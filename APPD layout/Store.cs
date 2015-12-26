@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace APPD_layout
 {
+    enum Page { Home, GameScreen, Cart, Bill }
     public partial class Store : Form
     {
         Panel[] panelList;
@@ -17,8 +18,13 @@ namespace APPD_layout
         public Store()
         {
             InitializeComponent();
-            panelList = new Panel[] { panel1, panel7, panel10 };
-    }
+            panelList = new Panel[] { panel1, panel7, panel10, panel9 };
+            textBox4.MaxLength = 16;
+            textBox3.MaxLength = 3;
+            textBox7.MaxLength = 6;
+            textBox3.TextAlign = HorizontalAlignment.Center;
+            textBox4.CharacterCasing = CharacterCasing.Upper;
+        }
 
     private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -48,7 +54,7 @@ namespace APPD_layout
         }
         private void Item3_Click(object sender, EventArgs e)
         {
-            count = 2;
+            count = 3;
             State(count);
         }
         private void Item4_Click(object sender, EventArgs e)
@@ -76,9 +82,21 @@ namespace APPD_layout
             count = 2;
             State(count);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            count = 4;
+            State(count);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            count = 4;
+            State(count);
+        }
         private void State(int n)
         {
-            panelList[n-1].Visible = true;
+            panelList[n - 1].Visible = true;
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -95,6 +113,51 @@ namespace APPD_layout
                 panel1.Visible = true;
                 panel7.Visible = false;
                 panel10.Visible = false;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string S = "";
+            try
+            {
+                if (checkBox1.CheckState.Equals(CheckState.Unchecked))
+                {
+                    label41.Visible = true;
+                    S += "• Checkbox was not ticked.\n";
+                }
+                if (textBox4.Text.Length != 16)
+                {
+                    label41.Visible = true;
+                    S += "• Invalid card number. Please ensure that you key in all 16 digits correctly.\n";
+                    textBox4.Clear();
+                }
+                if (textBox8.Text.Length != 8)
+                {
+                    label41.Visible = true;
+                    S += "• Invalid phone number. Please ensure you that you key in all 8 digits correctly.\n";
+                    textBox8.Clear();
+                }
+                label41.Text = S;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }
