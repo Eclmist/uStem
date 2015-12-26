@@ -1,43 +1,13 @@
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\bin\Debug\APPD layout.exe.config
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\bin\Debug\APPD layout.exe
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\bin\Debug\APPD layout.pdb
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\obj\Debug\APPD layout.csprojResolveAssemblyReference.cache
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\obj\Debug\APPD_layout.Properties.Resources.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\obj\Debug\APPD layout.csproj.GenerateResource.Cache
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\obj\Debug\APPD layout.exe
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\obj\Debug\APPD layout.pdb
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\bin\Debug\APPD layout.exe.config
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\obj\Debug\APPD layout.exe
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\obj\Debug\APPD layout.pdb
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\bin\Debug\APPD layout.exe
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\bin\Debug\APPD layout.pdb
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\obj\Debug\APPD_layout.Form2.resources
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\obj\Debug\APPD_layout.Form3.resources
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\obj\Debug\APPD_layout.Form4.resources
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\obj\Debug\APPD_layout.Form1.resources
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\obj\Debug\APPD_layout.Form5.resources
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\obj\Debug\APPD_layout.Properties.Resources.resources
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\obj\Debug\APPD layout.csproj.GenerateResource.Cache
-C:\Users\eclmi\Documents\Visual Studio 2015\Projects\APPD layout\APPD layout\obj\Debug\APPD layout.csprojResolveAssemblyReference.cache
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\obj\Debug\APPD_layout.GameDetails.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\obj\Debug\APPD_layout.Store.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\obj\Debug\APPD_layout.CartList.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\obj\Debug\APPD_layout.Login.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\obj\Debug\APPD_layout.Signup.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout\APPD layout\obj\Debug\APPD_layout.PaymentMethod.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout2\APPD layout\bin\Debug\APPD layout.exe.config
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout2\APPD layout\obj\Debug\APPD layout.exe
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\APPD layout2\APPD layout\obj\Debug\APPD layout.pdb
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\bin\Debug\APPD layout.exe.config
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD layout.exe
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD layout.pdb
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\bin\Debug\APPD layout.exe
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\bin\Debug\APPD layout.pdb
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD layout.csprojResolveAssemblyReference.cache
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD_layout.PaymentMethod.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD_layout.Store.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD_layout.CartList.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD_layout.Login.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD_layout.Signup.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD_layout.Properties.Resources.resources
-C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD layout.csproj.GenerateResource.Cache
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\bin\Debug\APPD layout.exe.config
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\bin\Debug\APPD layout.exe
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\bin\Debug\APPD layout.pdb
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD layout.csprojResolveAssemblyReference.cache
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.PaymentMethod.resources
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Store.resources
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.CartList.resources
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Login.resources
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Signup.resources
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Properties.Resources.resources
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD layout.csproj.GenerateResource.Cache
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD layout.exe
+C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD layout.pdb
