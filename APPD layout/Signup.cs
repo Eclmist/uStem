@@ -124,5 +124,10 @@ namespace APPD_layout
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -106,12 +106,13 @@
             // label6
             // 
             this.label6.ForeColor = System.Drawing.Color.LightGray;
-            this.label6.Location = new System.Drawing.Point(12, 9);
+            this.label6.Location = new System.Drawing.Point(14, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(247, 53);
             this.label6.TabIndex = 21;
             this.label6.Text = "Please provide an account name and password. Be sure to make your password someth" +
     "ing really hard to guess and use at least 8 characters.";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
