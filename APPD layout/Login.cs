@@ -31,7 +31,7 @@ namespace APPD_layout
         {
             this.Hide();
             Store frm = new Store();
-            frm.Show();
+            frm.Show(); 
         }
 
 

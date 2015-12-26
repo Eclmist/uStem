@@ -12,17 +12,15 @@ namespace APPD_layout
 {
     public partial class Store : Form
     {
+        Panel[] panelList;
+        private int count;
         public Store()
         {
             InitializeComponent();
-        }
+            panelList = new Panel[] { panel1, panel7, panel10 };
+    }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+    private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -49,10 +47,9 @@ namespace APPD_layout
 
         }
         private void Item3_Click(object sender, EventArgs e)
-        {   
-            this.Hide();
-            GameDetails frm = new GameDetails();
-            frm.Show();
+        {
+            count = 2;
+            State(count);
         }
         private void Item4_Click(object sender, EventArgs e)
         {
@@ -62,17 +59,43 @@ namespace APPD_layout
         {
 
         }
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            GameDetails frm = new GameDetails();
-            frm.Show();
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
-            CartList frm = new CartList();
-            frm.Show();
+            count = 3;
+            State(count);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            count = 1;
+            State(count);
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            count = 2;
+            State(count);
+        }
+        private void State(int n)
+        {
+            panelList[n-1].Visible = true;
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (panel10.Visible == true)
+            {
+                pictureBox1.Visible = true;
+                panel1.Visible = false;
+                panel7.Visible = true;
+                panel10.Visible = false;
+            }
+            else if (panel7.Visible == true)
+            {
+                pictureBox1.Visible = true;
+                panel1.Visible = true;
+                panel7.Visible = false;
+                panel10.Visible = false;
+            }
         }
     }
 }
