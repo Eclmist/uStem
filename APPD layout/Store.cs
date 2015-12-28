@@ -10,15 +10,32 @@ using System.Windows.Forms;
 
 namespace APPD_layout
 {
-    enum Page { Home, GameScreen, Cart, Bill }
+    public enum Page {
+        Browsing,
+        GameDetails,
+        Cart,
+        Billing
+    }
+
     public partial class Store : Form
     {
         Panel[] panelList;
-        private int count;
+        private Page currentPage = Page.Browsing;
+        private List<Page> pageHistroy = new List<Page>();
+
         public Store()
         {
             InitializeComponent();
-            panelList = new Panel[] { panel1, panel7, panel10, panel9 };
+
+            panelList = new Panel[] { panel1, panel7, panel10, panel9 };    //panel1 = Browsing
+                                                                            //panel7 = GameDetails
+                                                                            //panel10 = cart
+                                                                            //panel9 = billing
+            UpdatePageHistory();
+            UpdateCurrentPanel();
+            //
+            /*********************************************************************************/
+
             textBox4.MaxLength = 16;
             textBox3.MaxLength = 3;
             textBox7.MaxLength = 6;
@@ -26,7 +43,66 @@ namespace APPD_layout
             textBox4.CharacterCasing = CharacterCasing.Upper;
         }
 
-    private void richTextBox1_TextChanged(object sender, EventArgs e)
+        public void UpdatePageHistory()
+        {
+            pageHistroy.Add(currentPage);
+        }
+
+        public void UpdateCurrentPanel()
+        {
+
+            //currentPanel should be updated before this method is to be called
+            Panel targetPanel;     
+
+            switch (currentPage)
+            {
+                case Page.Browsing:
+                    targetPanel = panel1;
+                    break;
+                case Page.GameDetails:
+                    targetPanel = panel7;
+                    break;
+                case Page.Cart:
+                    targetPanel = panel10;
+                    break;
+                case Page.Billing:
+                    targetPanel = panel9;
+                    break;
+                default:
+                    targetPanel = panel1;
+                    break;
+            }
+
+            foreach (Panel p in panelList)
+            {
+                //Check reference equility
+                if (Object.ReferenceEquals(p, targetPanel))
+                    p.Visible = true;
+                else
+                    p.Visible = false;
+            }
+        }
+
+        public void NavButtonClick(Page targetPage)
+        {
+            UpdatePageHistory();
+            currentPage = targetPage;
+            UpdateCurrentPanel();
+        }
+
+        public void BackButtonClick()
+        {
+            currentPage = pageHistroy.Last<Page>();
+            if (pageHistroy.Count > 1)
+            {
+                int indexOfLastItem = pageHistroy.LastIndexOf(pageHistroy.Last<Page>());
+                pageHistroy.RemoveAt(indexOfLastItem);
+            }
+
+            UpdateCurrentPanel();
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -54,8 +130,7 @@ namespace APPD_layout
         }
         private void Item3_Click(object sender, EventArgs e)
         {
-            count = 3;
-            State(count);
+            NavButtonClick(Page.Cart);
         }
         private void Item4_Click(object sender, EventArgs e)
         {
@@ -67,53 +142,32 @@ namespace APPD_layout
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            count = 3;
-            State(count);
+            NavButtonClick(Page.Cart);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            count = 1;
-            State(count);
+            NavButtonClick(Page.Browsing);
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            count = 2;
-            State(count);
+            NavButtonClick(Page.GameDetails);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            count = 4;
-            State(count);
+            NavButtonClick(Page.Billing);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            count = 4;
-            State(count);
+            NavButtonClick(Page.Billing);
         }
-        private void State(int n)
-        {
-            panelList[n - 1].Visible = true;
-        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (panel10.Visible == true)
-            {
-                pictureBox1.Visible = true;
-                panel1.Visible = false;
-                panel7.Visible = true;
-                panel10.Visible = false;
-            }
-            else if (panel7.Visible == true)
-            {
-                pictureBox1.Visible = true;
-                panel1.Visible = true;
-                panel7.Visible = false;
-                panel10.Visible = false;
-            }
+            BackButtonClick();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -124,18 +178,18 @@ namespace APPD_layout
                 if (checkBox1.CheckState.Equals(CheckState.Unchecked))
                 {
                     label41.Visible = true;
-                    S += "• Checkbox was not ticked.\n";
+                    S += "• Checkbox was not ticked.\n\n";
                 }
                 if (textBox4.Text.Length != 16)
                 {
                     label41.Visible = true;
-                    S += "• Invalid card number. Please ensure that you key in all 16 digits correctly.\n";
+                    S += "• Invalid card number. Please ensure that you key in all 16 digits correctly.\n\n";
                     textBox4.Clear();
                 }
                 if (textBox8.Text.Length != 8)
                 {
                     label41.Visible = true;
-                    S += "• Invalid phone number. Please ensure you that you key in all 8 digits correctly.\n";
+                    S += "• Invalid phone number. Please ensure you that you key in all 8 digits correctly.\n\n";
                     textBox8.Clear();
                 }
                 label41.Text = S;

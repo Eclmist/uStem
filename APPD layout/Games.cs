@@ -55,7 +55,7 @@ namespace APPD_layout
                 Games game = new Games();
 
                 string[] info = new string[key.Length];
-                Regex seperator;
+                Regex seperator;    
 
                 for (int i = 0; i < key.Length; i++)
                 {

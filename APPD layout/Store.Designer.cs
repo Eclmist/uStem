@@ -1278,12 +1278,15 @@
             // label41
             // 
             this.label41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label41.Font = new System.Drawing.Font("Arial", 10F);
             this.label41.ForeColor = System.Drawing.Color.LightGray;
             this.label41.Location = new System.Drawing.Point(526, 207);
             this.label41.Name = "label41";
+            this.label41.Padding = new System.Windows.Forms.Padding(7);
             this.label41.Size = new System.Drawing.Size(346, 139);
             this.label41.TabIndex = 54;
+            this.label41.Text = "test";
             this.label41.Visible = false;
             // 
             // button5
