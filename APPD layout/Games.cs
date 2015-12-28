@@ -56,7 +56,7 @@ namespace APPD_layout
         {
             name = "";
             desc = "";
-            imgsrc = "";
+            imgsrc = "game1.png";
             cost = 0;
             discountrRate = 0;
             releaseDate = DateTime.MaxValue;
@@ -74,12 +74,18 @@ namespace APPD_layout
 
         public void SetInfo(string name, string desc, double cost, DateTime rdate, string imgsrc, double drate)
         {
-            this.name = name;
-            this.desc = desc;
-            this.cost = cost;
-            this.releaseDate = rdate;
-            this.imgsrc = imgsrc;
-            this.discountrRate = drate;
+            if (!name.Equals(""))
+                this.name = name;
+            if (!desc.Equals(""))
+                this.desc = desc;
+            if (!double.IsNaN(cost))
+                this.cost = cost;
+            if (releaseDate != null)
+                this.releaseDate = rdate;
+            if (!imgsrc.Equals(""))
+                this.imgsrc = imgsrc;
+            if (!double.IsNaN(discountrRate))
+                this.discountrRate = drate;
         }
     }
 }

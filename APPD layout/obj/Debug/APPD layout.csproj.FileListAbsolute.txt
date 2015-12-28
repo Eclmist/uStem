@@ -1,13 +1,12 @@
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\bin\Debug\APPD layout.exe.config
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\bin\Debug\APPD layout.exe
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\bin\Debug\APPD layout.pdb
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD layout.csprojResolveAssemblyReference.cache
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.PaymentMethod.resources
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Store.resources
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.CartList.resources
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Login.resources
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Signup.resources
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Properties.Resources.resources
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD layout.csproj.GenerateResource.Cache
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD layout.exe
-C:\Users\HUANGHAOYI\Desktop\uStem\APPD layout\obj\Debug\APPD layout.pdb
+C:\Users\eclmi\Desktop\uStem\APPD layout\bin\Debug\APPD layout.exe.config
+C:\Users\eclmi\Desktop\uStem\APPD layout\bin\Debug\APPD layout.exe
+C:\Users\eclmi\Desktop\uStem\APPD layout\bin\Debug\APPD layout.pdb
+C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.PaymentMethod.resources
+C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Store.resources
+C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.CartList.resources
+C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Login.resources
+C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Signup.resources
+C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Properties.Resources.resources
+C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD layout.csproj.GenerateResource.Cache
+C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD layout.exe
+C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD layout.pdb
