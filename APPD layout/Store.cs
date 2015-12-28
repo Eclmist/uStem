@@ -1,4 +1,6 @@
-﻿using System;
+﻿//TODO: remove unused winform click methods
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +43,13 @@ namespace APPD_layout
             textBox7.MaxLength = 6;
             textBox3.TextAlign = HorizontalAlignment.Center;
             textBox4.CharacterCasing = CharacterCasing.Upper;
+
+            /*** TEST ***/
+            Catalogue.LoadGames();
+            LoadGameClickHandler();
+
+            BrowsingScreenHandler browsingScreenHandler = new BrowsingScreenHandler(this.flowLayoutPanel1);
+            browsingScreenHandler.PopulateGameList();
         }
 
         public void UpdatePageHistory()
@@ -100,6 +109,32 @@ namespace APPD_layout
             }
 
             UpdateCurrentPanel();
+        }
+
+        public static System.EventHandler gameLabelClickHandler;
+        public static System.EventHandler gamePicClickHandler;
+
+
+        private void GameLabelClickHandler(object sender, EventArgs e)
+        {
+            GameClick((Games)((Label)sender).Tag);
+        }
+
+        private void GamePicClickHandler(object sender, EventArgs e)
+        {
+            GameClick((Games)((PictureBox)sender).Tag);
+        }
+
+        private void GameClick(Games game)
+        {
+            NavButtonClick(Page.GameDetails);
+            //TODO: Code to modify gamedetails page
+        }
+
+        private void LoadGameClickHandler()
+        {
+            gameLabelClickHandler = GameLabelClickHandler;
+            gamePicClickHandler = GamePicClickHandler;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -213,6 +248,16 @@ namespace APPD_layout
             {
                 e.Handled = true;
             }
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace APPD_layout
@@ -12,6 +11,46 @@ namespace APPD_layout
         private string name, desc, imgsrc;
         private double cost, discountrRate;
         private DateTime releaseDate;
+
+
+        #region Accessors and Mutators
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public string Desc
+        {
+            get { return desc; }
+            set { desc = value; }
+        }
+
+        public string Imgsrc
+        {
+            get { return imgsrc; }
+            set { imgsrc = value; }
+        }
+
+        public double Cost
+        {
+            get { return cost; }
+            set { cost = value; }
+        }
+
+        public double DiscountRate
+        {
+            get { return discountrRate; }
+            set { discountrRate = value; }
+        }
+
+        public DateTime ReleaseDate
+        {
+            get { return releaseDate; }
+            set { releaseDate = value; }
+        }
+
+        #endregion
 
         public Games()
         {
@@ -41,33 +80,6 @@ namespace APPD_layout
             this.releaseDate = rdate;
             this.imgsrc = imgsrc;
             this.discountrRate = drate;
-        }
-
-        public static void LoadGames()
-        {
-            string productFile = System.IO.File.ReadAllText("./product.txt");
-            string[] key = { "name", "desc", "cost", "rdate", "imgsrc", "drate" };
-
-            Regex gameSeperator = new Regex(@"<game>(.*?)</game>", RegexOptions.Singleline);
-            MatchCollection match = gameSeperator.Matches(productFile);
-            foreach (Match m in match)
-            {
-                Games game = new Games();
-
-                string[] info = new string[key.Length];
-                Regex seperator;    
-
-                for (int i = 0; i < key.Length; i++)
-                {
-                    seperator = new Regex(@"<" + key[i] + @">(.*?)</" + key[i] + @">", RegexOptions.Singleline);
-                    info[i] = Regex.Replace(seperator.Match(m.ToString()).ToString(), @"<" + key[i] + @">", "");
-                    info[i] = Regex.Replace(info[i], @"</" + key[i] + @">", "");
-
-               }
-
-                game.SetInfo(info[0], info[1], double.Parse(info[2]), DateTime.Parse(info[3]), info[4], double.Parse(info[5]));
-                Catalogue.allGames.Add(game);
-            }
         }
     }
 }
