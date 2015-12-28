@@ -10,3 +10,4 @@ C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD_layout.Properties.Resour
 C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD layout.csproj.GenerateResource.Cache
 C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD layout.exe
 C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD layout.pdb
+C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD layout.csprojResolveAssemblyReference.cache
