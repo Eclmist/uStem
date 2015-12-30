@@ -24,6 +24,8 @@ namespace APPD_layout
         Panel[] panelList;
         private Page currentPage = Page.Browsing;
         private List<Page> pageHistroy = new List<Page>();
+        Bitmap nullBitmap = new Bitmap(1, 1);
+        Image backArrow;
 
         public Store()
         {
@@ -37,6 +39,10 @@ namespace APPD_layout
             UpdateCurrentPanel();
             //
             /*********************************************************************************/
+            //
+
+            
+
 
             textBox4.MaxLength = 16;
             textBox3.MaxLength = 3;
@@ -81,6 +87,11 @@ namespace APPD_layout
                     targetPanel = panel1;
                     break;
             }
+
+            if (currentPage != Page.Browsing)
+                pictureBox1.Image = backArrow;
+            else
+                pictureBox1.Image = nullBitmap;
 
             foreach (Panel p in panelList)
             {
