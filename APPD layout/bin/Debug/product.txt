@@ -16,3 +16,30 @@
 <drate>20</drate>
 <genre>multiplayer</genre>
 </game>
+<game>
+<name>Gmae Name 2</name>
+<desc>Thissadsadae</desc>
+<cost>2323.90</cost>
+<rdate>25/12/2015</rdate>
+<imgsrc>game4.png</imgsrc>
+<drate>20</drate>
+<genre>Early Access</genre>
+</game>
+<game>
+<name>Gmae Name 2</name>
+<desc>Thissadsadae</desc>
+<cost>2323.90</cost>
+<rdate>25/12/2015</rdate>
+<imgsrc>game3.png</imgsrc>
+<drate>20</drate>
+<genre>RTS</genre>
+</game>
+<game>
+<name>Gmae Name 2</name>
+<desc>Thissadsadae</desc>
+<cost>2323.90</cost>
+<rdate>25/12/2015</rdate>
+<imgsrc>game4.png</imgsrc>
+<drate>20</drate>
+<genre>RTS</genre>
+</game>

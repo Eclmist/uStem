@@ -21,9 +21,9 @@ namespace APPD_layout
         private Page currentPage = Page.Browsing;
         private List<Page> pageHistroy = new List<Page>();
         Bitmap nullBitmap = new Bitmap(1, 1);
-        Image backArrow;
+        Image backArrow; //TODO: add greying code to partial class after project is done
 
-        List<Genre> listOfGenres;
+        List<GenreContainer> listOfGenres;
 
         Catalogue allGamesCatalogue;
         Catalogue winterSalesCatalogue;
@@ -42,8 +42,11 @@ namespace APPD_layout
             /*********************************************************************************/
             //
 
+            SetTranslucencyForControls();
+
+
             /*** Instantiate Genres List ***/
-            listOfGenres = new List<Genre>();
+            listOfGenres = new List<GenreContainer>();
 
             /*** Populating Catalogue ***/
             allGamesCatalogue = new Catalogue();
@@ -54,8 +57,17 @@ namespace APPD_layout
 
 
             LoadGameClickHandler();
-            BrowsingScreenHandler browsingScreenHandler = new BrowsingScreenHandler(this.flowLayoutPanel1);
+            BrowsingScreenHandler browsingScreenHandler = new BrowsingScreenHandler(this.flowLayoutPanel1, this.flowLayoutPanel2);
             browsingScreenHandler.PopulateGameList(allGamesCatalogue);
+            browsingScreenHandler.PopulateGenreSelector(listOfGenres);
+        }
+
+        public void SetTranslucencyForControls()
+        {
+            flowLayoutPanel1.BackColor = Color.FromArgb(10, Color.Black);
+            flowLayoutPanel2.BackColor = Color.FromArgb(10, Color.Black);
+            label5.BackColor = Color.FromArgb(0, Color.Black);
+            label21.BackColor = Color.FromArgb(10, Color.Black);
         }
 
         public void UpdatePageHistory()
@@ -267,6 +279,11 @@ namespace APPD_layout
         }
 
         private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -6,21 +6,9 @@ using System.Threading.Tasks;
 
 namespace APPD_layout
 {
-    class Genre : GenericContainer<Games>
+    class Genre : GenreContainer
     {
+        public Genre(string name) : base(name){ }   
 
-        private string genreName;
-
-        #region Accessors and Mutators
-        public string Name
-        {
-            get { return genreName; }
-            set { genreName = value; }
-        }
-        #endregion
-
-        public Genre(string name) {
-            genreName = name;
-        }
     }
 }

@@ -10,7 +10,7 @@ namespace APPD_layout
     class Catalogue : GenericContainer<Games>
     {
 
-        public void LoadGames(string filepath, List<Genre> storeGenresReference)
+        public void LoadGames(string filepath, List<GenreContainer> storeGenresReference)
         {
             string productFile = System.IO.File.ReadAllText(filepath);
             string[] key = { "name", "desc", "cost", "rdate", "imgsrc", "drate", "genre" };
@@ -45,7 +45,7 @@ namespace APPD_layout
                             matchedString = Regex.Replace(matchedString, @"</genre>", "");
                             bool genreRecordExist = false;
 
-                            foreach (Genre g in storeGenresReference)
+                            foreach (GenreContainer g in storeGenresReference)
                             {
                                 if (g.Name.Equals((matchedString)))
                                 {
@@ -55,7 +55,7 @@ namespace APPD_layout
 
                             if (!genreRecordExist)
                             {
-                                storeGenresReference.Add(new Genre(matchedString));
+                                storeGenresReference.Add(new GenreContainer(matchedString));
                             }
 
                             genres.Add(new Genre(matchedString));
@@ -73,6 +73,18 @@ namespace APPD_layout
                     genres);
 
                 AddToContainer(game);
+
+                //Adding game to genrecontainers
+                foreach (GenreContainer gc in storeGenresReference)
+                {
+                    foreach (Genre g in genres)
+                    {
+                        if (gc.Name.Equals(g.Name))
+                        {
+                            gc.AddToContainer(game);
+                        }
+                    }
+                }
             }
         }
     }
