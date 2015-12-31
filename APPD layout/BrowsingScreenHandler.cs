@@ -23,10 +23,14 @@ namespace APPD_layout
         {
             ClearGameListPanel();
 
+            bool atLeastOneBoxTicked = false;
+
             foreach (CheckBox c in allGenreCheckbox)
             {
                 if (c.Checked == true)
                 {
+                    atLeastOneBoxTicked = true;
+
                     GenreContainer genreContainer = (GenreContainer)c.Tag;
 
                     foreach (Games g in genreContainer.GetContainer())
@@ -36,7 +40,11 @@ namespace APPD_layout
                 }
             }
 
-            gamesListPanel.Refresh();
+            if (atLeastOneBoxTicked)
+                gamesListPanel.Refresh();
+            else
+                PopulateGameList(Store.allGamesCatalogue);
+                
         }
 
         public void PopulateGameList(Catalogue catalogue)

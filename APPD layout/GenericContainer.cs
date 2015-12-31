@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace APPD_layout
 {
-    class GenericContainer<T>
+    public class GenericContainer<T>
     {
+        public GenericContainer()
+            {}
+
         List<T> items = new List<T>();
 
         public virtual void AddToContainer(T item) //Override for Cart (add count instead of another item to list;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace APPD_layout
 {
-    class Games
+    public class Games
     {
         private string name, desc, imgsrc;
         private double cost, discountrRate;

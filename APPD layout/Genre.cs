@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace APPD_layout
 {
-    class Genre : GenreContainer
+    public class Genre : GenreContainer
     {
         public Genre(string name) : base(name){ }   
 

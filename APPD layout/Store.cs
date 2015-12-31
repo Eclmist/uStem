@@ -18,14 +18,14 @@ namespace APPD_layout
     public partial class Store : Form
     {
         Panel[] panelList;
-        private Page currentPage = Page.Browsing;
-        private List<Page> pageHistroy = new List<Page>();
+        Page currentPage = Page.Browsing;
+        List<Page> pageHistroy = new List<Page>();
         Bitmap nullBitmap = new Bitmap(1, 1);
         Image backArrow; //TODO: add greying code to partial class after project is done
 
         List<GenreContainer> listOfGenres;
 
-        Catalogue allGamesCatalogue;
+        public static Catalogue allGamesCatalogue;
         Catalogue winterSalesCatalogue;
 
         public Store()

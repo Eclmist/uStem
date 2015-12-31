@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace APPD_layout
 {
-    class Catalogue : GenericContainer<Games>
+    public class Catalogue : GenericContainer<Games>
     {
 
         public void LoadGames(string filepath, List<GenreContainer> storeGenresReference)

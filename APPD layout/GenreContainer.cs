@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace APPD_layout
 {   
-    class GenreContainer : GenericContainer<Games>
+    public class GenreContainer : GenericContainer<Games>
     {
 
         private string genreName;
