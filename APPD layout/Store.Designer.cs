@@ -315,9 +315,9 @@
             this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel10.Controls.Add(this.panel11);
-            this.panel10.Location = new System.Drawing.Point(10, 453);
+            this.panel10.Location = new System.Drawing.Point(10, 73);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(884, 40);
+            this.panel10.Size = new System.Drawing.Size(884, 420);
             this.panel10.TabIndex = 27;
             this.panel10.Visible = false;
             // 
@@ -768,9 +768,9 @@
             this.panel9.Controls.Add(this.label39);
             this.panel9.Controls.Add(this.label40);
             this.panel9.Controls.Add(this.comboBox1);
-            this.panel9.Location = new System.Drawing.Point(10, 473);
+            this.panel9.Location = new System.Drawing.Point(10, 73);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(884, 20);
+            this.panel9.Size = new System.Drawing.Size(884, 420);
             this.panel9.TabIndex = 28;
             this.panel9.Visible = false;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
@@ -1025,9 +1025,9 @@
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.groupBox1);
             this.panel7.Controls.Add(this.textBox2);
-            this.panel7.Location = new System.Drawing.Point(10, 437);
+            this.panel7.Location = new System.Drawing.Point(10, 73);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(884, 56);
+            this.panel7.Size = new System.Drawing.Size(884, 420);
             this.panel7.TabIndex = 23;
             this.panel7.Visible = false;
             // 
