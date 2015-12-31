@@ -53,6 +53,9 @@
     <Compile Include="Catalogue.cs" />
     <Compile Include="Games.cs" />
     <Compile Include="BrowsingScreenHandler.cs" />
+    <Compile Include="GenericContainer.cs" />
+    <Compile Include="Genre.cs" />
+    <Compile Include="GenreContainer.cs" />
     <Compile Include="Store.cs">
       <SubType>Form</SubType>
     </Compile>

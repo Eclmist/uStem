@@ -11,7 +11,7 @@ namespace APPD_layout
         private string name, desc, imgsrc;
         private double cost, discountrRate;
         private DateTime releaseDate;
-
+        private List<Genre> genres;
 
         #region Accessors and Mutators
         public string Name
@@ -50,6 +50,11 @@ namespace APPD_layout
             set { releaseDate = value; }
         }
 
+        public List<Genre> Genre
+        {
+            get { return genres; }
+        }
+
         #endregion
 
         public Games()
@@ -60,9 +65,10 @@ namespace APPD_layout
             cost = 0;
             discountrRate = 0;
             releaseDate = DateTime.MaxValue;
+            genres = new List<Genre>();
         }
 
-        public Games(string name, string desc, double cost, DateTime rdate, string imgsrc, double drate)
+        public Games(string name, string desc, double cost, DateTime rdate, string imgsrc, double drate, List<Genre> genres)
         {
             this.name = name;
             this.desc = desc;
@@ -70,9 +76,10 @@ namespace APPD_layout
             this.releaseDate = rdate;
             this.imgsrc = imgsrc;
             this.discountrRate = drate;
+            this.genres = genres;
         }
 
-        public void SetInfo(string name, string desc, double cost, DateTime rdate, string imgsrc, double drate)
+        public void SetInfo(string name, string desc, double cost, DateTime rdate, string imgsrc, double drate, List<Genre> genres)
         {
             if (!name.Equals(""))
                 this.name = name;
@@ -86,6 +93,8 @@ namespace APPD_layout
                 this.imgsrc = imgsrc;
             if (!double.IsNaN(discountrRate))
                 this.discountrRate = drate;
+            if (genres.Count > 0)
+                this.genres = genres;
         }
     }
 }

@@ -1,7 +1,7 @@
 <game>
 <name>Saints Column</name>
 <desc>The US President must save the Earth from alien overlord Zinyak using an arsenal of superpowers and strange weapons in the wildest open world game ever.
-  The epic conclusion to the game that changed all the rules! The Saints have gone from the crackhouse to the White House‚Äîbut the Earth has been invaded and it‚Äôs up to you to free the world from Overlord Zinyak and his alien empire.
+  The epic conclusion to the game that changed all the rules! The Saints have gone from the crackhouse to the White Houseóbut the Earth has been invaded and itís up to you to free the world from Overlord Zinyak and his alien empire.
   With homies new and old by your side, and an arsenal of superpowers and strange weapons, you must save the world in the wildest open world game ever!
 </desc>
 <cost>45.90</cost>
@@ -55,7 +55,7 @@
 <game>
   <name>Dead Mansion</name>
   <desc>Dead Realm is a creepy, multiplayer action game with beautiful, immersive environments. 
-  You can play as either a Ghost or a Human character and work with your friends to run, hide, survive‚Ä¶ or die. </desc>
+  You can play as either a Ghost or a Human character and work with your friends to run, hide, surviveÖ or die. </desc>
   <cost>49.90</cost>
   <rdate>2/8/2015</rdate>
   <imgsrc>game3.png</imgsrc>
@@ -143,7 +143,7 @@
 <game>
   <name>Mad Pain</name>
   <desc>Become Mad Pain, the lone warrior in a savage post-apocalyptic world where cars are the key to survival. In this action-packed, open world, third person action game, you must fight to stay alive in The Wasteland,
-    using brutal on-ground and vehicular against vicious gangs of bandits. A reluctant hero with an instinct for survival, Max wants nothing more than to leave the madness behind and find solace in the storied ‚ÄúPlains of Silence.‚Äù
+    using brutal on-ground and vehicular against vicious gangs of bandits. A reluctant hero with an instinct for survival, Max wants nothing more than to leave the madness behind and find solace in the storied ìPlains of Silence.î
     Players are challenged with treacherous missions as they scavenge the dangerous landscape for supplies to build the ultimate combat vehicle.</desc>
   <cost>48.50</cost>
   <rdate>7/7/2012</rdate>
@@ -173,7 +173,7 @@
 <game>
   <name>Just Because 3</name>
   <desc>The Mediterranean republic of Medici is suffering under the brutal control of General Di Ravello, a dictator with an insatiable appetite for power. 
-  Enter Rico Rodriguez, a man on a mission to destroy the General‚Äôs hold on power by any means necessary. With over 400 square miles of complete freedom from sky to seabed and a huge arsenal of weaponry, gadgets and vehicles, prepare to unleash chaos in the most creative and explosive ways you can imagine.</desc>
+  Enter Rico Rodriguez, a man on a mission to destroy the Generalís hold on power by any means necessary. With over 400 square miles of complete freedom from sky to seabed and a huge arsenal of weaponry, gadgets and vehicles, prepare to unleash chaos in the most creative and explosive ways you can imagine.</desc>
   <cost>75.90</cost>
   <rdate>10/10/2014</rdate>
   <imgsrc>game3.png</imgsrc>
@@ -181,7 +181,7 @@
 </game>
 <game>
   <name>Shadowsprint Hong Kong</name>
-  <desc>Shadowrun: Hong Kong is the third standalone game in Harebrained Schemes‚Äô critically-acclaimed Shadowrun cRPG series.
+  <desc>Shadowrun: Hong Kong is the third standalone game in Harebrained Schemesí critically-acclaimed Shadowrun cRPG series.
     Experience the most impressive Shadowrun RPG yet with an all new crew, expanded magic and cyberware,
     a completely revamped Matrix, an upgraded release of the Shadowrun Editor, and much more!</desc>
   <cost>60.50</cost>
@@ -191,8 +191,8 @@
 </game>
 <game>
   <name>Age of Extinction</name>
-  <desc>The Age of Extinction is an experiment, an attempt to explore a different direction, taking you back to the PnP roots of the genre. It doesn‚Äôt mean that the game is awesome.
-    In fact, there is a good chance that you won‚Äôt like it, precisely because we took too many liberties with the established design.
+  <desc>The Age of Extinction is an experiment, an attempt to explore a different direction, taking you back to the PnP roots of the genre. It doesnít mean that the game is awesome.
+    In fact, there is a good chance that you wonít like it, precisely because we took too many liberties with the established design.
   </desc>
   <cost>46.50</cost>
   <rdate>13/8/2014</rdate>
@@ -202,8 +202,8 @@
 <game>
   <name>Deathless SEA</name>
   <desc>Take the helm of your steamship and set sail for the unknown! Sunless Sea is a game of discovery, loneliness and frequent death, set in the award-winning Victorian Gothic universe of Fallen London.
-    If the giant crabs, sentient icebergs and swarms of bats don‚Äôt get you, madness and cannibalism certainly will. But that old black ocean beckons, and there‚Äôs loot for the brave souls who dare to sail her.
-    Betray your crew, sell your soul to a Devil, marry your sweetheart. Survive long enough and you‚Äôll achieve your life‚Äôs ambition.
+    If the giant crabs, sentient icebergs and swarms of bats donít get you, madness and cannibalism certainly will. But that old black ocean beckons, and thereís loot for the brave souls who dare to sail her.
+    Betray your crew, sell your soul to a Devil, marry your sweetheart. Survive long enough and youíll achieve your lifeís ambition.
   </desc>
   <cost>70.90</cost>
   <rdate>23/10/2015</rdate>
@@ -303,7 +303,7 @@
 <game>
   <name>Tomb Scavenger</name>
   <desc>Tomb Scavenger explores the intense and gritty origin story of Lara Croft and her ascent from a young woman to a hardened survivor. Armed only with raw instincts and the ability to push beyond the limits of human endurance,
-    Lara must fight to unravel the dark history of a forgotten island to escape its relentless hold. Download the Turning Point trailer to see the beginning of Lara‚Äôs epic adventure.</desc>
+    Lara must fight to unravel the dark history of a forgotten island to escape its relentless hold. Download the Turning Point trailer to see the beginning of Laraís epic adventure.</desc>
   <cost>49.90</cost>
   <rdate>20/7/2014</rdate>
   <imgsrc>game3.png</imgsrc>
@@ -312,8 +312,8 @@
 <game>
   <name>Origami and the Blind Forest</name>
   <desc>The forest of Nibel is dying. After a powerful storm sets a series of devastating events in motion, an unlikely hero must journey to find his courage and confront a dark nemesis to save his home. 
-  ‚ÄúOri and the Blind Forest‚Äù tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC. Featuring hand-painted artwork,
-  meticulously animated character performance, and a fully orchestrated score, ‚ÄúOri and the Blind Forest‚Äù explores a deeply emotional story about love and sacrifice, and the hope that exists in us all.</desc>
+  ìOri and the Blind Forestî tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC. Featuring hand-painted artwork,
+  meticulously animated character performance, and a fully orchestrated score, ìOri and the Blind Forestî explores a deeply emotional story about love and sacrifice, and the hope that exists in us all.</desc>
   <cost>70.90</cost>
   <rdate>2/12/2015</rdate>
   <imgsrc>game3.png</imgsrc>
@@ -322,7 +322,7 @@
 <game>
   <name>Team Destiny</name>
   <desc>The most highly-rated free game of all time!
-    One of the most popular online action games of all time, Team Destiny delivers constant free updates‚Äînew game modes, maps, equipment and, most importantly, hats.
+    One of the most popular online action games of all time, Team Destiny delivers constant free updatesónew game modes, maps, equipment and, most importantly, hats.
     Nine distinct classes provide a broad range of tactical abilities and personalities, and lend themselves to a variety of player skills.
   </desc>
   <cost>69.50</cost>

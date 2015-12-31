@@ -1,5 +1,4 @@
-﻿//TODO: Populate based on genre
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -11,18 +10,61 @@ namespace APPD_layout
 {
     class BrowsingScreenHandler
     {
-        FlowLayoutPanel gamesListPanel;
+        FlowLayoutPanel gamesListPanel, genreSelectorPanel;
+        List<CheckBox> allGenreCheckbox = new List<CheckBox>();
 
-        public BrowsingScreenHandler(FlowLayoutPanel flp)
+        public BrowsingScreenHandler(FlowLayoutPanel flp, FlowLayoutPanel gsp)
         {
             gamesListPanel = flp;
+            genreSelectorPanel = gsp;
         }
 
         public void PopulateGameList()
         {
-            foreach (Games game in Catalogue.gameList)
+            ClearGameListPanel();
+
+            foreach (CheckBox c in allGenreCheckbox)
+            {
+                if (c.Checked == true)
+                {
+                    GenreContainer genreContainer = (GenreContainer)c.Tag;
+
+                    foreach (Games g in genreContainer.GetContainer())
+                    {
+                        gamesListPanel.Controls.Add(GenerateGamePanel(g));
+                    }
+                }
+            }
+        }
+
+        public void PopulateGameList(Catalogue catalogue)
+        {
+            ClearGameListPanel();
+
+            foreach (Games game in catalogue.GetContainer())
             {
                 gamesListPanel.Controls.Add(GenerateGamePanel(game));
+            }
+        }
+
+        public void PopulateGenreList(GenreContainer genre)
+        {
+            foreach (Games game in genre.GetContainer())
+            {
+                gamesListPanel.Controls.Add(GenerateGamePanel(game));
+            }
+        }
+
+        public void ClearGameListPanel()
+        {
+            gamesListPanel.Controls.Clear();
+        }
+
+        public void PopulateGenreSelector(List<GenreContainer> genrelist)
+        {
+            foreach (GenreContainer g in genrelist)
+            {
+                genreSelectorPanel.Controls.Add(GenerateGenreSelectCheckbox(g));
             }
         }
 
@@ -72,6 +114,32 @@ namespace APPD_layout
             picbox.Tag = gameref;
 
             return picbox;
+        }
+
+        public CheckBox GenerateGenreSelectCheckbox(GenreContainer g)
+        {
+            CheckBox checkbox = new CheckBox();
+
+            checkbox.AutoSize = true;
+            checkbox.FlatStyle = FlatStyle.Flat;
+            checkbox.ForeColor = Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(118)))), ((int)(((byte)(150)))));
+            checkbox.Location = new Point(13, 43);
+            checkbox.Name = g.Name;
+            checkbox.Size = new Size(77, 17);
+            checkbox.TabIndex = 11;
+            checkbox.Text = g.Name;
+            checkbox.UseVisualStyleBackColor = true;
+            checkbox.Tag = g;
+            checkbox.CheckedChanged += GenreCheckHandler;
+
+            allGenreCheckbox.Add(checkbox);
+
+            return checkbox;
+        }
+
+        private void GenreCheckHandler(object sender, EventArgs e)
+        {
+            PopulateGameList();
         }
     }
 }
