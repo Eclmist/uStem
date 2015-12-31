@@ -392,6 +392,8 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(244, 23);
             this.textBox4.TabIndex = 31;
+            this.textBox4.MaxLength = 16;
+            this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             // 
             // dateTimePicker1
             // 
@@ -427,6 +429,8 @@
             this.textBox3.Size = new System.Drawing.Size(44, 23);
             this.textBox3.TabIndex = 34;
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox3.MaxLength = 3;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label36
             // 

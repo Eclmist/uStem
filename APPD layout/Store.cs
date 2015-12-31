@@ -2,12 +2,8 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace APPD_layout
@@ -27,6 +23,11 @@ namespace APPD_layout
         Bitmap nullBitmap = new Bitmap(1, 1);
         Image backArrow;
 
+        List<Genre> listOfGenres;
+
+        Catalogue allGamesCatalogue;
+        Catalogue winterSalesCatalogue;
+
         public Store()
         {
             InitializeComponent();
@@ -41,21 +42,20 @@ namespace APPD_layout
             /*********************************************************************************/
             //
 
-            
+            /*** Instantiate Genres List ***/
+            listOfGenres = new List<Genre>();
+
+            /*** Populating Catalogue ***/
+            allGamesCatalogue = new Catalogue();
+            allGamesCatalogue.LoadGames("./product.txt", listOfGenres);
+
+            winterSalesCatalogue = new Catalogue();
+            //winterSalesCatalogue.LoadGames("");
 
 
-            textBox4.MaxLength = 16;
-            textBox3.MaxLength = 3;
-            textBox7.MaxLength = 6;
-            textBox3.TextAlign = HorizontalAlignment.Center;
-            textBox4.CharacterCasing = CharacterCasing.Upper;
-
-            /*** TEST ***/
-            Catalogue.LoadGames();
             LoadGameClickHandler();
-
             BrowsingScreenHandler browsingScreenHandler = new BrowsingScreenHandler(this.flowLayoutPanel1);
-            browsingScreenHandler.PopulateGameList();
+            browsingScreenHandler.PopulateGameList(allGamesCatalogue);
         }
 
         public void UpdatePageHistory()

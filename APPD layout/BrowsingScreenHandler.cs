@@ -18,12 +18,29 @@ namespace APPD_layout
             gamesListPanel = flp;
         }
 
-        public void PopulateGameList()
+        public void PopulateGameList(Catalogue catalogue)
         {
-            foreach (Games game in Catalogue.gameList)
+            ClearGameListPanel();
+
+            foreach (Games game in catalogue.GetContainer())
             {
                 gamesListPanel.Controls.Add(GenerateGamePanel(game));
             }
+        }
+
+        public void PopulateGameList(Genre genre)
+        {
+            ClearGameListPanel();
+
+            foreach (Games game in genre.GetContainer())
+            {
+                gamesListPanel.Controls.Add(GenerateGamePanel(game));
+            }
+        }
+
+        public void ClearGameListPanel()
+        {
+            gamesListPanel.Controls.Clear();
         }
 
         public Panel GenerateGamePanel(Games gameref)
