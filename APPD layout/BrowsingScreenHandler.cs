@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace APPD_layout
 {
-    class BrowsingScreenHandler
+    public class BrowsingScreenHandler
     {
         FlowLayoutPanel gamesListPanel, genreSelectorPanel;
         List<CheckBox> allGenreCheckbox = new List<CheckBox>();

@@ -150,7 +150,13 @@ namespace APPD_layout
         private void GameClick(Games game)
         {
             NavButtonClick(Page.GameDetails);
-            //TODO: Code to modify gamedetails page
+            groupBox1.Text = game.Name;
+            pictureBox8.BackgroundImage = Image.FromFile("./img/" + game.Imgsrc);
+            label29.Text = game.Desc;
+            label25.Text = game.ReleaseDate.ToString();
+            label24.Text = "Buy " + game.Name;
+            label22.Text = "S" + String.Format("{0:C}", Convert.ToInt32(game.Cost));
+            button2.Tag = game;
         }
 
         private void LoadGameClickHandler()
@@ -272,6 +278,14 @@ namespace APPD_layout
             }
         }
 
+        private void UpdateCartButtonText()
+        {
+            if (Cart.gameCart.Count > 0)
+                button1.Text = "CART";
+            else
+                button1.Text = "CART(" + Cart.gameCart.Count + ")";
+        }
+
         private void label18_Click(object sender, EventArgs e)
         {
 
@@ -288,6 +302,12 @@ namespace APPD_layout
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            Cart.AddGamesToCart(((Games)((Button)sender).Tag));
+            UpdateCartButtonText();
+        }
+
+        private void label27_Click(object sender, EventArgs e)
         {
 
         }

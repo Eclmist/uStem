@@ -1,5 +1,4 @@
-﻿//Adding game to CartList
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -10,14 +9,14 @@ using System.Windows.Forms;
 
 namespace APPD_layout
 {
-    class Cart
+    public class Cart
     {
         FlowLayoutPanel cartListPanel;
         public static List<Games> gameCart = new List<Games>();
 
-        public static void AddGamesToCart(Games choiceofgame)
+        public static void AddGamesToCart(Games game)
         {
-            gameCart.Add(choiceofgame);
+            gameCart.Add(game);
         }
 
         public void PopulateGameCart()
