@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cart.cs" />
     <Compile Include="Catalogue.cs" />
     <Compile Include="Games.cs" />
     <Compile Include="BrowsingScreenHandler.cs" />

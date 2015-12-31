@@ -770,7 +770,7 @@
             this.panel9.Controls.Add(this.comboBox1);
             this.panel9.Location = new System.Drawing.Point(10, 73);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(884, 452);
+            this.panel9.Size = new System.Drawing.Size(884, 420);
             this.panel9.TabIndex = 28;
             this.panel9.Visible = false;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
@@ -1001,6 +1001,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "Add To Cart";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label22
             // 

@@ -65,7 +65,6 @@ namespace APPD_layout
         public void SetTranslucencyForControls()
         {
             flowLayoutPanel1.BackColor = Color.FromArgb(10, Color.Black);
-            flowLayoutPanel2.BackColor = Color.FromArgb(10, Color.Black);
             label5.BackColor = Color.FromArgb(0, Color.Black);
             label21.BackColor = Color.FromArgb(10, Color.Black);
         }
@@ -284,6 +283,11 @@ namespace APPD_layout
         }
 
         private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

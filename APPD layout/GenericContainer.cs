@@ -10,7 +10,7 @@ namespace APPD_layout
     {
         List<T> items = new List<T>();
 
-        public virtual void AddToContainer(T item) //OVeride for Cart (add count instead of another item to list;
+        public virtual void AddToContainer(T item) //Override for Cart (add count instead of another item to list;
         {
             items.Add(item);
         }

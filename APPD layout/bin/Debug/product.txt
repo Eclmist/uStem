@@ -8,6 +8,8 @@
 <rdate>12/2/2013</rdate>
 <imgsrc>game1.png</imgsrc>
 <drate>10</drate>
+<genre>Action</genre>
+<genre>Adventure</genre>
 </game>
 <game>
   <name>BIOBLOW</name>
@@ -18,6 +20,9 @@
   <rdate>4/11/2013</rdate>
   <imgsrc>game2.png</imgsrc>
   <drate>20</drate>
+<genre>Action</genre>
+<genre>Adventure</genre>
+<genre>Stretegy</genre>
 </game>
 <gamx e>
   <name>ATOM</name>
@@ -30,6 +35,8 @@
   <rdate>14/3/2014</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>10</drate>
+<genre>Action</genre>
+<genre>Puzzle</genre>
 </game>
 <game>
   <name>Dawn</name>
@@ -41,6 +48,7 @@
   <rdate>18/5/2013</rdate>
   <imgsrc>game4.png</imgsrc>
   <drate>15</drate>
+<genre>Action</genre>
 </game>
 <game>
   <name>War of the Dark</name>
@@ -51,6 +59,10 @@
   <rdate>4/6/2012</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>20</drate>
+<genre>Action</genre>
+<genre>Puzzle</genre>
+<genre>Strategy</genre>
+<genre>RPG</genre>
 </game>
 <game>
   <name>Dead Mansion</name>
@@ -60,6 +72,9 @@
   <rdate>2/8/2015</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>50</drate>
+<genre>Action</genre>
+<genre>Strategy</genre>
+<genre>RPG</genre>
 </game>
 <game>
   <name>S1Z1</name>
@@ -71,6 +86,10 @@
   <rdate>15/3/2015</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>20</drate>
+<genre>Action</genre>
+<genre>Massive Multiplayer</genre>
+<genre>Stretegy</genre>
+<genre>RPG</genre>
 </game>
 <game>
   <name>Assasin's Fraternity: Days End</name>
@@ -81,6 +100,10 @@
   <rdate>12/9/2013</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>40</drate>
+<genre>Action</genre>
+<genre>Adventure</genre>
+<genre>Massive Multiplayer</genre>
+<genre>Singleplayer</genre>
 </game>
 <game>
   <name>Full-Life</name>
@@ -91,6 +114,10 @@
   <rdate>25/12/2015</rdate>
   <imgsrc></imgsrc>
   <drate>20</drate>
+<genre>Action</genre>
+<genre>Adventure</genre>
+<genre>Singleplayer</genre>
+<genre>Puzzle</genre>
 </game>
 <game>
   <name>Dark Life</name>
@@ -100,6 +127,10 @@
   <rdate>29/12/2014</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>50</drate>
+<genre>Action</genre>
+<genre>Adventure</genre>
+<genre>Casual</genre>
+<genre>Singleplayer</genre>
 </game>
 <game>
   <name>The Witch</name>
@@ -109,6 +140,10 @@
   <rdate>27/11/2014</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>30</drate>
+<genre>Action</genre>
+<genre>Strategy</genre>
+<genre>Casual</genre>
+<genre>Singleplayer</genre>
 </game>
 <game>
   <name>The Jungle</name>
@@ -118,6 +153,11 @@
   <rdate>22/7/2013</rdate>
   <imgsrc></imgsrc>
   <drate>0</drate>
+<genre>Action</genre>
+<genre>Casual</genre>
+<genre>Indie</genre>
+<genre>Adventure</genre>
+<genre>Singleplayer</genre>
 </game>
 <game>
   <name>Dirt Track</name>
@@ -127,6 +167,9 @@
   <rdate>25/12/2015</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>20</drate>
+  <genre>Action</genre>
+<genre>Puzzle</genre>
+<genre>Massive Multiplayer</genre>
 </game>
 <game>
   <name>Project Excel</name>
@@ -139,6 +182,9 @@
   <rdate>16/2/2014</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>10</drate>
+  <genre>Action</genre>
+<genre>Adventure</genre>
+<genre>Singleplayer</genre>
 </game>
 <game>
   <name>Mad Pain</name>
@@ -149,6 +195,9 @@
   <rdate>7/7/2012</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>20</drate>
+  <genre>Action</genre>
+  <genre>Indie</genre>
+<genre>Singleplayer</genre>
 </game>
 <game>
   <name>Call Of Force</name>
@@ -159,6 +208,10 @@
   <rdate>14/11/2013</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>20</drate>
+  <genre>Action</genre>
+  <genre>Adventure</genre>
+  <genre>Indie</genre>
+  <genre>Massive Multiplayer</genre>
 </game>
 <game>
   <name>Darkest Game</name>
@@ -169,6 +222,10 @@
   <rdate>22/1/2015</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>10</drate>
+  <genre>Casual</genre>
+  <genre>Puzzle</genre>
+  <genre>Indie</genre>
+  <genre>Singleplayer</genre>
 </game>
 <game>
   <name>Just Because 3</name>
@@ -178,6 +235,10 @@
   <rdate>10/10/2014</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>45</drate>
+  <genre>Casual</genre>
+  <genre>Adventure</genre>
+  <genre>Action</genre>
+  <genre>Singleplayer</genre>
 </game>
 <game>
   <name>Shadowsprint Hong Kong</name>
@@ -188,6 +249,9 @@
   <rdate>20/11/2014</rdate>
   <imgsrc></imgsrc>
   <drate>20</drate>
+  <genre>Action</genre>
+  <genre>Race</genre>
+  <genre>Singleplayer</genre>
 </game>
 <game>
   <name>Age of Extinction</name>
@@ -198,6 +262,10 @@
   <rdate>13/8/2014</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>30</drate>
+  <genre>Strategy</genre>
+  <genre>Casual</genre>
+  <genre>Action</genre>
+  <genre>Massive Multiplayer</genre>
 </game>
 <game>
   <name>Deathless SEA</name>
@@ -209,6 +277,10 @@
   <rdate>23/10/2015</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>10</drate>
+  <genre>Strategy</genre>
+  <genre>Casual</genre>
+  <genre>Adventure</genre>
+  <genre>Massive Multiplayer</genre>
 </game>
 <game>
   <name>Battleground : Combat fleet</name>
@@ -219,6 +291,10 @@
   <rdate>12/12/2015</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>20</drate>
+  <genre>Indie</genre>
+  <genre>Casual</genre>
+  <genre>Adventure</genre>
+  <genre>Singleplayer</genre>
 </game>
 <game>
   <name>Fallcry</name>
@@ -228,6 +304,9 @@
   <rdate>16/6/2015</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>0</drate>
+  <genre>Action</genre>
+  <genre>Adventure</genre>
+  <genre>Singleplayer</genre>
 </game>
 <game>
   <name>Goat Surgeon</name>
@@ -237,6 +316,10 @@
   <rdate>6/11/2011</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>10</drate>
+  <genre>Indie</genre>
+  <genre>Puzzle</genre>
+  <genre>Casual</genre>
+  <genre>Singleplayer</genre>
 </game>
 <game>
   <name>Links Legend</name>
@@ -246,6 +329,10 @@
   <rdate>29/10/2015</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>30</drate>
+  <genre>Indie</genre>
+  <genre>Adventure</genre>
+  <genre>Casual</genre>
+  <genre>Singleplayer</genre>
 </game>
 <game>
   <name>Castle Crashers</name>
@@ -256,6 +343,10 @@
   <rdate>26/10/2015</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>0</drate>
+  <genre>Strategy</genre>
+  <genre>Action</genre>
+  <genre>Casual</genre>
+  <genre>Massive Multiplayer</genre>
 </game>
 <game>
   <name>FTS: Faster Than Sound</name>
@@ -267,6 +358,9 @@
   <rdate>17/4/2012</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>40</drate>
+  <genre>Casual</genre>
+  <genre>Singleplayer</genre>
+  <genre>Race</genre>
 </game>
 <game>
   <name>GO!</name>
@@ -277,6 +371,9 @@
   <rdate>12/4/2013</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>10</drate>
+  <genre>Casual</genre>
+  <genre>Singleplayer</genre>
+  <genre>Indie</genre>
 </game>
 <game>
   <name>TANOS</name>
@@ -288,6 +385,11 @@
   <rdate>21/9/2014</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>20</drate>
+  <drate>10</drate>
+  <genre>Action</genre>
+  <genre>Puzzle</genre>
+  <genre>Indie</genre>
+  <genre>Singleplayer</genre>
 </game>
 <game>
   <name>Tom Robin</name>
@@ -299,6 +401,10 @@
   <rdate>12/5/2015</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>30</drate>
+  <drate>10</drate>
+  <genre>Action</genre>
+  <genre>Singleplayer</genre>
+  <genre>Adventure</genre>
 </game>
 <game>
   <name>Tomb Scavenger</name>
@@ -308,6 +414,10 @@
   <rdate>20/7/2014</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>0</drate>
+  <genre>Action</genre>
+  <genre>Adventure</genre>
+  <genre>Singleplayer</genre>
+  <genre>Indie</genre>
 </game>
 <game>
   <name>Origami and the Blind Forest</name>
@@ -318,6 +428,10 @@
   <rdate>2/12/2015</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>20</drate>
+  <genre>Adventure</genre>
+  <genre>Singleplayer</genre>
+  <genre>Indie</genre>
+  <genre>Casual</genre>
 </game>
 <game>
   <name>Team Destiny</name>
@@ -329,4 +443,6 @@
   <rdate>21/11/2015</rdate>
   <imgsrc>game3.png</imgsrc>
   <drate>0</drate>
+  <genre>Massive Multiplayer</genre>
+  <genre>Action</genre>
 </game>

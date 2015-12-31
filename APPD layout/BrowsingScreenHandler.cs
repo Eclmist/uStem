@@ -35,6 +35,8 @@ namespace APPD_layout
                     }
                 }
             }
+
+            gamesListPanel.Refresh();
         }
 
         public void PopulateGameList(Catalogue catalogue)
@@ -45,6 +47,9 @@ namespace APPD_layout
             {
                 gamesListPanel.Controls.Add(GenerateGamePanel(game));
             }
+
+            gamesListPanel.Refresh();
+
         }
 
         public void PopulateGenreList(GenreContainer genre)
@@ -78,6 +83,7 @@ namespace APPD_layout
             panel.Name = "panel" + gameref.Name;
             panel.Size = new Size(307, 208);
             panel.TabIndex = 0;
+            panel.BackColor = Color.FromArgb(0, Color.Black);
 
             return panel;
         }
@@ -97,6 +103,8 @@ namespace APPD_layout
             label.Text = gameref.Name;
             label.Click += Store.gameLabelClickHandler;
             label.Tag = gameref;
+            label.BackColor = Color.FromArgb(0, Color.Black);
+
 
             return label;
         }
