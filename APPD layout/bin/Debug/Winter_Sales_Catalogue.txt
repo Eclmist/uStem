@@ -1,0 +1,430 @@
+<cost>45.90</cost>
+<rdate>12/12/2013</rdate>
+<imgsrc>game1.png</imgsrc>
+<drate>10</drate>
+<genre>Action</genre>
+<genre>Adventure</genre>
+</game>
+<game>
+  <name>BIOBLOW</name>
+  <desc>Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth,
+ a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia.</desc>
+  <cost>35.90</cost>
+  <rdate>4/11/2013</rdate>
+  <imgsrc>game2.png</imgsrc>
+  <drate>20</drate>
+<genre>Action</genre>
+<genre>Adventure</genre>
+<genre>Stretegy</genre>
+</game>
+<game>
+  <name>ATOM</name>
+  <desc>ATOM (Ancient Territory Of Mystery) is one of the most successful roguelike games ever created, boasting a brilliant mix of story, RPG, exploration, and intensely strategic and flexible combat. 
+  </desc>
+  <cost>50.00</cost>
+  <rdate>14/3/2014</rdate>
+  <imgsrc>game3.png</imgsrc>
+  <drate>10</drate>
+<genre>Action</genre>
+<genre>Puzzle</genre>
+</game>
+<game>
+  <name>Dawn</name>
+  <desc>Deep under the central desert of Kronus, a vast honeycomb of skull-lined tunnels and funeral chambers house the awakening Necron menace. 
+  Eons ago, these were the boulevards and squares of a great necropolis built to house the bones of the races who had fallen to the Necrons, 
+  and ultimately were where the Necrons themselves retire to spend eternity. Over millions of years, sand and rock had covered it all until ill-fated 
+  excavations awoke the deathless. </desc>
+  <cost>13.95</cost>
+  <rdate>18/5/2013</rdate>
+  <imgsrc>game4.png</imgsrc>
+  <drate>15</drate>
+<genre>Action</genre>
+</game>
+<game>
+  <name>War of the Dark</name>
+  <desc>It is four thousand years before the Galactic Empire and hundreds of Knights have fallen in battle against the ruthless Sith. 
+  You are the last hope of the Knight Order. Can you master the awesome power of the Force on your quest to save the Republic? 
+  Or will you fall to the lure of the dark side? Hero or villain, saviour or conqueror... you alone will determine the destiny of the entire universe! </desc>
+  <cost>50.90</cost>
+  <rdate>4/6/2012</rdate>
+  <imgsrc>game5.png</imgsrc>
+  <drate>20</drate>
+<genre>Action</genre>
+<genre>Puzzle</genre>
+<genre>Strategy</genre>
+<genre>RPG</genre>
+</game>
+<game>
+  <name>Dead Mansion</name>
+  <desc>Dead Realm is a creepy, multiplayer action game with beautiful, immersive environments. 
+  You can play as either a Ghost or a Human character and work with your friends to run, hide, surviveÅEor die. </desc>
+  <cost>49.90</cost>
+  <rdate>2/8/2015</rdate>
+  <imgsrc>game6.png</imgsrc>
+  <drate>50</drate>
+<genre>Action</genre>
+<genre>Strategy</genre>
+<genre>RPG</genre>
+</game>
+<game>
+  <name>S1Z1</name>
+  <desc>The S1Z1 development team will continue to create new features and may make significant changes based on the needs of the game. 
+  Those who choose to purchase Early Access should anticipate an evolving feature set, bugs, incomplete content, missing features, 
+  and potentially game breaking issues. Early Access is designed for those wishing to support the ongoing development of H1Z1 and be a part of shaping its future. 
+</desc>
+  <cost>85.90</cost>
+  <rdate>15/3/2015</rdate>
+  <imgsrc>game7.png</imgsrc>
+  <drate>20</drate>
+<genre>Action</genre>
+<genre>Massive Multiplayer</genre>
+<genre>Stretegy</genre>
+<genre>RPG</genre>
+</game>
+<game>
+  <name>Assasin's Fraternity: Days End</name>
+  <desc>London, 1868. In the heart of the Industrial Revolution, lead your underworld organization and grow your influence to fight 
+  those who exploit the less privileged.
+</desc>
+  <cost>79.50</cost>
+  <rdate>12/9/2013</rdate>
+  <imgsrc>game8.png</imgsrc>
+  <drate>40</drate>
+<genre>Action</genre>
+<genre>Adventure</genre>
+<genre>Massive Multiplayer</genre>
+<genre>Singleplayer</genre>
+</game>
+<game>
+  <name>Full-Life</name>
+  <desc>1998. Full-Life sends a shock through the game industry with its combination of pounding action and continuous, immersive storytelling. 
+  Valve's debut title wins more than 50 game-of-the-year awards on its way to being named "Best PC Game Ever" by PC Gamer, and launches a franchise 
+  with more than eight million retail units sold worldwide.</desc>
+  <cost>60.00</cost>
+  <rdate>25/12/2015</rdate>
+  <imgsrc>game9.png</imgsrc>
+  <drate>20</drate>
+<genre>Action</genre>
+<genre>Adventure</genre>
+<genre>Singleplayer</genre>
+<genre>Puzzle</genre>
+</game>
+<game>
+  <name>Dark Life</name>
+  <desc>Dark Life: Prepare to Die Edition will include an untold chapter in the world of Lordran.
+  Sent back to the past, player will discover the story when Knight Artorias still lives. </desc>
+  <cost>48.90</cost>
+  <rdate>29/12/2014</rdate>
+  <imgsrc>game10.png</imgsrc>
+  <drate>50</drate>
+<genre>Action</genre>
+<genre>Adventure</genre>
+<genre>Casual</genre>
+<genre>Singleplayer</genre>
+</game>
+<game>
+  <name>The Witch</name>
+  <desc>The Witcher: Wild Hunt is a story-driven, next-generation open world role-playing game set in a
+  visually stunning fantasy universe full of meaningful choices and impactful consequences.</desc>
+  <cost>69.90</cost>
+  <rdate>27/11/2014</rdate>
+  <imgsrc>game11.png</imgsrc>
+  <drate>30</drate>
+<genre>Action</genre>
+<genre>Strategy</genre>
+<genre>Casual</genre>
+<genre>Singleplayer</genre>
+</game>
+<game>
+  <name>Dirt Track</name>
+  <desc>Built by Codemasters and road tested over 60 million miles by the Dirt community, Dirt Track 
+  is the ultimate rally experience. It captures the essence of what makes rally unique like no other game.</desc>
+  <cost>47.90</cost>
+  <rdate>25/12/2015</rdate>
+  <imgsrc>game13.png</imgsrc>
+  <drate>20</drate>
+  <genre>Action</genre>
+<genre>Puzzle</genre>
+<genre>Massive Multiplayer</genre>
+</game>
+<game>
+  <name>Project Excel</name>
+  <desc>Project Excel is the ultimate driver journey!
+  Guided, tested, and approved by a passionate community of racing fans and real-life drivers, Project CARS represents the next-generation of racing simulation as the ultimate combination of fan desire and developer expertise.
+  Discover an unrivaled immersion fuelled by world-class graphics and handling that allows you to truly feel the road. Create a driver, pick from a huge variety of motorsports in a dynamic career mode and write your own tale in an intense online multiplayer.
+  Featuring the largest track roster of any recent racing game with a ground-breaking dynamic time of day & weather system, deep tuning & pit stop functionality, and support for Oculus Rift and 12K ultra HD resolution, Project CARS leaves the competition behind in the dust.
+  </desc>
+  <cost>55.00</cost>
+  <rdate>16/2/2014</rdate>
+  <imgsrc>game14.png</imgsrc>
+  <drate>10</drate>
+  <genre>Casual</genre>
+<genre>Race</genre>
+<genre>Massive Multiplayer</genre>
+</game>
+<game>
+  <name>Mad Pain</name>
+  <desc>Become Mad Pain, the lone warrior in a savage post-apocalyptic world where cars are the key to survival. In this action-packed, open world, third person action game, you must fight to stay alive in The Wasteland,
+    using brutal on-ground and vehicular against vicious gangs of bandits. A reluctant hero with an instinct for survival, Max wants nothing more than to leave the madness behind and find solace in the storied ìPlains of Silence.ÅE
+    Players are challenged with treacherous missions as they scavenge the dangerous landscape for supplies to build the ultimate combat vehicle.</desc>
+  <cost>78.50</cost>
+  <rdate>7/7/2012</rdate>
+  <imgsrc>game15.png</imgsrc>
+  <drate>20</drate>
+  <genre>Action</genre>
+<genre>Adventure</genre>
+  <genre>Indie</genre>
+<genre>Singleplayer</genre>
+</game>
+<game>
+  <name>Call Of Force</name>
+  <desc>Call Of Force can be played entirely online, and for the first time each of the offerings has its own unique player XP and progression systems. The title ushers in an unprecedented level of innovation, including jaw-dropping environments,
+    never before experienced weaponry and abilities, and the introduction of a new, improved fluid movement system. All of this is brought to life by advanced technology custom crafted for this title, including new AI and animation systems,
+    and graphics that redefine the standards Call of Duty fans have come to expect from the critically-acclaimed series, with cutting edge lighting systems and visual effects.</desc>
+  <cost>21.90</cost>
+  <rdate>14/11/2013</rdate>
+  <imgsrc>game16.png</imgsrc>
+  <drate>20</drate>
+  <genre>Action</genre>
+  <genre>Adventure</genre>
+  <genre>Indie</genre>
+  <genre>Massive Multiplayer</genre>
+</game>
+<game>
+  <name>Darkest Game</name>
+  <desc>Darkest Game is a challenging gothic roguelike turn-based RPG about the psychological stresses of adventuring.
+  Recruit, train, and lead a team of flawed heroes through twisted forests, forgotten warrens, ruined crypts, and beyond. You'll battle not only unimaginable foes, but stress, famine, disease, and the ever-encroaching dark. Uncover strange mysteries, and pit the heroes against an array of fearsome monsters with an innovative strategic turn-based combat system.
+  </desc>
+  <cost>50.50</cost>
+  <rdate>22/1/2015</rdate>
+  <imgsrc>game17.png</imgsrc>
+  <drate>10</drate>
+  <genre>Casual</genre>
+  <genre>Puzzle</genre>
+  <genre>Indie</genre>
+  <genre>Singleplayer</genre>
+</game>
+<game>
+  <name>Just Because 3</name>
+  <desc>The Mediterranean republic of Medici is suffering under the brutal control of General Di Ravello, a dictator with an insatiable appetite for power. 
+  Enter Rico Rodriguez, a man on a mission to destroy the Generalís hold on power by any means necessary. With over 400 square miles of complete freedom from sky to seabed and a huge arsenal of weaponry, gadgets and vehicles, prepare to unleash chaos in the most creative and explosive ways you can imagine.</desc>
+  <cost>75.90</cost>
+  <rdate>10/10/2014</rdate>
+  <imgsrc>game18.png</imgsrc>
+  <drate>45</drate>
+  <genre>Casual</genre>
+  <genre>Adventure</genre>
+  <genre>Action</genre>
+  <genre>Singleplayer</genre>
+</game>
+<game>
+  <name>Shadowsprint Hong Kong</name>
+  <desc>Shadowrun: Hong Kong is the third standalone game in Harebrained SchemesÅEcritically-acclaimed Shadowrun cRPG series.
+    Experience the most impressive Shadowrun RPG yet with an all new crew, expanded magic and cyberware,
+    a completely revamped Matrix, an upgraded release of the Shadowrun Editor, and much more!</desc>
+  <cost>60.50</cost>
+  <rdate>20/11/2014</rdate>
+  <imgsrc>game19.png</imgsrc>
+  <drate>20</drate>
+  <genre>Action</genre>
+  <genre>Race</genre>
+  <genre>Singleplayer</genre>
+</game>
+<game>
+  <name>Age of Extinction</name>
+  <desc>The Age of Extinction is an experiment, an attempt to explore a different direction, taking you back to the PnP roots of the genre. It doesnít mean that the game is awesome.
+    In fact, there is a good chance that you wonít like it, precisely because we took too many liberties with the established design.
+  </desc>
+  <cost>46.50</cost>
+  <rdate>13/8/2014</rdate>
+  <imgsrc>game20.png</imgsrc>
+  <drate>30</drate>
+  <genre>Strategy</genre>
+  <genre>Casual</genre>
+  <genre>Action</genre>
+  <genre>Massive Multiplayer</genre>
+</game>
+<game>
+  <name>Deathless SEA</name>
+  <desc>Take the helm of your steamship and set sail for the unknown! Sunless Sea is a game of discovery, loneliness and frequent death, set in the award-winning Victorian Gothic universe of Fallen London.
+    If the giant crabs, sentient icebergs and swarms of bats donít get you, madness and cannibalism certainly will. But that old black ocean beckons, and thereís loot for the brave souls who dare to sail her.
+    Betray your crew, sell your soul to a Devil, marry your sweetheart. Survive long enough and youíll achieve your lifeís ambition.
+  </desc>
+  <cost>70.90</cost>
+  <rdate>23/10/2015</rdate>
+  <imgsrc>game21.png</imgsrc>
+  <drate>10</drate>
+  <genre>Strategy</genre>
+  <genre>Casual</genre>
+  <genre>Adventure</genre>
+  <genre>Massive Multiplayer</genre>
+</game>
+<game>
+  <name>Battleground : Combat fleet</name>
+  <desc>New vehicles like the ATV and a transport helicopter allow for all-new multiplayer tactics on the Battlefield. With the Frostbite-enabled Destruction 2.0 system,
+  you can take down entire buildings and create your own fire points by blasting holes through cover.
+  You can also compete in four-player teams in two squad-only game modes, fighting together to unlock exclusive awards and achievements.</desc>
+  <cost>40.00</cost>
+  <rdate>12/12/2015</rdate>
+  <imgsrc>game22.png</imgsrc>
+  <drate>20</drate>
+  <genre>Indie</genre>
+  <genre>Casual</genre>
+  <genre>Adventure</genre>
+  <genre>Singleplayer</genre>
+</game>
+<game>
+  <name>Goat Surgeon</name>
+  <desc>Goat Surgeon is the latest in goat simulation technology, bringing next-gen goat simulation to YOU.
+  You no longer have to fantasize about being a goat, your dreams have finally come true! WASD to write history. </desc>
+  <cost>39.90</cost>
+  <rdate>6/11/2011</rdate>
+  <imgsrc>game24.png</imgsrc>
+  <drate>10</drate>
+  <genre>Indie</genre>
+  <genre>Puzzle</genre>
+  <genre>Casual</genre>
+  <genre>Singleplayer</genre>
+</game>
+<game>
+  <name>Links Legend</name>
+  <desc>Links Legend is a dungeon crawling role playing game with an oldschool heart but a modern execution.
+  A group of prisoners are sentenced to certain death by exiling them to the secluded Mount Grimrock for vile crimes they may or may not have committed. </desc>
+  <cost>70.90</cost>
+  <rdate>29/10/2015</rdate>
+  <imgsrc>game25.png</imgsrc>
+  <drate>30</drate>
+  <genre>Indie</genre>
+  <genre>Adventure</genre>
+  <genre>Casual</genre>
+  <genre>Singleplayer</genre>
+</game>
+<game>
+  <name>FTS: Faster Than Sound</name>
+  <desc>The free expansion, FTS: Advanced Edition, is available now! Content additions include: new alien race, events, weapons, playable ships, drones, and more! 
+    Also adds additional musical tracks by Ben Prunty, and events by Tom Jubert and guest writer Chris Avellone.
+    If you already own FTL it should update the new content automatically. Advanced Edition is included free for anyone who purchases the game from this point forward.
+  </desc>
+  <cost>50.90</cost>
+  <rdate>17/4/2012</rdate>
+  <imgsrc>game27.png</imgsrc>
+  <drate>40</drate>
+  <genre>Casual</genre>
+  <genre>Singleplayer</genre>
+  <genre>Race</genre>
+</game>
+<game>
+  <name>GO!</name>
+  <desc>With GO! you can record and stream your gameplay, fullscreen Windows desktop, selected Windows desktop region, web player videos, music,
+    benchmark and display game framerates, add live audio co. momentary, add webcams and much more! With outstanding performance and sleek design Action! defines a new standard
+    of user experience for real-time gameplay recording and streaming software.</desc>
+  <cost>39.90</cost>
+  <rdate>12/4/2013</rdate>
+  <imgsrc>game28.png</imgsrc>
+  <drate>10</drate>
+  <genre>Casual</genre>
+  <genre>Singleplayer</genre>
+  <genre>Indie</genre>
+</game>
+<game>
+  <name>TANOS</name>
+  <desc>The Tanos Principle is a philosophical first-person puzzle game from Croteam, the creators of the legendary Serious Sam games, written by Tom Jubert (FTL, The Swapper) and Jonas Kyratzes (The Sea Will Claim Everything).
+    As if awakening from a deep sleep, you find yourself in a strange, contradictory world of ancient ruins and advanced technology. Tasked by your creator with solving a series of increasingly complex puzzles,
+    you must decide whether to have faith or to ask the difficult questions: Who are you? What is your purpose? And what are you going to do about it?
+  </desc>
+  <cost>49.50</cost>
+  <rdate>21/9/2014</rdate>
+  <imgsrc>game29.png</imgsrc>
+  <drate>20</drate>
+  <drate>10</drate>
+  <genre>Action</genre>
+  <genre>Puzzle</genre>
+  <genre>Indie</genre>
+  <genre>Singleplayer</genre>
+</game>
+<game>
+  <name>Tom Robin</name>
+  <desc>Tom Robin's Rainbow Seven Siege is the upcoming installment of the acclaimed first-person shooter franchise developed by the renowned Ubisoft Montreal studio.
+    Tom Robin's Rainbow Six Siege invites players to master the art of destruction. Intense close quarters confrontations, high lethality, tactics, team play, and explosive action are at the center of the experience. 
+    The gameplay sets a new bar for intense firefights and expert strategy in the rich legacy of past Tom Robin's Rainbow Six games.
+  </desc>
+  <cost>55.90</cost>
+  <rdate>12/5/2015</rdate>
+  <imgsrc>game30.png</imgsrc>
+  <drate>30</drate>
+  <drate>10</drate>
+  <genre>Action</genre>
+  <genre>Singleplayer</genre>
+  <genre>Adventure</genre>
+</game>
+<game>
+  <name>FTS: Faster Than Sound</name>
+  <desc>The free expansion, FTS: Advanced Edition, is available now! Content additions include: new alien race, events, weapons, playable ships, drones, and more! 
+    Also adds additional musical tracks by Ben Prunty, and events by Tom Jubert and guest writer Chris Avellone.
+    If you already own FTL it should update the new content automatically. Advanced Edition is included free for anyone who purchases the game from this point forward.
+  </desc>
+  <cost>50.90</cost>
+  <rdate>17/4/2012</rdate>
+  <imgsrc>game27.png</imgsrc>
+  <drate>40</drate>
+  <genre>Casual</genre>
+  <genre>Singleplayer</genre>
+  <genre>Race</genre>
+</game>
+<game>
+  <name>GO!</name>
+  <desc>With GO! you can record and stream your gameplay, fullscreen Windows desktop, selected Windows desktop region, web player videos, music,
+    benchmark and display game framerates, add live audio co. momentary, add webcams and much more! With outstanding performance and sleek design Action! defines a new standard
+    of user experience for real-time gameplay recording and streaming software.</desc>
+  <cost>39.90</cost>
+  <rdate>12/4/2013</rdate>
+  <imgsrc>game28.png</imgsrc>
+  <drate>10</drate>
+  <genre>Casual</genre>
+  <genre>Singleplayer</genre>
+  <genre>Indie</genre>
+</game>
+<game>
+  <name>TANOS</name>
+  <desc>The Tanos Principle is a philosophical first-person puzzle game from Croteam, the creators of the legendary Serious Sam games, written by Tom Jubert (FTL, The Swapper) and Jonas Kyratzes (The Sea Will Claim Everything).
+    As if awakening from a deep sleep, you find yourself in a strange, contradictory world of ancient ruins and advanced technology. Tasked by your creator with solving a series of increasingly complex puzzles,
+    you must decide whether to have faith or to ask the difficult questions: Who are you? What is your purpose? And what are you going to do about it?
+  </desc>
+  <cost>49.50</cost>
+  <rdate>21/9/2014</rdate>
+  <imgsrc>game29.png</imgsrc>
+  <drate>10</drate>
+  <genre>Action</genre>
+  <genre>Puzzle</genre>
+  <genre>Indie</genre>
+  <genre>Singleplayer</genre>
+</game>
+<game>
+  <name>Tom Robin</name>
+  <desc>Tom Robin's Rainbow Seven Siege is the upcoming installment of the acclaimed first-person shooter franchise developed by the renowned Ubisoft Montreal studio.
+    Tom Robin's Rainbow Six Siege invites players to master the art of destruction. Intense close quarters confrontations, high lethality, tactics, team play, and explosive action are at the center of the experience. 
+    The gameplay sets a new bar for intense firefights and expert strategy in the rich legacy of past Tom Robin's Rainbow Six games.
+  </desc>
+  <cost>55.90</cost>
+  <rdate>12/5/2015</rdate>
+  <imgsrc>game30.png</imgsrc>
+  <drate>30</drate>
+  <drate>10</drate>
+  <genre>Action</genre>
+  <genre>Singleplayer</genre>
+  <genre>Adventure</genre>
+</game>
+<game>
+  <name>Origami and the Blind Forest</name>
+  <desc>The forest of Nibel is dying. After a powerful storm sets a series of devastating events in motion, an unlikely hero must journey to find his courage and confront a dark nemesis to save his home. 
+  ìOri and the Blind ForestÅEtells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC. Featuring hand-painted artwork,
+  meticulously animated character performance, and a fully orchestrated score, ìOri and the Blind ForestÅEexplores a deeply emotional story about love and sacrifice, and the hope that exists in us all.</desc>
+  <cost>70.90</cost>
+  <rdate>2/12/2015</rdate>
+  <imgsrc>game32.png</imgsrc>
+  <drate>20</drate>
+  <genre>Adventure</genre>
+  <genre>Singleplayer</genre>
+  <genre>Indie</genre>
+  <genre>Casual</genre>
+</game>

@@ -8,7 +8,8 @@ using System.Windows.Forms;
 
 namespace APPD_layout
 {
-    public enum Page {
+    public enum Page
+    {
         Browsing,
         GameDetails,
         Cart,
@@ -18,8 +19,8 @@ namespace APPD_layout
     public partial class Store : Form
     {
         Panel[] panelList;
-        Page currentPage = Page.Browsing;
-        List<Page> pageHistroy = new List<Page>();
+        private Page currentPage = Page.Browsing;
+        private List<Page> pageHistroy = new List<Page>();
         Bitmap nullBitmap = new Bitmap(1, 1);
         Image backArrow; //TODO: add greying code to partial class after project is done
 
@@ -78,7 +79,7 @@ namespace APPD_layout
         {
 
             //currentPanel should be updated before this method is to be called
-            Panel targetPanel;     
+            Panel targetPanel;
 
             switch (currentPage)
             {
@@ -150,13 +151,19 @@ namespace APPD_layout
         private void GameClick(Games game)
         {
             NavButtonClick(Page.GameDetails);
+            //TODO: Code to modify gamedetails page
+            //CHECKPOINT: almost completed however, may add more things in the game details page
+            gamePicture.BackgroundImage = Image.FromFile("./img/" + game.Imgsrc);
+            gameDesc.Text = game.Desc;
+            gameReleaseDate.Text = game.ReleaseDate.ToString("dd / MM / yyyy");
+            gameCost.Text = game.Cost.ToString("0.00");
+            gameName.Text = "Buy "+ game.Name;
             groupBox1.Text = game.Name;
-            pictureBox8.BackgroundImage = Image.FromFile("./img/" + game.Imgsrc);
-            label29.Text = game.Desc;
-            label25.Text = game.ReleaseDate.ToString();
-            label24.Text = "Buy " + game.Name;
-            label22.Text = "S" + String.Format("{0:C}", Convert.ToInt32(game.Cost));
-            button2.Tag = game;
+            if (game.DiscountRate > 0)
+            {
+                discountRate.Text = "SPECIAL PROMOTION! Offer ends on " + game.ReleaseDate.AddDays(36).ToString("MMMM dd");
+            }
+            else discountRate.Visible = false;
         }
 
         private void LoadGameClickHandler()
@@ -187,7 +194,8 @@ namespace APPD_layout
         private void Item1_Click(object sender, EventArgs e)
         {
 
-        }private void Item2_Click(object sender, EventArgs e)
+        }
+        private void Item2_Click(object sender, EventArgs e)
         {
 
         }
@@ -278,14 +286,6 @@ namespace APPD_layout
             }
         }
 
-        private void UpdateCartButtonText()
-        {
-            if (Cart.gameCart.Count > 0)
-                button1.Text = "CART";
-            else
-                button1.Text = "CART(" + Cart.gameCart.Count + ")";
-        }
-
         private void label18_Click(object sender, EventArgs e)
         {
 
@@ -302,12 +302,6 @@ namespace APPD_layout
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            Cart.AddGamesToCart(((Games)((Button)sender).Tag));
-            UpdateCartButtonText();
-        }
-
-        private void label27_Click(object sender, EventArgs e)
         {
 
         }
