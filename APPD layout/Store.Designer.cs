@@ -93,20 +93,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.gamePicture = new System.Windows.Forms.PictureBox();
-            this.gameReleaseDate = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.gameDesc = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.discountRate = new System.Windows.Forms.Label();
-            this.gameName = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.gameCost = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel11.SuspendLayout();
@@ -121,11 +124,14 @@
             this.panel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gamePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -315,9 +321,9 @@
             this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel10.Controls.Add(this.panel11);
-            this.panel10.Location = new System.Drawing.Point(10, 467);
+            this.panel10.Location = new System.Drawing.Point(10, 459);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(884, 26);
+            this.panel10.Size = new System.Drawing.Size(884, 34);
             this.panel10.TabIndex = 27;
             this.panel10.Visible = false;
             // 
@@ -768,9 +774,9 @@
             this.panel9.Controls.Add(this.label39);
             this.panel9.Controls.Add(this.label40);
             this.panel9.Controls.Add(this.comboBox1);
-            this.panel9.Location = new System.Drawing.Point(10, 481);
+            this.panel9.Location = new System.Drawing.Point(10, 476);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(884, 12);
+            this.panel9.Size = new System.Drawing.Size(884, 17);
             this.panel9.TabIndex = 28;
             this.panel9.Visible = false;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
@@ -851,46 +857,45 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.AutoSize = true;
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox1.Controls.Add(this.gamePicture);
-            this.groupBox1.Controls.Add(this.gameReleaseDate);
-            this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.label28);
+            this.groupBox1.Controls.Add(this.flowLayoutPanel3);
+            this.groupBox1.Controls.Add(this.pictureBox8);
             this.groupBox1.Controls.Add(this.pictureBox9);
-            this.groupBox1.Controls.Add(this.gameDesc);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Azure;
             this.groupBox1.Location = new System.Drawing.Point(18, 22);
+            this.groupBox1.MaximumSize = new System.Drawing.Size(837, 9001);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(846, 425);
+            this.groupBox1.Size = new System.Drawing.Size(832, 426);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ADOM (Ancient Domains Of Mystery)";
             // 
             // pictureBox8
             // 
-            this.gamePicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
-            this.gamePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gamePicture.Location = new System.Drawing.Point(548, 34);
-            this.gamePicture.Name = "pictureBox8";
-            this.gamePicture.Size = new System.Drawing.Size(271, 158);
-            this.gamePicture.TabIndex = 29;
-            this.gamePicture.TabStop = false;
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(548, 34);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(271, 158);
+            this.pictureBox8.TabIndex = 29;
+            this.pictureBox8.TabStop = false;
             // 
             // label25
             // 
-            this.gameReleaseDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(73)))));
-            this.gameReleaseDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameReleaseDate.ForeColor = System.Drawing.Color.Azure;
-            this.gameReleaseDate.Image = ((System.Drawing.Image)(resources.GetObject("label25.Image")));
-            this.gameReleaseDate.Location = new System.Drawing.Point(640, 349);
-            this.gameReleaseDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.gameReleaseDate.Name = "label25";
-            this.gameReleaseDate.Size = new System.Drawing.Size(98, 18);
-            this.gameReleaseDate.TabIndex = 28;
-            this.gameReleaseDate.Text = "17, Nov 2015";
+            this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(73)))));
+            this.label25.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Azure;
+            this.label25.Image = ((System.Drawing.Image)(resources.GetObject("label25.Image")));
+            this.label25.Location = new System.Drawing.Point(102, 0);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(138, 18);
+            this.label25.TabIndex = 28;
+            this.label25.Text = "17, Nov 2015";
             // 
             // label26
             // 
@@ -898,7 +903,7 @@
             this.label26.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Azure;
             this.label26.Image = ((System.Drawing.Image)(resources.GetObject("label26.Image")));
-            this.label26.Location = new System.Drawing.Point(548, 349);
+            this.label26.Location = new System.Drawing.Point(2, 0);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(100, 18);
@@ -911,12 +916,13 @@
             this.label27.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.label27.Image = ((System.Drawing.Image)(resources.GetObject("label27.Image")));
-            this.label27.Location = new System.Drawing.Point(636, 324);
+            this.label27.Location = new System.Drawing.Point(88, 0);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(86, 18);
             this.label27.TabIndex = 26;
             this.label27.Text = "Very Positive";
+            this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
             // label28
             // 
@@ -924,7 +930,7 @@
             this.label28.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Azure;
             this.label28.Image = ((System.Drawing.Image)(resources.GetObject("label28.Image")));
-            this.label28.Location = new System.Drawing.Point(548, 324);
+            this.label28.Location = new System.Drawing.Point(2, 0);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(88, 18);
@@ -943,49 +949,51 @@
             // 
             // label29
             // 
-            this.gameDesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(73)))));
-            this.gameDesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameDesc.ForeColor = System.Drawing.Color.Azure;
-            this.gameDesc.Image = ((System.Drawing.Image)(resources.GetObject("label29.Image")));
-            this.gameDesc.Location = new System.Drawing.Point(548, 199);
-            this.gameDesc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.gameDesc.Name = "label29";
-            this.gameDesc.Size = new System.Drawing.Size(272, 118);
-            this.gameDesc.TabIndex = 24;
-            this.gameDesc.Text = resources.GetString("label29.Text");
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(73)))));
+            this.label29.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Azure;
+            this.label29.Image = ((System.Drawing.Image)(resources.GetObject("label29.Image")));
+            this.label29.Location = new System.Drawing.Point(5, 5);
+            this.label29.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.label29.MaximumSize = new System.Drawing.Size(272, 99999);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(259, 128);
+            this.label29.TabIndex = 24;
+            this.label29.Text = resources.GetString("label29.Text");
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel8.Controls.Add(this.discountRate);
-            this.panel8.Controls.Add(this.gameName);
-            this.panel8.Location = new System.Drawing.Point(18, 418);
+            this.panel8.Controls.Add(this.label23);
+            this.panel8.Controls.Add(this.label24);
+            this.panel8.Location = new System.Drawing.Point(32, 418);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(563, 83);
+            this.panel8.Size = new System.Drawing.Size(522, 66);
             this.panel8.TabIndex = 26;
             // 
             // label23
             // 
-            this.discountRate.AutoSize = true;
-            this.discountRate.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discountRate.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.discountRate.Location = new System.Drawing.Point(13, 40);
-            this.discountRate.Name = "label23";
-            this.discountRate.Size = new System.Drawing.Size(274, 15);
-            this.discountRate.TabIndex = 1;
-            this.discountRate.Text = "SPECIAL PROMOTION! Offer ends 24 November";
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.label23.Location = new System.Drawing.Point(13, 40);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(274, 15);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "SPECIAL PROMOTION! Offer ends 24 November";
             // 
             // label24
             // 
-            this.gameName.AutoSize = true;
-            this.gameName.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameName.ForeColor = System.Drawing.Color.Azure;
-            this.gameName.Location = new System.Drawing.Point(13, 18);
-            this.gameName.Name = "label24";
-            this.gameName.Size = new System.Drawing.Size(390, 22);
-            this.gameName.TabIndex = 0;
-            this.gameName.Text = "Buy ADOM (Ancient Domains Of Mystery)";
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Azure;
+            this.label24.Location = new System.Drawing.Point(13, 18);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(390, 22);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Buy ADOM (Ancient Domains Of Mystery)";
             // 
             // button2
             // 
@@ -994,7 +1002,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(202)))), ((int)(((byte)(33)))));
-            this.button2.Location = new System.Drawing.Point(457, 489);
+            this.button2.Location = new System.Drawing.Point(430, 470);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 32);
@@ -1005,15 +1013,15 @@
             // 
             // label22
             // 
-            this.gameCost.BackColor = System.Drawing.Color.Black;
-            this.gameCost.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameCost.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.gameCost.Location = new System.Drawing.Point(388, 489);
-            this.gameCost.Name = "label22";
-            this.gameCost.Size = new System.Drawing.Size(69, 32);
-            this.gameCost.TabIndex = 27;
-            this.gameCost.Text = "S$13.50";
-            this.gameCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label22.BackColor = System.Drawing.Color.Black;
+            this.label22.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label22.Location = new System.Drawing.Point(361, 470);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(69, 32);
+            this.label22.TabIndex = 27;
+            this.label22.Text = "S$13.50";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel7
             // 
@@ -1021,7 +1029,7 @@
             this.panel7.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel7.Controls.Add(this.gameCost);
+            this.panel7.Controls.Add(this.label22);
             this.panel7.Controls.Add(this.button2);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.groupBox1);
@@ -1031,6 +1039,41 @@
             this.panel7.Size = new System.Drawing.Size(884, 420);
             this.panel7.TabIndex = 23;
             this.panel7.Visible = false;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoSize = true;
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(45)))), ((int)(((byte)(65)))));
+            this.flowLayoutPanel3.Controls.Add(this.label29);
+            this.flowLayoutPanel3.Controls.Add(this.panel2);
+            this.flowLayoutPanel3.Controls.Add(this.panel3);
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(548, 198);
+            this.flowLayoutPanel3.MaximumSize = new System.Drawing.Size(271, 9999);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(271, 194);
+            this.flowLayoutPanel3.TabIndex = 30;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label28);
+            this.panel2.Controls.Add(this.label27);
+            this.panel2.Location = new System.Drawing.Point(5, 143);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(242, 23);
+            this.panel2.TabIndex = 29;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label26);
+            this.panel3.Controls.Add(this.label25);
+            this.panel3.Location = new System.Drawing.Point(5, 166);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(242, 23);
+            this.panel3.TabIndex = 30;
             // 
             // Store
             // 
@@ -1076,13 +1119,18 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gamePicture)).EndInit();
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1150,21 +1198,24 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox gamePicture;
-        private System.Windows.Forms.Label gameReleaseDate;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label gameDesc;
+        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label discountRate;
-        private System.Windows.Forms.Label gameName;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label gameCost;
+        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
