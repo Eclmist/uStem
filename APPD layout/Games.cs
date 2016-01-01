@@ -12,12 +12,19 @@ namespace APPD_layout
         private double cost, discountrRate;
         private DateTime releaseDate;
         private List<Genre> genres;
+        private int quantity;
 
         #region Accessors and Mutators
         public string Name
         {
             get { return name; }
             set { name = value; }
+        }
+
+        public int Quantity
+        {
+            get { return quantity; }
+            set { quantity = value; }
         }
 
         public string Desc
@@ -66,6 +73,7 @@ namespace APPD_layout
             discountrRate = 0;
             releaseDate = DateTime.MaxValue;
             genres = new List<Genre>();
+            quantity = 1;
         }
 
         public Games(string name, string desc, double cost, DateTime rdate, string imgsrc, double drate, List<Genre> genres)

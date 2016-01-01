@@ -12,82 +12,64 @@ namespace APPD_layout
     public class Cart : GenericContainer<Games>
     {
         FlowLayoutPanel cartListPanel;
-        public Cart(FlowLayoutPanel flowLayoutPanel)
+        Label subtotalLabel;
+        double subtotal;
+
+        public Cart(FlowLayoutPanel flowLayoutPanel, Label subtotalLabel)
         {
             cartListPanel = flowLayoutPanel;
+            this.subtotalLabel = subtotalLabel;
+            subtotal = 0;
         }
+
         public void PopulateGameCart()
         {
+            cartListPanel.Controls.Clear();
+
             foreach (Games game in GetContainer())
             {
-                cartListPanel.Controls.Add(GenerateGameInCart(game));
+                Panel p = ControlsGenerator.GenerateCartPanel(game);
+                ((Label)p.Controls.Find("remove", true)[0]).Click += Remove_Click;
+                cartListPanel.Controls.Add(p);
             }
-        }
-        public Panel GenerateGameInCart(Games gameref)
-        {
-            Panel panel = new Panel();
-
-            panel.Controls.Add(GameNameLabel(gameref));
-            panel.Controls.Add(GamePicturebox(gameref));
-            panel.Controls.Add(GameCostLabel(gameref));
-            panel.Size = new Size(870, 130);
-            panel.BackColor = Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            panel.TabIndex = 0;
-
-            return panel;
+            UpdateSubtotal();
         }
 
-        public Label GameNameLabel(Games gameref)
+        private void Remove_Click(object sender, EventArgs e)
         {
-            Label label = new Label();
+            if (((Games)((Label)sender).Tag).Quantity > 1)
+            {
+                ((Games)((Label)sender).Tag).Quantity--;
+            }
+            else
+            {
+                GetContainer().Remove((Games)((Label)sender).Tag);
+            }
 
-            label.AutoSize = true;
-            label.BackColor = Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(73)))));
-            label.Font = new Font("Arial", 9.75F, ((FontStyle)((FontStyle.Bold | FontStyle.Underline))), GraphicsUnit.Point, ((byte)(0)));
-            label.ForeColor = Color.WhiteSmoke;
-            label.Location = new Point(240, 19);
-            label.Margin = new Padding(2, 0, 2, 0);
-            label.Name = "Label" + gameref.Name;
-            label.Size = new Size(218, 16);
-            label.Text = gameref.Name;
-            label.Click += Store.gameLabelClickHandler;
-            label.Tag = gameref;
+            PopulateGameCart();
 
-            return label;
         }
 
-        public PictureBox GamePicturebox(Games gameref)
+        public void UpdateSubtotal()
         {
-            PictureBox picbox = new PictureBox();
-
-            picbox.BackgroundImage = Image.FromFile("./img/" + gameref.Imgsrc);
-            picbox.BackgroundImageLayout = ImageLayout.Stretch;
-            picbox.Location = new Point(10, 19);
-            picbox.Name = "Picbox" + gameref.Name;
-            picbox.Size = new Size(200, 120);
-            picbox.Click += Store.gamePicClickHandler;
-            picbox.Tag = gameref;
-
-            return picbox;
+            subtotal = 0;
+            foreach (Games game in GetContainer())
+            {
+                subtotal +=  game.Cost;
+            }
+            subtotalLabel.Text = "S" + String.Format("{0:C}", subtotal);
         }
 
-        public Label GameCostLabel(Games gameref)
+        public override void AddToContainer(Games item)
         {
-            Label label = new Label();
-
-            label.AutoSize = true;
-            label.BackColor = Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(73)))));
-            label.Font = new Font("Arial", 9.75F, ((FontStyle)((FontStyle.Bold | FontStyle.Underline))), GraphicsUnit.Point, ((byte)(0)));
-            label.ForeColor = Color.WhiteSmoke;
-            label.Location = new Point(790, 19);
-            label.Margin = new Padding(2, 0, 2, 0);
-            label.Name = "Label" + gameref.Cost;
-            label.Size = new Size(218, 16);
-            label.Text = gameref.Cost.ToString("0.00");
-            label.Click += Store.gameLabelClickHandler;
-            label.Tag = gameref;
-
-            return label;
+            if (!GetContainer().Exists(x => x.Name.Equals(item.Name)))
+            {
+                base.AddToContainer(item);
+            }
+            else
+            {
+                GetContainer().Find(x => x.Name.Equals(item.Name)).Quantity ++;
+            }
         }
     }
 }

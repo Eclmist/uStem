@@ -59,7 +59,7 @@ namespace APPD_layout
 
             LoadGameClickHandler();
             BrowsingScreenHandler browsingScreenHandler = new BrowsingScreenHandler(this.flowLayoutPanel1, this.flowLayoutPanel2);
-            cart = new Cart(flowLayoutPanel4);
+            cart = new Cart(flowLayoutPanel7, label8);
             browsingScreenHandler.PopulateGameList(allGamesCatalogue);
             browsingScreenHandler.PopulateGenreSelector(listOfGenres);
         }
@@ -69,6 +69,9 @@ namespace APPD_layout
             flowLayoutPanel1.BackColor = Color.FromArgb(10, Color.Black);
             label5.BackColor = Color.FromArgb(0, Color.Black);
             label21.BackColor = Color.FromArgb(10, Color.Black);
+            panel11.BackColor = Color.FromArgb(70, Color.Black);
+            panel5.BackColor = Color.FromArgb(70, Color.Black);
+            panel10.BackColor = Color.FromArgb(70, Color.Black);
         }
 
         public void UpdatePageHistory()
@@ -157,7 +160,7 @@ namespace APPD_layout
             label29.Text = game.Desc;
             label25.Text = game.ReleaseDate.ToString("dd MMM yyyy");
             label24.Text = "Buy " + game.Name;
-            label22.Text = "S" + String.Format("{0:C}", Convert.ToInt32(game.Cost));
+            label22.Text = "S" + String.Format("{0:C}", game.Cost);
             button2.Tag = game;
             if (game.DiscountRate > 0)
             {
@@ -181,7 +184,8 @@ namespace APPD_layout
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            NavButtonClick(Page.Cart);
+            cart.PopulateGameCart();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -213,10 +217,6 @@ namespace APPD_layout
         {
 
         }
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            NavButtonClick(Page.Cart);
-        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -235,7 +235,6 @@ namespace APPD_layout
 
         private void button4_Click(object sender, EventArgs e)
         {
-            NavButtonClick(Page.Billing);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -316,9 +315,40 @@ namespace APPD_layout
             cart.AddToContainer(((Games)((Button)sender).Tag));
             UpdateCartButtonText();
         }
+
         private void panel10_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label18_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            NavButtonClick(Page.Browsing);
         }
     }
 }

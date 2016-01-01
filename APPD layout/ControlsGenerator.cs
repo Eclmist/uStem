@@ -100,5 +100,99 @@ namespace APPD_layout
             return button;
         }
 
+
+        #region cartpanel
+        public static Panel GenerateCartPanel(Games gameref)
+        {
+            Label name = new Label();
+            name.AutoSize = true;
+            name.BackColor = Color.Transparent;
+            name.Font = new Font("Calibri", 10F);
+            name.ForeColor = Color.LightSteelBlue;
+            name.Location = new Point(149, 25);
+            name.Name = "label9";
+            name.Size = new Size(46, 17);
+            name.Text = gameref.Name;
+
+            Label quantity = new Label();
+            quantity.AutoSize = true;
+            quantity.BackColor = Color.Transparent;
+            quantity.Font = new Font("Calibri", 10F);
+            quantity.ForeColor = Color.LightSteelBlue;
+            quantity.Location = new Point(149, 42);
+            quantity.Name = "label11";
+            quantity.Size = new Size(29, 17);
+            quantity.Text = "(x" + gameref.Quantity + ")";
+            if (gameref.Quantity <= 1)
+                quantity.Visible = false;
+
+            Label price = new Label();
+            price.Anchor = AnchorStyles.Top;
+            price.AutoSize = true;
+            price.BackColor = Color.Transparent;
+            price.Font = new Font("Calibri", 11F);
+            price.ForeColor = Color.LightSteelBlue;
+            price.Location = new Point(14, 0);
+            price.Name = "label10";
+            price.Size = new Size(74, 18);
+            price.Text = "S" + String.Format("{0:C}", gameref.Cost);
+            if (gameref.Quantity > 1)
+                price.Text += " x " + gameref.Quantity;
+
+            price.TextAlign = ContentAlignment.MiddleCenter;
+
+            Label remove = new Label();
+            remove.Anchor = AnchorStyles.Top;
+            remove.AutoSize = true;
+            remove.BackColor = Color.Transparent;
+            remove.Font = new Font("Calibri", 10F);
+            remove.ForeColor = Color.SlateGray;
+            remove.Location = new Point(34, 18);
+            remove.Name = "remove";
+            remove.Size = new Size(54, 17);
+            remove.Text = "Remove";
+            remove.Tag = gameref;
+
+            PictureBox pic = GenerateGamePicturebox(gameref);
+            pic.Location = new Point(16, 18);
+            pic.Size = new Size(118, 44);
+            pic.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            PictureBox platform = new PictureBox();
+            platform.Image = Image.FromFile("./img/Platform.png");
+            platform.Location = new Point(370, 15);
+            platform.Size = new Size(137, 34);
+            platform.SizeMode = PictureBoxSizeMode.AutoSize;
+            platform.BackColor = Color.Transparent;
+
+            FlowLayoutPanel costAndRemoveGroup = new FlowLayoutPanel();
+            costAndRemoveGroup.BackColor = Color.Transparent;
+            costAndRemoveGroup.Controls.Add(price);
+            costAndRemoveGroup.Controls.Add(remove);
+            costAndRemoveGroup.FlowDirection = FlowDirection.RightToLeft;
+            costAndRemoveGroup.Location = new Point(513, 18);
+            costAndRemoveGroup.Name = "flowLayoutPanel6";
+            costAndRemoveGroup.Size = new Size(91, 41);
+            costAndRemoveGroup.TabIndex = 36;
+
+            Panel panel = new Panel();
+            panel.Controls.Add(name);
+            panel.Controls.Add(costAndRemoveGroup);
+            panel.Controls.Add(pic);
+            panel.Controls.Add(quantity);
+            panel.Controls.Add(platform);
+            panel.ForeColor = SystemColors.InactiveCaption;
+            panel.Location = new Point(0, 2);
+            panel.Margin = new Padding(0, 2, 0, 2);
+            panel.Name = "panel4";
+            panel.Size = new Size(615, 80);
+            panel.TabIndex = 34;
+            panel.BackColor = Color.FromArgb(70, Color.Black);
+
+            return panel;
+        }
+
+        #endregion
+
     }
 }
