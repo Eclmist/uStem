@@ -9,29 +9,20 @@ using System.Windows.Forms;
 
 namespace APPD_layout
 {
-    public class Cart
+    public class Cart : GenericContainer<Games>
     {
         FlowLayoutPanel cartListPanel;
-        public static List<Games> gameCart = new List<Games>();
-
-        public static void AddGamesToCart(Games game)
-        {
-            gameCart.Add(game);
-        }
-
-        public void PopulateGameCart()
-        {
-            foreach (Games game in gameCart)
-            {
-                cartListPanel.Controls.Add(GenerateGameInCart(game));
-            }
-        }
-
         public Cart(FlowLayoutPanel flowLayoutPanel)
         {
             cartListPanel = flowLayoutPanel;
         }
-
+        public void PopulateGameCart()
+        {
+            foreach (Games game in GetContainer())
+            {
+                cartListPanel.Controls.Add(GenerateGameInCart(game));
+            }
+        }
         public Panel GenerateGameInCart(Games gameref)
         {
             Panel panel = new Panel();
@@ -39,8 +30,8 @@ namespace APPD_layout
             panel.Controls.Add(GameNameLabel(gameref));
             panel.Controls.Add(GamePicturebox(gameref));
             panel.Controls.Add(GameCostLabel(gameref));
-            panel.Location = new Point(3, 3);
-            panel.Size = new Size(884, 120);
+            panel.Size = new Size(870, 130);
+            panel.BackColor = Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             panel.TabIndex = 0;
 
             return panel;
@@ -54,7 +45,7 @@ namespace APPD_layout
             label.BackColor = Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(73)))));
             label.Font = new Font("Arial", 9.75F, ((FontStyle)((FontStyle.Bold | FontStyle.Underline))), GraphicsUnit.Point, ((byte)(0)));
             label.ForeColor = Color.WhiteSmoke;
-            label.Location = new Point(1, 6);
+            label.Location = new Point(240, 19);
             label.Margin = new Padding(2, 0, 2, 0);
             label.Name = "Label" + gameref.Name;
             label.Size = new Size(218, 16);
@@ -71,7 +62,7 @@ namespace APPD_layout
 
             picbox.BackgroundImage = Image.FromFile("./img/" + gameref.Imgsrc);
             picbox.BackgroundImageLayout = ImageLayout.Stretch;
-            picbox.Location = new Point(-1, 30);
+            picbox.Location = new Point(10, 19);
             picbox.Name = "Picbox" + gameref.Name;
             picbox.Size = new Size(200, 120);
             picbox.Click += Store.gamePicClickHandler;
@@ -88,11 +79,11 @@ namespace APPD_layout
             label.BackColor = Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(73)))));
             label.Font = new Font("Arial", 9.75F, ((FontStyle)((FontStyle.Bold | FontStyle.Underline))), GraphicsUnit.Point, ((byte)(0)));
             label.ForeColor = Color.WhiteSmoke;
-            label.Location = new Point(1, 6);
+            label.Location = new Point(790, 19);
             label.Margin = new Padding(2, 0, 2, 0);
             label.Name = "Label" + gameref.Cost;
             label.Size = new Size(218, 16);
-            label.Text = gameref.Name;
+            label.Text = gameref.Cost.ToString("0.00");
             label.Click += Store.gameLabelClickHandler;
             label.Tag = gameref;
 

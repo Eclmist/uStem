@@ -410,20 +410,6 @@
   <genre>Adventure</genre>
 </game>
 <game>
-  <name>FTS: Faster Than Sound</name>
-  <desc>The free expansion, FTS: Advanced Edition, is available now! Content additions include: new alien race, events, weapons, playable ships, drones, and more! 
-    Also adds additional musical tracks by Ben Prunty, and events by Tom Jubert and guest writer Chris Avellone.
-    If you already own FTL it should update the new content automatically. Advanced Edition is included free for anyone who purchases the game from this point forward.
-  </desc>
-  <cost>50.90</cost>
-  <rdate>17/4/2012</rdate>
-  <imgsrc>game27.png</imgsrc>
-  <drate>40</drate>
-  <genre>Casual</genre>
-  <genre>Singleplayer</genre>
-  <genre>Race</genre>
-</game>
-<game>
   <name>GO!</name>
   <desc>With GO! you can record and stream your gameplay, fullscreen Windows desktop, selected Windows desktop region, web player videos, music,
     benchmark and display game framerates, add live audio co. momentary, add webcams and much more! With outstanding performance and sleek design Action! defines a new standard

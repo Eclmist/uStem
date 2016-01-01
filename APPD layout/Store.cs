@@ -20,6 +20,7 @@ namespace APPD_layout
     {
         Panel[] panelList;
         Page currentPage = Page.Browsing;
+        Cart cart;
         List<Page> pageHistroy = new List<Page>();
         Bitmap nullBitmap = new Bitmap(1, 1);
         Image backArrow; //TODO: add greying code to partial class after project is done
@@ -28,7 +29,6 @@ namespace APPD_layout
 
         public static Catalogue allGamesCatalogue;
         Catalogue winterSalesCatalogue;
-
         public Store()
         {
             InitializeComponent();
@@ -59,6 +59,7 @@ namespace APPD_layout
 
             LoadGameClickHandler();
             BrowsingScreenHandler browsingScreenHandler = new BrowsingScreenHandler(this.flowLayoutPanel1, this.flowLayoutPanel2);
+            cart = new Cart(flowLayoutPanel4);
             browsingScreenHandler.PopulateGameList(allGamesCatalogue);
             browsingScreenHandler.PopulateGenreSelector(listOfGenres);
         }
@@ -154,7 +155,7 @@ namespace APPD_layout
             groupBox1.Text = game.Name;
             pictureBox8.BackgroundImage = Image.FromFile("./img/" + game.Imgsrc);
             label29.Text = game.Desc;
-            label25.Text = game.ReleaseDate.ToString();
+            label25.Text = game.ReleaseDate.ToString("dd MMM yyyy");
             label24.Text = "Buy " + game.Name;
             label22.Text = "S" + String.Format("{0:C}", Convert.ToInt32(game.Cost));
             button2.Tag = game;
@@ -163,7 +164,7 @@ namespace APPD_layout
                 label23.Text = "SPECIAL PROMOTION! Offer ends on " + game.ReleaseDate.AddDays(36).ToString("MMMM dd");
             }
             else
-                label23.Visible = false;
+                label23.Text = "Discounts not available in your region.";
 
         }
 
@@ -286,13 +287,13 @@ namespace APPD_layout
                 e.Handled = true;
             }
         }
-
+        //Increase the number on items in the cart
         private void UpdateCartButtonText()
         {
-            if (Cart.gameCart.Count < 1)
+            if (cart.GetContainer().Count < 1)
                 button1.Text = "CART";
             else
-                button1.Text = "CART(" + Cart.gameCart.Count + ")";
+                button1.Text = "CART(" + cart.GetContainer().Count + ")";
         }
 
         private void label18_Click(object sender, EventArgs e)
@@ -310,13 +311,12 @@ namespace APPD_layout
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Add_To_Cart_Click(object sender, EventArgs e)
         {
-            Cart.AddGamesToCart(((Games)((Button)sender).Tag));
+            cart.AddToContainer(((Games)((Button)sender).Tag));
             UpdateCartButtonText();
         }
-
-        private void label27_Click(object sender, EventArgs e)
+        private void panel10_Paint(object sender, PaintEventArgs e)
         {
 
         }
