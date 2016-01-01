@@ -26,7 +26,7 @@ namespace APPD_layout
 
         List<GenreContainer> listOfGenres;
 
-        Catalogue allGamesCatalogue;
+        public static Catalogue allGamesCatalogue;
         Catalogue winterSalesCatalogue;
 
         public Store()
