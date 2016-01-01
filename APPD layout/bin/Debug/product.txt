@@ -1,11 +1,9 @@
 <game>
 <name>Saints Column</name>
 <desc>The US President must save the Earth from alien overlord Zinyak using an arsenal of superpowers and strange weapons in the wildest open world game ever.
-  The epic conclusion to the game that changed all the rules! The Saints have gone from the crackhouse to the White House—but the Earth has been invaded and it’s up to you to free the world from Overlord Zinyak and his alien empire.
-  With homies new and old by your side, and an arsenal of superpowers and strange weapons, you must save the world in the wildest open world game ever!
 </desc>
 <cost>45.90</cost>
-<rdate>12/2/2013</rdate>
+<rdate>12/12/2013</rdate>
 <imgsrc>game1.png</imgsrc>
 <drate>10</drate>
 <genre>Action</genre>
@@ -13,9 +11,8 @@
 </game>
 <game>
   <name>BIOBLOW</name>
-  <desc>Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth, a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia.
-  Forced to trust one another, Booker and Elizabeth form a powerful bond during their daring escape.
-  Together, they learn to harness an expanding arsenal of weapons and abilities, as they fight on zeppelins in the clouds, along high-speed Sky-Lines, and down in the streets of Columbia, all while surviving the threats of the air-city and uncovering its dark secret.</desc>
+  <desc>Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth,
+ a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia.</desc>
   <cost>35.90</cost>
   <rdate>4/11/2013</rdate>
   <imgsrc>game2.png</imgsrc>
@@ -27,9 +24,6 @@
 <gamx e>
   <name>ATOM</name>
   <desc>ATOM (Ancient Territory Of Mystery) is one of the most successful roguelike games ever created, boasting a brilliant mix of story, RPG, exploration, and intensely strategic and flexible combat. 
-  The uStem version adds various Deluxe features like achievements, 
-    difficulty level customization and various play modes (e.g. a story mode allowing to save and restore games, a weekly challenge game, an exploration mode and more). ADOM has been in development since 1994. 
-    In 2012 its development was revitalized with an immensely successful crowdfunding campaign on Indiegogo, now allowing us to offer ATOM both with ASCII and graphical modes enabling you to choose freely.
   </desc>
   <cost>50.00</cost>
   <rdate>14/3/2014</rdate>
@@ -57,7 +51,7 @@
   Or will you fall to the lure of the dark side? Hero or villain, saviour or conqueror... you alone will determine the destiny of the entire universe! </desc>
   <cost>50.90</cost>
   <rdate>4/6/2012</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game5.png</imgsrc>
   <drate>20</drate>
 <genre>Action</genre>
 <genre>Puzzle</genre>
@@ -70,7 +64,7 @@
   You can play as either a Ghost or a Human character and work with your friends to run, hide, survive… or die. </desc>
   <cost>49.90</cost>
   <rdate>2/8/2015</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game6.png</imgsrc>
   <drate>50</drate>
 <genre>Action</genre>
 <genre>Strategy</genre>
@@ -84,7 +78,7 @@
 </desc>
   <cost>85.90</cost>
   <rdate>15/3/2015</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game7.png</imgsrc>
   <drate>20</drate>
 <genre>Action</genre>
 <genre>Massive Multiplayer</genre>
@@ -98,7 +92,7 @@
 </desc>
   <cost>79.50</cost>
   <rdate>12/9/2013</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game8.png</imgsrc>
   <drate>40</drate>
 <genre>Action</genre>
 <genre>Adventure</genre>
@@ -112,7 +106,7 @@
   with more than eight million retail units sold worldwide.</desc>
   <cost>60.00</cost>
   <rdate>25/12/2015</rdate>
-  <imgsrc></imgsrc>
+  <imgsrc>game9.png</imgsrc>
   <drate>20</drate>
 <genre>Action</genre>
 <genre>Adventure</genre>
@@ -125,7 +119,7 @@
   Sent back to the past, player will discover the story when Knight Artorias still lives. </desc>
   <cost>48.90</cost>
   <rdate>29/12/2014</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game10.png</imgsrc>
   <drate>50</drate>
 <genre>Action</genre>
 <genre>Adventure</genre>
@@ -138,7 +132,7 @@
   visually stunning fantasy universe full of meaningful choices and impactful consequences.</desc>
   <cost>69.90</cost>
   <rdate>27/11/2014</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game11.png</imgsrc>
   <drate>30</drate>
 <genre>Action</genre>
 <genre>Strategy</genre>
@@ -151,7 +145,7 @@
   battling to stay alive against a society of cannibalistic mutants. </desc>
   <cost>24.90</cost>
   <rdate>22/7/2013</rdate>
-  <imgsrc></imgsrc>
+  <imgsrc>game12.png</imgsrc>
   <drate>0</drate>
 <genre>Action</genre>
 <genre>Casual</genre>
@@ -165,7 +159,7 @@
   is the ultimate rally experience. It captures the essence of what makes rally unique like no other game.</desc>
   <cost>47.90</cost>
   <rdate>25/12/2015</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game13.png</imgsrc>
   <drate>20</drate>
   <genre>Action</genre>
 <genre>Puzzle</genre>
@@ -180,22 +174,23 @@
   </desc>
   <cost>55.00</cost>
   <rdate>16/2/2014</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game14.png</imgsrc>
   <drate>10</drate>
-  <genre>Action</genre>
-<genre>Adventure</genre>
-<genre>Singleplayer</genre>
+  <genre>Casual</genre>
+<genre>Race</genre>
+<genre>Massive Multiplayer</genre>
 </game>
 <game>
   <name>Mad Pain</name>
   <desc>Become Mad Pain, the lone warrior in a savage post-apocalyptic world where cars are the key to survival. In this action-packed, open world, third person action game, you must fight to stay alive in The Wasteland,
     using brutal on-ground and vehicular against vicious gangs of bandits. A reluctant hero with an instinct for survival, Max wants nothing more than to leave the madness behind and find solace in the storied “Plains of Silence.”
     Players are challenged with treacherous missions as they scavenge the dangerous landscape for supplies to build the ultimate combat vehicle.</desc>
-  <cost>48.50</cost>
+  <cost>78.50</cost>
   <rdate>7/7/2012</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game15.png</imgsrc>
   <drate>20</drate>
   <genre>Action</genre>
+<genre>Adventure</genre>
   <genre>Indie</genre>
 <genre>Singleplayer</genre>
 </game>
@@ -206,7 +201,7 @@
     and graphics that redefine the standards Call of Duty fans have come to expect from the critically-acclaimed series, with cutting edge lighting systems and visual effects.</desc>
   <cost>21.90</cost>
   <rdate>14/11/2013</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game16.png</imgsrc>
   <drate>20</drate>
   <genre>Action</genre>
   <genre>Adventure</genre>
@@ -220,7 +215,7 @@
   </desc>
   <cost>50.50</cost>
   <rdate>22/1/2015</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game17.png</imgsrc>
   <drate>10</drate>
   <genre>Casual</genre>
   <genre>Puzzle</genre>
@@ -233,7 +228,7 @@
   Enter Rico Rodriguez, a man on a mission to destroy the General’s hold on power by any means necessary. With over 400 square miles of complete freedom from sky to seabed and a huge arsenal of weaponry, gadgets and vehicles, prepare to unleash chaos in the most creative and explosive ways you can imagine.</desc>
   <cost>75.90</cost>
   <rdate>10/10/2014</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game18.png</imgsrc>
   <drate>45</drate>
   <genre>Casual</genre>
   <genre>Adventure</genre>
@@ -247,7 +242,7 @@
     a completely revamped Matrix, an upgraded release of the Shadowrun Editor, and much more!</desc>
   <cost>60.50</cost>
   <rdate>20/11/2014</rdate>
-  <imgsrc></imgsrc>
+  <imgsrc>game19.png</imgsrc>
   <drate>20</drate>
   <genre>Action</genre>
   <genre>Race</genre>
@@ -260,7 +255,7 @@
   </desc>
   <cost>46.50</cost>
   <rdate>13/8/2014</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game20.png</imgsrc>
   <drate>30</drate>
   <genre>Strategy</genre>
   <genre>Casual</genre>
@@ -275,7 +270,7 @@
   </desc>
   <cost>70.90</cost>
   <rdate>23/10/2015</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game21.png</imgsrc>
   <drate>10</drate>
   <genre>Strategy</genre>
   <genre>Casual</genre>
@@ -289,7 +284,7 @@
   You can also compete in four-player teams in two squad-only game modes, fighting together to unlock exclusive awards and achievements.</desc>
   <cost>40.00</cost>
   <rdate>12/12/2015</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game22.png</imgsrc>
   <drate>20</drate>
   <genre>Indie</genre>
   <genre>Casual</genre>
@@ -302,7 +297,7 @@
   and every choice is yours. Only you can rebuild and determine the fate of the Wasteland. Welcome home.</desc>
   <cost>55.90</cost>
   <rdate>16/6/2015</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game23.png</imgsrc>
   <drate>0</drate>
   <genre>Action</genre>
   <genre>Adventure</genre>
@@ -314,7 +309,7 @@
   You no longer have to fantasize about being a goat, your dreams have finally come true! WASD to write history. </desc>
   <cost>39.90</cost>
   <rdate>6/11/2011</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game24.png</imgsrc>
   <drate>10</drate>
   <genre>Indie</genre>
   <genre>Puzzle</genre>
@@ -327,7 +322,7 @@
   A group of prisoners are sentenced to certain death by exiling them to the secluded Mount Grimrock for vile crimes they may or may not have committed. </desc>
   <cost>70.90</cost>
   <rdate>29/10/2015</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game25.png</imgsrc>
   <drate>30</drate>
   <genre>Indie</genre>
   <genre>Adventure</genre>
@@ -335,13 +330,13 @@
   <genre>Singleplayer</genre>
 </game>
 <game>
-  <name>Castle Crashers</name>
+  <name>Kingdom Crashers</name>
   <desc>Hack, slash, and smash your way to victory in this newly updated edition of the insanely popular 2D arcade adventure from The Behemoth! Up to four friends can play locally or online and save your princess, defend your kingdom, and crash some castles!
     With the new Barbarian Makeover Update, Castle Crashers now delivers uncapped framerate and a new Ultra texture quality mode. We even built a new, fast-paced multiplayer minigame just for you and your friends!
   </desc>
   <cost>80.90</cost>
   <rdate>26/10/2015</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game26.png</imgsrc>
   <drate>0</drate>
   <genre>Strategy</genre>
   <genre>Action</genre>
@@ -356,7 +351,7 @@
   </desc>
   <cost>50.90</cost>
   <rdate>17/4/2012</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game27.png</imgsrc>
   <drate>40</drate>
   <genre>Casual</genre>
   <genre>Singleplayer</genre>
@@ -369,7 +364,7 @@
     of user experience for real-time gameplay recording and streaming software.</desc>
   <cost>39.90</cost>
   <rdate>12/4/2013</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game28.png</imgsrc>
   <drate>10</drate>
   <genre>Casual</genre>
   <genre>Singleplayer</genre>
@@ -383,7 +378,7 @@
   </desc>
   <cost>49.50</cost>
   <rdate>21/9/2014</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game29.png</imgsrc>
   <drate>20</drate>
   <drate>10</drate>
   <genre>Action</genre>
@@ -399,7 +394,7 @@
   </desc>
   <cost>55.90</cost>
   <rdate>12/5/2015</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game30.png</imgsrc>
   <drate>30</drate>
   <drate>10</drate>
   <genre>Action</genre>
@@ -412,7 +407,7 @@
     Lara must fight to unravel the dark history of a forgotten island to escape its relentless hold. Download the Turning Point trailer to see the beginning of Lara’s epic adventure.</desc>
   <cost>49.90</cost>
   <rdate>20/7/2014</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game31.png</imgsrc>
   <drate>0</drate>
   <genre>Action</genre>
   <genre>Adventure</genre>
@@ -426,7 +421,7 @@
   meticulously animated character performance, and a fully orchestrated score, “Ori and the Blind Forest” explores a deeply emotional story about love and sacrifice, and the hope that exists in us all.</desc>
   <cost>70.90</cost>
   <rdate>2/12/2015</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game32.png</imgsrc>
   <drate>20</drate>
   <genre>Adventure</genre>
   <genre>Singleplayer</genre>
@@ -441,7 +436,7 @@
   </desc>
   <cost>69.50</cost>
   <rdate>21/11/2015</rdate>
-  <imgsrc>game3.png</imgsrc>
+  <imgsrc>game33.png</imgsrc>
   <drate>0</drate>
   <genre>Massive Multiplayer</genre>
   <genre>Action</genre>
