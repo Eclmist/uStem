@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,59 +13,115 @@ namespace APPD_layout
     {
         FlowLayoutPanel gamesListPanel, genreSelectorPanel;
         List<CheckBox> allGenreCheckbox = new List<CheckBox>();
+        List<Games> gamesToBeDisplayed = new List<Games>();
+        BackgroundWorker BWPopulateGameList = new BackgroundWorker();
+        int gamesPerPage = 8;
 
         public BrowsingScreenHandler(FlowLayoutPanel flp, FlowLayoutPanel gsp)
         {
             gamesListPanel = flp;
             genreSelectorPanel = gsp;
+            GenreCheckEventHandler = GenreCheckHandler;
+            BWPopulateGameList.DoWork += BWPopulateGameList_DoWork;
+            BWPopulateGameList.RunWorkerCompleted += BWPopulateGameList_RunWorkerCompleted;
+        }
+
+        private void BWPopulateGameList_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            DrawGameListPanelControls();
+        }
+
+        //Attempt to optimise loading of games by running it in the background thread instead of the UI thread
+        private void BWPopulateGameList_DoWork(object sender, DoWorkEventArgs e)
+        {
+            object[] args = e.Argument as object[];
+            gamesToBeDisplayed.Clear();
+
+            if ((bool)args[0])
+            {
+                foreach (Games g in ((Catalogue)args[1]).GetContainer())
+                {
+                    gamesToBeDisplayed.Add(g);
+                }
+            }
+            else
+            {
+                foreach (CheckBox c in allGenreCheckbox)
+                {
+                    if (c.Checked == true)
+                    {
+
+                        GenreContainer genreContainer = (GenreContainer)c.Tag;
+
+                        foreach (Games g in genreContainer.GetContainer())
+                        {
+                            gamesToBeDisplayed.Add(g);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void ShowListPanel(bool b)
+        {
+            gamesListPanel.Visible = b;
         }
 
         public void PopulateGameList()
         {
-            ClearGameListPanel();
-
-            bool atLeastOneBoxTicked = false;
-
-            foreach (CheckBox c in allGenreCheckbox)
-            {
-                if (c.Checked == true)
-                {
-                    atLeastOneBoxTicked = true;
-
-                    GenreContainer genreContainer = (GenreContainer)c.Tag;
-
-                    foreach (Games g in genreContainer.GetContainer())
-                    {
-                        gamesListPanel.Controls.Add(GenerateGamePanel(g));
-                    }
-                }
-            }
-
-            if (atLeastOneBoxTicked)
-                gamesListPanel.Refresh();
-            else
-                PopulateGameList(Store.allGamesCatalogue);
-                
+            object[] args = { false };
+            BWPopulateGameList.RunWorkerAsync(args);
         }
 
         public void PopulateGameList(Catalogue catalogue)
         {
-            ClearGameListPanel();
-
-            foreach (Games game in catalogue.GetContainer())
-            {
-                gamesListPanel.Controls.Add(GenerateGamePanel(game));
-            }
-
-            gamesListPanel.Refresh();
-
+            object[] args = { true, catalogue };
+            BWPopulateGameList.RunWorkerAsync(args);
         }
 
+        public void DrawGameListPanelControls(int pageNumber)
+        {
+            gamesListPanel.Controls.Clear();
+
+            for (int i = gamesPerPage * pageNumber; i < (gamesPerPage * pageNumber) + gamesPerPage; i++)
+            {
+                if (i < gamesToBeDisplayed.Count)
+                    gamesListPanel.Controls.Add(ControlsGenerator.GenerateGamePanel(gamesToBeDisplayed[i]));
+            }
+
+            if (pageNumber > 0)
+            {
+                Button back = ControlsGenerator.GenerateBtn("<< BACK");
+                back.Click += Nav_Click;
+                back.Tag = pageNumber - 1;
+                gamesListPanel.Controls.Add(back);
+            }
+
+            if (gamesToBeDisplayed.Count > gamesPerPage * (pageNumber + 1))
+            {
+                Button next = ControlsGenerator.GenerateBtn("NEXT >>");
+                next.Click += Nav_Click;
+                next.Tag = pageNumber + 1;
+                gamesListPanel.Controls.Add(next);
+            }
+        }
+
+        private void Nav_Click(object sender, EventArgs e)
+        {
+            int nextPageNumber = (int)((Button)sender).Tag;
+            DrawGameListPanelControls(nextPageNumber);
+        }
+
+        public void DrawGameListPanelControls()
+        {
+            DrawGameListPanelControls(0);
+        }
+  
         public void PopulateGenreList(GenreContainer genre)
         {
             foreach (Games game in genre.GetContainer())
             {
-                gamesListPanel.Controls.Add(GenerateGamePanel(game));
+                gamesListPanel.Controls.Add(ControlsGenerator.GenerateGamePanel(game));
             }
         }
 
@@ -77,85 +134,28 @@ namespace APPD_layout
         {
             foreach (GenreContainer g in genrelist)
             {
-                genreSelectorPanel.Controls.Add(GenerateGenreSelectCheckbox(g));
+                CheckBox c = ControlsGenerator.GenerateGenreSelectCheckbox(g, GenreCheckEventHandler);
+                allGenreCheckbox.Add(c);
+                genreSelectorPanel.Controls.Add(c);
             }
         }
 
-        public Panel GenerateGamePanel(Games gameref)
-        {
-            Panel panel = new Panel();
-
-            panel.Controls.Add(GenerateGameNameLabel(gameref));
-            panel.Controls.Add(GenerateGamePicturebox(gameref));
-            panel.Location = new Point(3, 3);
-            panel.Name = "panel" + gameref.Name;
-            panel.Size = new Size(307, 208);
-            panel.TabIndex = 0;
-            panel.BackColor = Color.FromArgb(0, Color.Black);
-
-            return panel;
-        }
-
-        public Label GenerateGameNameLabel(Games gameref)
-        {
-            Label label = new Label();
-
-            label.AutoSize = true;
-            label.BackColor = Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(73)))));
-            label.Font = new Font("Arial", 9.75F, ((FontStyle)((FontStyle.Bold | FontStyle.Underline))), GraphicsUnit.Point, ((byte)(0)));
-            label.ForeColor = Color.WhiteSmoke;
-            label.Location = new Point(1, 6);
-            label.Margin = new Padding(2, 0, 2, 0);
-            label.Name = "Label" + gameref.Name;
-            label.Size = new Size(218, 16);
-            label.Text = gameref.Name;
-            label.Click += Store.gameLabelClickHandler;
-            label.Tag = gameref;
-            label.BackColor = Color.FromArgb(0, Color.Black);
-
-
-            return label;
-        }
-
-        public PictureBox GenerateGamePicturebox(Games gameref)
-        {
-            PictureBox picbox = new PictureBox();
-
-            picbox.BackgroundImage = Image.FromFile("./img/" + gameref.Imgsrc);
-            picbox.BackgroundImageLayout = ImageLayout.Stretch;
-            picbox.Location = new Point(-1, 30);
-            picbox.Name = "Picbox" + gameref.Name;
-            picbox.Size = new Size(307, 175);
-            picbox.Click += Store.gamePicClickHandler;
-            picbox.Tag = gameref;
-
-            return picbox;
-        }
-
-        public CheckBox GenerateGenreSelectCheckbox(GenreContainer g)
-        {
-            CheckBox checkbox = new CheckBox();
-
-            checkbox.AutoSize = true;
-            checkbox.FlatStyle = FlatStyle.Flat;
-            checkbox.ForeColor = Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(118)))), ((int)(((byte)(150)))));
-            checkbox.Location = new Point(13, 43);
-            checkbox.Name = g.Name;
-            checkbox.Size = new Size(77, 17);
-            checkbox.TabIndex = 11;
-            checkbox.Text = g.Name;
-            checkbox.UseVisualStyleBackColor = true;
-            checkbox.Tag = g;
-            checkbox.CheckedChanged += GenreCheckHandler;
-
-            allGenreCheckbox.Add(checkbox);
-
-            return checkbox;
-        }
+        public static System.EventHandler GenreCheckEventHandler;
 
         private void GenreCheckHandler(object sender, EventArgs e)
         {
-            PopulateGameList();
+            bool check = false;
+
+            foreach (CheckBox c in allGenreCheckbox)
+            {
+                if (c.Checked == true)
+                    check = true;
+            }
+
+            if (check)
+                PopulateGameList();
+            else
+                PopulateGameList(Store.allGamesCatalogue);
         }
     }
 }

@@ -61,7 +61,7 @@
 <game>
   <name>Dead Mansion</name>
   <desc>Dead Realm is a creepy, multiplayer action game with beautiful, immersive environments. 
-  You can play as either a Ghost or a Human character and work with your friends to run, hide, surviveÖ or die. </desc>
+  You can play as either a Ghost or a Human character and work with your friends to run, hide, surviveÅEor die. </desc>
   <cost>49.90</cost>
   <rdate>2/8/2015</rdate>
   <imgsrc>game6.png</imgsrc>
@@ -183,7 +183,7 @@
 <game>
   <name>Mad Pain</name>
   <desc>Become Mad Pain, the lone warrior in a savage post-apocalyptic world where cars are the key to survival. In this action-packed, open world, third person action game, you must fight to stay alive in The Wasteland,
-    using brutal on-ground and vehicular against vicious gangs of bandits. A reluctant hero with an instinct for survival, Max wants nothing more than to leave the madness behind and find solace in the storied ìPlains of Silence.î
+    using brutal on-ground and vehicular against vicious gangs of bandits. A reluctant hero with an instinct for survival, Max wants nothing more than to leave the madness behind and find solace in the storied ìPlains of Silence.ÅE
     Players are challenged with treacherous missions as they scavenge the dangerous landscape for supplies to build the ultimate combat vehicle.</desc>
   <cost>78.50</cost>
   <rdate>7/7/2012</rdate>
@@ -237,7 +237,7 @@
 </game>
 <game>
   <name>Shadowsprint Hong Kong</name>
-  <desc>Shadowrun: Hong Kong is the third standalone game in Harebrained Schemesí critically-acclaimed Shadowrun cRPG series.
+  <desc>Shadowrun: Hong Kong is the third standalone game in Harebrained SchemesÅEcritically-acclaimed Shadowrun cRPG series.
     Experience the most impressive Shadowrun RPG yet with an all new crew, expanded magic and cyberware,
     a completely revamped Matrix, an upgraded release of the Shadowrun Editor, and much more!</desc>
   <cost>60.50</cost>
@@ -417,8 +417,8 @@
 <game>
   <name>Origami and the Blind Forest</name>
   <desc>The forest of Nibel is dying. After a powerful storm sets a series of devastating events in motion, an unlikely hero must journey to find his courage and confront a dark nemesis to save his home. 
-  ìOri and the Blind Forestî tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC. Featuring hand-painted artwork,
-  meticulously animated character performance, and a fully orchestrated score, ìOri and the Blind Forestî explores a deeply emotional story about love and sacrifice, and the hope that exists in us all.</desc>
+  ìOri and the Blind ForestÅEtells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC. Featuring hand-painted artwork,
+  meticulously animated character performance, and a fully orchestrated score, ìOri and the Blind ForestÅEexplores a deeply emotional story about love and sacrifice, and the hope that exists in us all.</desc>
   <cost>70.90</cost>
   <rdate>2/12/2015</rdate>
   <imgsrc>game32.png</imgsrc>

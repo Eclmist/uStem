@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Cart.cs" />
     <Compile Include="Catalogue.cs" />
+    <Compile Include="ControlsGenerator.cs" />
     <Compile Include="Games.cs" />
     <Compile Include="BrowsingScreenHandler.cs" />
     <Compile Include="GenericContainer.cs" />
