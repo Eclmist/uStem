@@ -13,13 +13,11 @@ namespace APPD_layout
     {
         FlowLayoutPanel cartListPanel;
         Label subtotalLabel;
-        double subtotal;
 
         public Cart(FlowLayoutPanel flowLayoutPanel, Label subtotalLabel)
         {
             cartListPanel = flowLayoutPanel;
             this.subtotalLabel = subtotalLabel;
-            subtotal = 0;
         }
 
         public void PopulateGameCart()
@@ -52,12 +50,18 @@ namespace APPD_layout
 
         public void UpdateSubtotal()
         {
-            subtotal = 0;
+            subtotalLabel.Text = "S" + String.Format("{0:C}", CalculateSubtotal());
+        }
+
+        public double CalculateSubtotal()
+        {
+            double subtotal = 0;
             foreach (Games game in GetContainer())
             {
-                subtotal +=  game.Cost;
+                subtotal += game.Cost;
             }
-            subtotalLabel.Text = "S" + String.Format("{0:C}", subtotal);
+
+            return subtotal;
         }
 
         public override void AddToContainer(Games item)
