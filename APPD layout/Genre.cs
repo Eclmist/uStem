@@ -9,6 +9,5 @@ namespace APPD_layout
     public class Genre : GenreContainer
     {
         public Genre(string name) : base(name){ }   
-
     }
 }

@@ -43,7 +43,7 @@ namespace APPD_layout
             /*********************************************************************************/
             //
 
-            SetTranslucencyForControls();
+            SetControlStyles();
 
 
             /*** Instantiate Genres List ***/
@@ -64,7 +64,7 @@ namespace APPD_layout
             browsingScreenHandler.PopulateGenreSelector(listOfGenres);
         }
 
-        public void SetTranslucencyForControls()
+        public void SetControlStyles()
         {
             flowLayoutPanel1.BackColor = Color.FromArgb(10, Color.Black);
             label5.BackColor = Color.FromArgb(0, Color.Black);
@@ -72,6 +72,10 @@ namespace APPD_layout
             panel11.BackColor = Color.FromArgb(70, Color.Black);
             panel5.BackColor = Color.FromArgb(70, Color.Black);
             panel10.BackColor = Color.FromArgb(70, Color.Black);
+            panel8.BackColor = Color.FromArgb(30, Color.White);
+            panel6.BackColor = Color.FromArgb(50, Color.Black);
+            panel13.BackColor = Color.FromArgb(70, Color.Black);        
+            
         }
 
         public void UpdatePageHistory()
@@ -155,7 +159,7 @@ namespace APPD_layout
         private void GameClick(Games game)
         {
             NavButtonClick(Page.GameDetails);
-            groupBox1.Text = game.Name;
+            label31.Text = game.Name;
             pictureBox8.BackgroundImage = Image.FromFile("./img/" + game.Imgsrc);
             label29.Text = game.Desc;
             label25.Text = game.ReleaseDate.ToString("dd MMM yyyy");
@@ -349,6 +353,11 @@ namespace APPD_layout
         private void button6_Click(object sender, EventArgs e)
         {
             NavButtonClick(Page.Browsing);
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
