@@ -60,6 +60,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -139,7 +140,6 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel11.SuspendLayout();
@@ -548,6 +548,21 @@
             this.label10.TabIndex = 33;
             this.label10.Text = "S$10.50 x 2";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.SkyBlue;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Calibri", 10F);
+            this.linkLabel1.LinkColor = System.Drawing.Color.SlateGray;
+            this.linkLabel1.Location = new System.Drawing.Point(34, 18);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(54, 17);
+            this.linkLabel1.TabIndex = 40;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Remove";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.SlateGray;
             // 
             // pictureBox5
             // 
@@ -1130,9 +1145,9 @@
             this.panel9.Controls.Add(this.label39);
             this.panel9.Controls.Add(this.label40);
             this.panel9.Controls.Add(this.comboBox1);
-            this.panel9.Location = new System.Drawing.Point(10, 480);
+            this.panel9.Location = new System.Drawing.Point(10, 73);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(884, 13);
+            this.panel9.Size = new System.Drawing.Size(884, 420);
             this.panel9.TabIndex = 28;
             this.panel9.Visible = false;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
@@ -1478,21 +1493,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(884, 420);
             this.panel1.TabIndex = 24;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.SkyBlue;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Calibri", 10F);
-            this.linkLabel1.LinkColor = System.Drawing.Color.SlateGray;
-            this.linkLabel1.Location = new System.Drawing.Point(34, 18);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(54, 17);
-            this.linkLabel1.TabIndex = 40;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Remove";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.SlateGray;
             // 
             // Store
             // 

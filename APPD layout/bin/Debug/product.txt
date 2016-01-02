@@ -1,7 +1,6 @@
 <game>
-  <name>Fallcry</name>
-  <desc>As the sole survivor of Vault 111, you enter a world destroyed by nuclear war. Every second is a fight for survival,
-  and every choice is yours. Only you can rebuild and determine the fate of the Wasteland. Welcome home.</desc>
+  <name>Fallout 4</name>
+  <desc>As the sole survivor of Vault 111, you enter a world destroyed by nuclear war. Every second is a fight for survival, and every choice is yours. Only you can rebuild and determine the fate of the Wasteland. Welcome home.</desc>
   <cost>55.90</cost>
   <rdate>16/6/2015</rdate>
   <imgsrc>game23.png</imgsrc>
@@ -12,9 +11,7 @@
 </game>
 <game>
   <name>Kingdom Crashers</name>
-  <desc>Hack, slash, and smash your way to victory in this newly updated edition of the insanely popular 2D arcade adventure from The Behemoth! Up to four friends can play locally or online and save your princess, defend your kingdom, and crash some castles!
-    With the new Barbarian Makeover Update, Castle Crashers now delivers uncapped framerate and a new Ultra texture quality mode. We even built a new, fast-paced multiplayer minigame just for you and your friends!
-  </desc>
+  <desc>Hack, slash, and smash your way to victory in this newly updated edition of the insanely popular 2D arcade adventure from The Behemoth! Up to four friends can play locally or online and save your princess, defend your kingdom, and crash some castles!</desc>
   <cost>80.90</cost>
   <rdate>26/10/2015</rdate>
   <imgsrc>game26.png</imgsrc>
@@ -25,8 +22,8 @@
   <genre>Massive Multiplayer</genre>
 </game>
 <game>
-  <name>Tomb Scavenger</name>
-  <desc>Tomb Scavenger explores the intense and gritty origin story of Lara Croft and her ascent from a young woman to a hardened survivor. Armed only with raw instincts and the ability to push beyond the limits of human endurance,
+  <name>Tomb Raider</name>
+  <desc>Tomb Raider explores the intense and gritty origin story of Lara Croft and her ascent from a young woman to a hardened survivor. Armed only with raw instincts and the ability to push beyond the limits of human endurance,
     Lara must fight to unravel the dark history of a forgotten island to escape its relentless hold. Download the Turning Point trailer to see the beginning of Lara’s epic adventure.</desc>
   <cost>49.90</cost>
   <rdate>20/7/2014</rdate>
@@ -58,9 +55,8 @@
 <genre>Adventure</genre>
 </game>
 <game>
-  <name>BIOBLOW</name>
-  <desc>Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth,
- a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia.</desc>
+  <name>Bioshock Infinite</name>
+  <desc>Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth, a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia.</desc>
   <cost>35.90</cost>
   <rdate>4/11/2013</rdate>
   <imgsrc>game2.png</imgsrc>
