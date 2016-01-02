@@ -29,7 +29,7 @@ namespace APPD_layout
             foreach (Games game in GetContainer())
             {
                 Panel p = ControlsGenerator.GenerateCartPanel(game);
-                ((Label)p.Controls.Find("remove", true)[0]).Click += Remove_Click;
+                ((LinkLabel)p.Controls.Find("remove", true)[0]).Click += Remove_Click;
                 cartListPanel.Controls.Add(p);
             }
             UpdateSubtotal();
@@ -37,13 +37,13 @@ namespace APPD_layout
 
         private void Remove_Click(object sender, EventArgs e)
         {
-            if (((Games)((Label)sender).Tag).Quantity > 1)
+            if (((Games)((LinkLabel)sender).Tag).Quantity > 1)
             {
-                ((Games)((Label)sender).Tag).Quantity--;
+                ((Games)((LinkLabel)sender).Tag).Quantity--;
             }
             else
             {
-                GetContainer().Remove((Games)((Label)sender).Tag);
+                GetContainer().Remove((Games)((LinkLabel)sender).Tag);
             }
 
             PopulateGameCart();

@@ -141,16 +141,17 @@ namespace APPD_layout
 
             price.TextAlign = ContentAlignment.MiddleCenter;
 
-            Label remove = new Label();
-            remove.Anchor = AnchorStyles.Top;
+            LinkLabel remove = new LinkLabel();
+            remove.ActiveLinkColor = Color.SkyBlue;
             remove.AutoSize = true;
             remove.BackColor = Color.Transparent;
             remove.Font = new Font("Calibri", 10F);
-            remove.ForeColor = Color.SlateGray;
+            remove.LinkColor = Color.SlateGray;
             remove.Location = new Point(34, 18);
             remove.Name = "remove";
             remove.Size = new Size(54, 17);
             remove.Text = "Remove";
+            remove.VisitedLinkColor = Color.SlateGray;
             remove.Tag = gameref;
 
             PictureBox pic = GenerateGamePicturebox(gameref);
