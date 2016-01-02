@@ -26,11 +26,13 @@ namespace APPD_layout
         List<Page> pageHistroy = new List<Page>();
         Bitmap nullBitmap = new Bitmap(1, 1);
         Image backArrow; //TODO: add greying code to partial class after project is done
-
+        
         List<GenreContainer> listOfGenres;
 
         public static Catalogue allGamesCatalogue;
         Catalogue winterSalesCatalogue;
+
+        Account currentLoggedInUser;
         public Store()
         {
             InitializeComponent();
@@ -46,7 +48,6 @@ namespace APPD_layout
             //
 
             SetControlStyles();
-
 
             /*** Instantiate Genres List ***/
             listOfGenres = new List<GenreContainer>();
@@ -64,6 +65,12 @@ namespace APPD_layout
             cart = new Cart(flowLayoutPanel7, label8);
             browsingScreenHandler.PopulateGameList(allGamesCatalogue);
             browsingScreenHandler.PopulateGenreSelector(listOfGenres);
+        }
+
+        public Store(Account a) : this ()
+        {
+            /*** Update Logged Account ***/
+            currentLoggedInUser = a;
         }
 
         public void SetControlStyles()

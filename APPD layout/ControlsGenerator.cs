@@ -195,5 +195,38 @@ namespace APPD_layout
 
         #endregion
 
+        #region GenerateLoginError
+        public static Panel GenerateLoginError()
+        {
+            Label label8 = new Label();
+            label8.Font = new Font("Arial", 8.25F);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(8, 7);
+            label8.Name = "label8";
+            label8.Size = new Size(415, 33);
+            label8.TabIndex = 0;
+            label8.Text = "You have entered your password or account name incorrectly. Please check your pas" +
+    "sword and account name and try again.";
+
+            Panel panel3 = new Panel();
+            panel3.BackColor = Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            panel3.Controls.Add(label8);
+            panel3.Location = new Point(2, 2);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(419, 45);
+            panel3.TabIndex = 0;
+
+            Panel panel = new Panel();
+            panel.BackColor = Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(72)))), ((int)(((byte)(71)))));
+            panel.Controls.Add(panel3);
+            panel.Location = new Point(3, 3);
+            panel.Name = "panel2";
+            panel.Size = new Size(423, 49);
+            panel.TabIndex = 0;
+
+            return panel;
+        }
+        #endregion
+
     }
 }
