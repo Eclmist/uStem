@@ -41,7 +41,9 @@ namespace APPD_layout
 
                         foreach (Match gMatch in genreMatches)
                         {
-                            string matchedString = Regex.Replace(gMatch.ToString(), @"<genre>", "");
+                            string matchedString = gMatch.ToString();
+                            matchedString = Regex.Replace(matchedString, "/n", "");
+                            matchedString = Regex.Replace(matchedString, @"<genre>", "");
                             matchedString = Regex.Replace(matchedString, @"</genre>", "");
                             bool genreRecordExist = false;
 
