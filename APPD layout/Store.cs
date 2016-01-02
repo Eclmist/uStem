@@ -13,13 +13,15 @@ namespace APPD_layout
         Browsing,
         GameDetails,
         Cart,
-        Billing
+        Billing,
+        Confirmation
     }
 
     public partial class Store : Form
     {
         Panel[] panelList;
         Page currentPage = Page.Browsing;
+        bool errorCheck = true;
         Cart cart;
         List<Page> pageHistroy = new List<Page>();
         Bitmap nullBitmap = new Bitmap(1, 1);
@@ -33,10 +35,10 @@ namespace APPD_layout
         {
             InitializeComponent();
 
-            panelList = new Panel[] { panel1, panel7, panel10, panel9 };    //panel1 = Browsing
-                                                                            //panel7 = GameDetails
-                                                                            //panel10 = cart
-                                                                            //panel9 = billing
+            panelList = new Panel[] { panel1, panel7, panel10, panel9, panel14 };    //panel1 = Browsing
+                                                                                     //panel7 = GameDetails
+                                                                                     //panel10 = cart
+                                                                                     //panel9 = billing
             UpdatePageHistory();
             UpdateCurrentPanel();
             //
@@ -102,6 +104,9 @@ namespace APPD_layout
                     break;
                 case Page.Billing:
                     targetPanel = panel9;
+                    break;
+                case Page.Confirmation:
+                    targetPanel = panel14;
                     break;
                 default:
                     targetPanel = panel1;
@@ -255,20 +260,28 @@ namespace APPD_layout
                 {
                     label41.Visible = true;
                     S += "• Checkbox was not ticked.\n\n";
+                    errorCheck = false;
                 }
                 if (textBox4.Text.Length != 16)
                 {
                     label41.Visible = true;
                     S += "• Invalid card number. Please ensure that you key in all 16 digits correctly.\n\n";
                     textBox4.Clear();
+                    errorCheck = false;
                 }
                 if (textBox8.Text.Length != 8)
                 {
                     label41.Visible = true;
                     S += "• Invalid phone number. Please ensure you that you key in all 8 digits correctly.\n\n";
                     textBox8.Clear();
+                    errorCheck = false;
                 }
                 label41.Text = S;
+                if(errorCheck == true)
+                {
+                    NavButtonClick(Page.Confirmation);
+                }
+                errorCheck = true;
             }
             catch (Exception ex)
             {
@@ -358,6 +371,17 @@ namespace APPD_layout
         private void pictureBox9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Receipt receipt = new Receipt();
+            receipt.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            NavButtonClick(Page.Browsing);
         }
     }
 }

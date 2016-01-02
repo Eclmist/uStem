@@ -37,3 +37,4 @@ C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\AP
 C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD layout.exe
 C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD layout.pdb
 C:\Users\eclmi\Desktop\uStem\APPD layout\obj\Debug\APPD layout.csprojResolveAssemblyReference.cache
+C:\Users\Joshua\Desktop\Class slides\Application Development\Assignment\uStem\APPD layout\obj\Debug\APPD_layout.Receipt.resources
