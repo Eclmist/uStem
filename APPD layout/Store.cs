@@ -30,7 +30,7 @@ namespace APPD_layout
         private List<GenreContainer> listOfGenres;
 
         public static Catalogue allGamesCatalogue;
-        private Catalogue winterSalesCatalogue;
+        public static Catalogue winterSalesCatalogue;
         private BrowsingScreenHandler browsingScreenHandler;
         private Account currentLoggedInUser;
         private Login loginForm;
@@ -64,7 +64,7 @@ namespace APPD_layout
             allGamesCatalogue.LoadGames("./uStem/product.txt", listOfGenres);
 
             winterSalesCatalogue = new Catalogue();
-            //winterSalesCatalogue.LoadGames("");
+            winterSalesCatalogue.LoadGames("./uStem/Winter_Sales_Catalogue.txt", listOfGenres);
 
             LoadGameClickHandler();
 
@@ -103,9 +103,9 @@ namespace APPD_layout
 
         public void SetControlStyles()
         {
-            flowLayoutPanel1.BackColor = Color.FromArgb(10, Color.Black);
+            flowLayoutPanel1.BackColor = Color.FromArgb(70, Color.Black);
+
             label5.BackColor = Color.FromArgb(0, Color.Black);
-            label21.BackColor = Color.FromArgb(10, Color.Black);
             panel11.BackColor = Color.FromArgb(70, Color.Black);
             panel5.BackColor = Color.FromArgb(70, Color.Black);
             panel10.BackColor = Color.FromArgb(70, Color.Black);
@@ -442,6 +442,18 @@ namespace APPD_layout
         private void panel19_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((radioButton1.Checked))
+            {
+                browsingScreenHandler.PopulateGameList(winterSalesCatalogue);
+            }
+            else
+            {
+                browsingScreenHandler.PopulateGameList(allGamesCatalogue);
+            }
         }
     }
 }

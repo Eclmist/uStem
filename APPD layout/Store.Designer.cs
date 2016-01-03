@@ -108,6 +108,15 @@
             this.label41 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label61 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label29 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -136,6 +145,9 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label64 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.label37 = new System.Windows.Forms.Label();
@@ -157,15 +169,8 @@
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel11.SuspendLayout();
@@ -186,6 +191,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel9.SuspendLayout();
+            this.panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.panel18.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -199,15 +207,14 @@
             this.panel6.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel9.SuspendLayout();
+            this.flowLayoutPanel10.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            this.panel18.SuspendLayout();
-            this.panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -424,10 +431,10 @@
             this.panel10.Controls.Add(this.panel12);
             this.panel10.Controls.Add(this.label18);
             this.panel10.Controls.Add(this.flowLayoutPanel4);
-            this.panel10.Location = new System.Drawing.Point(10, 73);
+            this.panel10.Location = new System.Drawing.Point(10, 429);
             this.panel10.Name = "panel10";
             this.panel10.Padding = new System.Windows.Forms.Padding(5);
-            this.panel10.Size = new System.Drawing.Size(884, 420);
+            this.panel10.Size = new System.Drawing.Size(884, 64);
             this.panel10.TabIndex = 27;
             this.panel10.Visible = false;
             this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
@@ -1122,12 +1129,157 @@
             this.panel9.Controls.Add(this.label41);
             this.panel9.Controls.Add(this.label36);
             this.panel9.Controls.Add(this.panel18);
-            this.panel9.Location = new System.Drawing.Point(10, 73);
+            this.panel9.Location = new System.Drawing.Point(10, 455);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(884, 420);
+            this.panel9.Size = new System.Drawing.Size(884, 38);
             this.panel9.TabIndex = 28;
             this.panel9.Visible = false;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.BackColor = System.Drawing.Color.Transparent;
+            this.label63.Location = new System.Drawing.Point(582, 495);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(0, 13);
+            this.label63.TabIndex = 60;
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.label61);
+            this.panel19.Controls.Add(this.pictureBox13);
+            this.panel19.Controls.Add(this.label34);
+            this.panel19.Controls.Add(this.label35);
+            this.panel19.Controls.Add(this.pictureBox10);
+            this.panel19.Controls.Add(this.pictureBox12);
+            this.panel19.Controls.Add(this.pictureBox11);
+            this.panel19.Location = new System.Drawing.Point(564, 51);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(296, 191);
+            this.panel19.TabIndex = 59;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.BackColor = System.Drawing.Color.Transparent;
+            this.label61.Font = new System.Drawing.Font("Arial", 14F);
+            this.label61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(183)))), ((int)(((byte)(197)))));
+            this.label61.Location = new System.Drawing.Point(12, 9);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(153, 22);
+            this.label61.TabIndex = 37;
+            this.label61.Text = "Payment method";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox13.Location = new System.Drawing.Point(214, 78);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(54, 35);
+            this.pictureBox13.TabIndex = 33;
+            this.pictureBox13.TabStop = false;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.textBox2);
+            this.panel18.Controls.Add(this.label62);
+            this.panel18.Controls.Add(this.comboBox4);
+            this.panel18.Controls.Add(this.label40);
+            this.panel18.Controls.Add(this.comboBox3);
+            this.panel18.Controls.Add(this.comboBox1);
+            this.panel18.Controls.Add(this.label39);
+            this.panel18.Controls.Add(this.textBox4);
+            this.panel18.Controls.Add(this.checkBox1);
+            this.panel18.Controls.Add(this.label38);
+            this.panel18.Controls.Add(this.textBox8);
+            this.panel18.Controls.Add(this.textBox3);
+            this.panel18.Controls.Add(this.label42);
+            this.panel18.Controls.Add(this.label49);
+            this.panel18.Controls.Add(this.comboBox2);
+            this.panel18.Controls.Add(this.label48);
+            this.panel18.Controls.Add(this.label43);
+            this.panel18.Controls.Add(this.label47);
+            this.panel18.Controls.Add(this.textBox7);
+            this.panel18.Controls.Add(this.textBox10);
+            this.panel18.Controls.Add(this.label44);
+            this.panel18.Controls.Add(this.textBox9);
+            this.panel18.Controls.Add(this.textBox6);
+            this.panel18.Controls.Add(this.label46);
+            this.panel18.Controls.Add(this.label45);
+            this.panel18.Controls.Add(this.textBox5);
+            this.panel18.Location = new System.Drawing.Point(5, 51);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(553, 440);
+            this.panel18.TabIndex = 58;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(240)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox2.Location = new System.Drawing.Point(11, 303);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(244, 24);
+            this.textBox2.TabIndex = 59;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.BackColor = System.Drawing.Color.Transparent;
+            this.label62.Font = new System.Drawing.Font("Arial", 9F);
+            this.label62.ForeColor = System.Drawing.Color.LightGray;
+            this.label62.Location = new System.Drawing.Point(8, 288);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(126, 15);
+            this.label62.TabIndex = 58;
+            this.label62.Text = "Billing address, line 2";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"});
+            this.comboBox4.Location = new System.Drawing.Point(363, 95);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(76, 26);
+            this.comboBox4.TabIndex = 57;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
+            this.comboBox3.Location = new System.Drawing.Point(311, 95);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(46, 26);
+            this.comboBox3.TabIndex = 56;
             // 
             // flowLayoutPanel3
             // 
@@ -1334,9 +1486,9 @@
             this.panel7.Controls.Add(this.button2);
             this.panel7.Controls.Add(this.label22);
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(10, 73);
+            this.panel7.Location = new System.Drawing.Point(10, 409);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(884, 420);
+            this.panel7.Size = new System.Drawing.Size(884, 84);
             this.panel7.TabIndex = 23;
             this.panel7.Visible = false;
             // 
@@ -1419,10 +1571,10 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(73)))));
+            this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label21.Location = new System.Drawing.Point(214, 22);
+            this.label21.Location = new System.Drawing.Point(10, 11);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(135, 33);
@@ -1436,7 +1588,7 @@
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
             this.flowLayoutPanel2.Controls.Add(this.label5);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(17, 22);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(181, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(10);
@@ -1463,13 +1615,55 @@
             this.panel1.AutoScroll = true;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.flowLayoutPanel2);
+            this.panel1.Controls.Add(this.flowLayoutPanel9);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Location = new System.Drawing.Point(10, 73);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(884, 420);
             this.panel1.TabIndex = 24;
+            // 
+            // flowLayoutPanel9
+            // 
+            this.flowLayoutPanel9.AutoSize = true;
+            this.flowLayoutPanel9.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel2);
+            this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel10);
+            this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(10, 54);
+            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(187, 159);
+            this.flowLayoutPanel9.TabIndex = 24;
+            // 
+            // flowLayoutPanel10
+            // 
+            this.flowLayoutPanel10.AutoSize = true;
+            this.flowLayoutPanel10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(54)))), ((int)(((byte)(70)))));
+            this.flowLayoutPanel10.Controls.Add(this.label64);
+            this.flowLayoutPanel10.Controls.Add(this.radioButton1);
+            this.flowLayoutPanel10.Controls.Add(this.radioButton2);
+            this.flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel10.Location = new System.Drawing.Point(3, 59);
+            this.flowLayoutPanel10.MinimumSize = new System.Drawing.Size(181, 0);
+            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
+            this.flowLayoutPanel10.Padding = new System.Windows.Forms.Padding(10);
+            this.flowLayoutPanel10.Size = new System.Drawing.Size(181, 96);
+            this.flowLayoutPanel10.TabIndex = 24;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.BackColor = System.Drawing.Color.Transparent;
+            this.label64.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(118)))), ((int)(((byte)(150)))));
+            this.label64.Location = new System.Drawing.Point(12, 10);
+            this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label64.Name = "label64";
+            this.label64.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.label64.Size = new System.Drawing.Size(66, 30);
+            this.label64.TabIndex = 10;
+            this.label64.Text = "Catagory";
             // 
             // panel14
             // 
@@ -1738,150 +1932,32 @@
             this.label60.TabIndex = 37;
             this.label60.Text = "Thank you for your purchase!";
             // 
-            // comboBox3
+            // radioButton1
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "",
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12"});
-            this.comboBox3.Location = new System.Drawing.Point(311, 95);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(46, 26);
-            this.comboBox3.TabIndex = 56;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(118)))), ((int)(((byte)(150)))));
+            this.radioButton1.Location = new System.Drawing.Point(13, 43);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(84, 17);
+            this.radioButton1.TabIndex = 13;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Winter Sales";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // comboBox4
+            // radioButton2
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "2016",
-            "2017",
-            "2018",
-            "2019",
-            "2020",
-            "2021",
-            "2022",
-            "2023",
-            "2024",
-            "2025",
-            "2026"});
-            this.comboBox4.Location = new System.Drawing.Point(363, 95);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(76, 26);
-            this.comboBox4.TabIndex = 57;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.textBox2);
-            this.panel18.Controls.Add(this.label62);
-            this.panel18.Controls.Add(this.comboBox4);
-            this.panel18.Controls.Add(this.label40);
-            this.panel18.Controls.Add(this.comboBox3);
-            this.panel18.Controls.Add(this.comboBox1);
-            this.panel18.Controls.Add(this.label39);
-            this.panel18.Controls.Add(this.textBox4);
-            this.panel18.Controls.Add(this.checkBox1);
-            this.panel18.Controls.Add(this.label38);
-            this.panel18.Controls.Add(this.textBox8);
-            this.panel18.Controls.Add(this.textBox3);
-            this.panel18.Controls.Add(this.label42);
-            this.panel18.Controls.Add(this.label49);
-            this.panel18.Controls.Add(this.comboBox2);
-            this.panel18.Controls.Add(this.label48);
-            this.panel18.Controls.Add(this.label43);
-            this.panel18.Controls.Add(this.label47);
-            this.panel18.Controls.Add(this.textBox7);
-            this.panel18.Controls.Add(this.textBox10);
-            this.panel18.Controls.Add(this.label44);
-            this.panel18.Controls.Add(this.textBox9);
-            this.panel18.Controls.Add(this.textBox6);
-            this.panel18.Controls.Add(this.label46);
-            this.panel18.Controls.Add(this.label45);
-            this.panel18.Controls.Add(this.textBox5);
-            this.panel18.Location = new System.Drawing.Point(5, 51);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(553, 440);
-            this.panel18.TabIndex = 58;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(240)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(11, 303);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 24);
-            this.textBox2.TabIndex = 59;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.BackColor = System.Drawing.Color.Transparent;
-            this.label62.Font = new System.Drawing.Font("Arial", 9F);
-            this.label62.ForeColor = System.Drawing.Color.LightGray;
-            this.label62.Location = new System.Drawing.Point(8, 288);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(126, 15);
-            this.label62.TabIndex = 58;
-            this.label62.Text = "Billing address, line 2";
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.label61);
-            this.panel19.Controls.Add(this.pictureBox13);
-            this.panel19.Controls.Add(this.label34);
-            this.panel19.Controls.Add(this.label35);
-            this.panel19.Controls.Add(this.pictureBox10);
-            this.panel19.Controls.Add(this.pictureBox12);
-            this.panel19.Controls.Add(this.pictureBox11);
-            this.panel19.Location = new System.Drawing.Point(564, 51);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(296, 191);
-            this.panel19.TabIndex = 59;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
-            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox13.Location = new System.Drawing.Point(214, 78);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(54, 35);
-            this.pictureBox13.TabIndex = 33;
-            this.pictureBox13.TabStop = false;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.BackColor = System.Drawing.Color.Transparent;
-            this.label61.Font = new System.Drawing.Font("Arial", 14F);
-            this.label61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(183)))), ((int)(((byte)(197)))));
-            this.label61.Location = new System.Drawing.Point(12, 9);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(153, 22);
-            this.label61.TabIndex = 37;
-            this.label61.Text = "Payment method";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.BackColor = System.Drawing.Color.Transparent;
-            this.label63.Location = new System.Drawing.Point(582, 495);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(0, 13);
-            this.label63.TabIndex = 60;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(118)))), ((int)(((byte)(150)))));
+            this.radioButton2.Location = new System.Drawing.Point(13, 66);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(71, 17);
+            this.radioButton2.TabIndex = 14;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "All Games";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // Store
             // 
@@ -1937,6 +2013,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1956,6 +2037,10 @@
             this.flowLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.flowLayoutPanel9.ResumeLayout(false);
+            this.flowLayoutPanel9.PerformLayout();
+            this.flowLayoutPanel10.ResumeLayout(false);
+            this.flowLayoutPanel10.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -1965,11 +2050,6 @@
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2112,5 +2192,10 @@
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }
