@@ -45,6 +45,7 @@ namespace APPD_layout
             }
 
             PopulateGameCart();
+            UpdateSubtotal();
 
         }
 
@@ -58,7 +59,7 @@ namespace APPD_layout
             double subtotal = 0;
             foreach (Games game in GetContainer())
             {
-                subtotal += game.Cost;
+                subtotal += game.Cost * game.Quantity;
             }
 
             return subtotal;

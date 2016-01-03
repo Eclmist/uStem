@@ -1,10 +1,9 @@
-﻿//TODO: remove unused winform click methods
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace APPD_layout
@@ -36,6 +35,9 @@ namespace APPD_layout
         private Account currentLoggedInUser;
         private Login loginForm;
 
+        //Singleton reference for store
+        public static Store storeReference;
+
         public Store()
         {
             InitializeComponent();
@@ -50,6 +52,7 @@ namespace APPD_layout
             /*********************************************************************************/
             //
 
+            storeReference = this;
 
             SetControlStyles();
 
@@ -81,6 +84,17 @@ namespace APPD_layout
             On_Store_Loaded();
         }
 
+        // Turn on WS_EX_COMPOSITED to stop winform flickering
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;  
+                return cp;
+            }
+        }
+
         public void On_Store_Loaded()
         {
             this.Show();
@@ -97,8 +111,15 @@ namespace APPD_layout
             panel10.BackColor = Color.FromArgb(70, Color.Black);
             panel8.BackColor = Color.FromArgb(30, Color.White);
             panel6.BackColor = Color.FromArgb(50, Color.Black);
-            panel13.BackColor = Color.FromArgb(70, Color.Black);        
+            panel13.BackColor = Color.FromArgb(70, Color.Black);
+            panel17.BackColor = Color.FromArgb(70, Color.Black);
+            panel15.BackColor = Color.FromArgb(70, Color.Black);
+            panel18.BackColor = Color.FromArgb(70, Color.Black);
+            panel19.BackColor = Color.FromArgb(70, Color.Black);
+            label41.BackColor = Color.FromArgb(70, 192, 64, 0);
             
+            comboBox3.SelectedIndex = 0;
+
         }
 
         public void UpdatePageHistory()
@@ -108,6 +129,7 @@ namespace APPD_layout
 
         public void UpdateCurrentPanel()
         {
+            this.SuspendLayout();
 
             //currentPanel should be updated before this method is to be called
             Panel targetPanel;
@@ -147,6 +169,8 @@ namespace APPD_layout
                 else
                     p.Visible = false;
             }
+
+            this.ResumeLayout(false);
         }
 
         public void NavButtonClick(Page targetPage)
@@ -184,6 +208,8 @@ namespace APPD_layout
 
         private void GameClick(Games game)
         {
+            this.SuspendLayout();
+
             NavButtonClick(Page.GameDetails);
             label31.Text = game.Name;
             pictureBox8.BackgroundImage = Image.FromFile("./img/" + game.Imgsrc);
@@ -198,6 +224,8 @@ namespace APPD_layout
             }
             else
                 label23.Text = "Discounts not available in your region.";
+
+            this.ResumeLayout(false);
 
         }
 
@@ -403,6 +431,17 @@ namespace APPD_layout
         private void button7_Click(object sender, EventArgs e)
         {
             NavButtonClick(Page.Browsing);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Receipt receipt = new Receipt();
+            receipt.Show();
+        }
+
+        private void panel19_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -80,7 +80,6 @@
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Remember my password";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // textBox1
             // 
@@ -94,6 +93,7 @@
             this.textBox1.Size = new System.Drawing.Size(312, 15);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // button1
             // 
@@ -128,6 +128,7 @@
             this.textBox2.TabIndex = 2;
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // label1
             // 
@@ -210,7 +211,6 @@
             this.label5.Size = new System.Drawing.Size(119, 14);
             this.label5.TabIndex = 15;
             this.label5.Text = "Need help with sign in?";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button4
             // 
@@ -228,7 +228,6 @@
             this.button4.Text = "I CAN\'T SIGN IN...";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox1
             // 
@@ -239,7 +238,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(37, 37);
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label6
             // 
@@ -252,7 +250,6 @@
             this.label6.Size = new System.Drawing.Size(71, 26);
             this.label6.TabIndex = 18;
             this.label6.Text = "uSTEM";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -287,6 +284,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(430, 79);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -327,7 +325,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "uSTEM Login ";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();

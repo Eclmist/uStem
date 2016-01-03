@@ -6,60 +6,74 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace APPD_layout
 {
-    public enum Process
+    public enum SignupPages
     {
-        Features,
-        CreateAccount,
+        Intro,
+        LoginCredentials,
         Email,
-        Information
+        Complete
     }
     public partial class Signup : Form
     {
-        List<string> Account = new List<string>();
-        Panel[] panelList;
-        bool errorCheck = true;
-        private Process currentProcess = Process.Features;
+        private List<string> Account = new List<string>();
+        private Panel[] panelList;
+        private bool errorCheck = true;
+        private SignupPages _currentSignupPages = SignupPages.Intro;
+        private string chosenUsername;
+        private string chosenPassword;
+        private string chosenEmail;
+
         public Signup()
         {
             InitializeComponent();
             progressBar1.Maximum = 85;
 
             panelList = new Panel[] { panel1, panel2, panel5, panel4 };
+
+            label27.Visible = false;
+            label28.Visible = false;
+            label29.Visible = false;
+            label30.Visible = false;
+
+
         }
-        public void NavButtonClick(Process targetProcess)
+
+        public void NavButtonClick(SignupPages targetSignupPages)
         {
-            currentProcess = targetProcess;
+            _currentSignupPages = targetSignupPages;
             UpdateCurrentPanel();
         }
+
         public void UpdateCurrentPanel()
         {
-
             //currentPanel should be updated before this method is to be called
             Panel targetPanel;
 
-            switch (currentProcess)
+            switch (_currentSignupPages)
             {
-                case Process.Features:
+                case SignupPages.Intro:
                     targetPanel = panel1;
                     break;
-                case Process.CreateAccount:
+                case SignupPages.LoginCredentials:
                     targetPanel = panel2;
                     break;
-                case Process.Email:
+                case SignupPages.Email:
                     targetPanel = panel5;
                     break;
-                case Process.Information:
+                case SignupPages.Complete:
                     targetPanel = panel4;
                     break;
                 default:
                     targetPanel = panel1;
                     break;
             }
+
             foreach (Panel panel in panelList)
             {
                 if (object.ReferenceEquals(panel, targetPanel))
@@ -72,65 +86,42 @@ namespace APPD_layout
                 }
             }
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
+
         private void Form5_Load(object sender, EventArgs e)
         {
 
         }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             progressBar1.Value = CheckStrength(textBox2.Text);
-            if (progressBar1.Value > 70 && textBox2.Text.Length > 8)
-            {
-                progressBar1.ForeColor = Color.YellowGreen;
-                label24.Text = "Password is very strong.";
-                label24.ForeColor = Color.YellowGreen;
-            }
-            else if (progressBar1.Value > 50 && progressBar1.Value <= 70 && textBox2.Text.Length > 8)
-            {
-                progressBar1.ForeColor = Color.YellowGreen;
-                label24.Text = "Password is fairly strong.";
-                label24.ForeColor = Color.LightGray;
-            }
-            else if (progressBar1.Value > 30 && progressBar1.Value <= 50 && textBox2.Text.Length > 8)
-            {
-                progressBar1.ForeColor = Color.Yellow;
-                label24.Text = "Password is acceptable.";
-                label24.ForeColor = Color.LightGray;
-            }
-            else if (progressBar1.Value >= 1 && progressBar1.Value <= 30)
-            {
-                progressBar1.ForeColor = Color.DarkRed;
-                label24.Text = "Password is short and\nis weak.";
-                label24.ForeColor = Color.DarkRed;
-            }
-            if (textBox2.Text.Length >= 24)
-            {
-                MessageBox.Show("The password that you have input is too long. The maximum number of characters for a password is 28", "ERROR",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox2.Clear();
-                textBox3.Clear();
-            }
+            progressBar1.ForeColor = Color.FromArgb(0, 94, 139);
         }
+
         public static int CheckStrength(string password)
         {
             int score = 0;
-            if (password.Length > 0 && password.Length <= 4)
+            if (password.Length > 0)
                 score = 5;
-            if (password.Length > 4 && password.Length <= 8)
+            if (password.Length > 3)
                 score = 10;
-            if (password.Length > 8 && password.Length <= 12)
+            if (password.Length > 6)
                 score = 30;
-            if (password.Length > 12)
+            if (password.Length > 9)
                 score = 40;
+
             string s = @"([<>?/,!])+";
+
             foreach (char c in s)
             {
                 if (password.Contains(c))
@@ -140,6 +131,7 @@ namespace APPD_layout
                 }
 
             }
+
             if (password.Any(char.IsDigit)) score += 15;
             if (password.Any(char.IsUpper)) score += 15;
             if (password.Contains(s)) score += 15;
@@ -148,37 +140,23 @@ namespace APPD_layout
 
         private void panel2next_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text.Length <= 8)
+            if (!label27.Visible && !label28.Visible &&
+                !textBox1.Text.Equals("") && !textBox2.Text.Equals("") &&
+                !textBox3.Text.Equals(""))
             {
-                MessageBox.Show("The password that you have input is too short. The minimum number of characters for a password is 9", "ERROR",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox2.Clear();
-                textBox3.Clear();
-                errorCheck = false;
+                chosenUsername = textBox1.Text;
+                chosenPassword = textBox3.Text;
+                NavButtonClick(SignupPages.Email);
             }
-            if (textBox2.Text != textBox3.Text)
-            {
-                MessageBox.Show("The password does not match. Please try again", "ERROR",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox2.Clear();
-                textBox3.Clear();
-                errorCheck = false;
-            }
-            if (errorCheck == true)
-            {
-                NavButtonClick(Process.Email);
-            }
-            errorCheck = true;
         }
         private void button8_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login login = new Login();
-            login.Show();
+            Login.loginForm.Show();
         }
         private void panel1Next_Click(object sender, EventArgs e)
         {
-            NavButtonClick(Process.CreateAccount);
+            NavButtonClick(SignupPages.LoginCredentials);
         }
         private void Cancel_Click(object sender, EventArgs e)
         {
@@ -186,18 +164,128 @@ namespace APPD_layout
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            NavButtonClick(Process.CreateAccount);
+            NavButtonClick(SignupPages.LoginCredentials);
         }
         private void button6_Click(object sender, EventArgs e)
         {
-            NavButtonClick(Process.Information);
+            NavButtonClick(SignupPages.Complete);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login login = new Login();
-            login.Show();
+            Login.loginForm.Show();
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            bool usernameValid = true;
+
+            foreach (Account account in Login.accounts.GetContainer())
+            {
+                if (account.Username.Equals(((TextBox)sender).Text))
+                {
+                    usernameValid = false;
+                }
+            }
+
+            label27.Visible = !usernameValid ? true : false;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            bool password = textBox2.Text.Equals(((TextBox)sender).Text);
+
+            label28.Visible = !password ? true : false;
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            bool emailValid = true;
+
+            foreach (Account account in Login.accounts.GetContainer())
+            {
+                if (account.Email.Equals(((TextBox)sender).Text))
+                {
+                    emailValid = false;
+                    label29.Text = "!This email is already in use";
+                }
+            }
+
+            if (!IsValidEmail(((TextBox) sender).Text))
+            {
+                emailValid = false;
+                label29.Text = "!This email is not valid";
+            }
+
+            label29.Visible = !emailValid ? true : false;
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            bool email = textBox4.Text.Equals(((TextBox)sender).Text);
+
+            label30.Visible = !email ? true : false;
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (textBox4.Text.Equals(textBox6.Text) && IsValidEmail(textBox4.Text) && !label29.Visible &&
+                !label30.Visible)
+            {
+                chosenEmail = textBox4.Text;
+
+                label20.Text = chosenUsername;
+                label21.Text = chosenPassword;
+                label22.Text = chosenEmail;
+
+                Account a = new Account(chosenUsername, chosenPassword, chosenEmail);
+                Login.accounts.AddToContainer(a);
+                Login.accounts.AddAccount(a);
+
+                NavButtonClick(SignupPages.Complete);
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login.loginForm.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            NavButtonClick(SignupPages.Intro);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login.loginForm.Show();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            NavButtonClick(SignupPages.LoginCredentials);
         }
     }
 }

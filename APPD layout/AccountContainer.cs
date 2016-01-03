@@ -9,7 +9,14 @@ namespace APPD_layout
 {
     public class AccountContainer : GenericContainer<Account>
     {
-        public void LoadAccounts(string filepath)
+        private string filepath;
+
+        public AccountContainer(string path)
+        {
+            filepath = path;
+        }
+
+        public void LoadAccounts()
         {
             string accountsFile = System.IO.File.ReadAllText(filepath);
             string[] key = { "username", "password", "email" };
@@ -36,6 +43,18 @@ namespace APPD_layout
                 account = new Account(info[0].ToString(), info[1].ToString(), info[2].ToString());
                 AddToContainer(account);
             }
+        }
+
+        public void AddAccount(Account account)
+        {
+            string accountsFile = System.IO.File.ReadAllText(filepath);
+
+            string accountDetails = @"<account><username>";
+            accountDetails += account.Username + @"</username><password>";
+            accountDetails += account.Password + @"</password><email>";
+            accountDetails += account.Email + @"</email></account>";
+
+            System.IO.File.WriteAllText(filepath, accountsFile + accountDetails);
         }
     }
 }

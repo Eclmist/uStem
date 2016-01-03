@@ -13,24 +13,30 @@ namespace APPD_layout
 {
     public partial class Login : Form
     {
-        private AccountContainer accounts = new AccountContainer();
+        public static AccountContainer accounts = new AccountContainer("./uStem/accounts.txt");
         private Image buttonBg;
         private string userfile = "./uStem/user.txt";
         private string lastUser = "";
         private string lastPassword = "";
         private bool rememberPw = false;
 
+        //Singleton
+        public static Login loginForm;
+
         public Login()
         {
             InitializeComponent();
+            this.AcceptButton = button1;
+            loginForm = this;
 
             /*** Populating Accounts ***/
-            accounts.LoadAccounts("./uStem/accounts.txt");
+            accounts.LoadAccounts();
 
             /*** Styling ***/
             buttonBg = button1.BackgroundImage;
             button1.BackgroundImage = base.BackgroundImage;
             button1.Enabled = false;
+            button1.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
 
             /*** Previous user details ***/
             if (File.Exists(userfile))
@@ -71,6 +77,7 @@ namespace APPD_layout
                 button1.BackgroundImage = base.BackgroundImage;
                 button1.Enabled = false;
             }
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -89,12 +96,52 @@ namespace APPD_layout
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ExecuteLogin();
+        }
+
+        private void ToggleLoginControls(bool b)
+        {
+            this.SuspendLayout();
+            textBox1.Enabled = b;
+            textBox2.Enabled = b;
+            checkBox1.Enabled = b;
+            button1.BackgroundImage = b ? buttonBg : base.BackgroundImage;
+            button1.Enabled = b;
+            button3.BackgroundImage = b ? buttonBg : base.BackgroundImage;
+            button3.Enabled = b;
+            button4.BackgroundImage = b ? buttonBg : base.BackgroundImage;
+            button4.Enabled = b;
+            textBox1.Refresh();
+            textBox2.Refresh();
+            this.ResumeLayout(true);
+            this.PerformLayout();
+
+        }
+
+        private void HideLoginError()
+        {
+            if (flowLayoutPanel2.Controls.Find("errorPanel", true).Any())
+            {
+                ((Panel)flowLayoutPanel2.Controls.Find("errorPanel", true)[0]).Visible = false;
+            }
+        }
+
+        private void DisplayLoginError()
+        {
+            flowLayoutPanel2.Controls.Clear();
+            flowLayoutPanel2.Controls.Add(ControlsGenerator.GenerateLoginError());
+            textBox2.Clear();
+        }
+
+
+        private void ExecuteLogin()
+        {
+            ToggleLoginControls(false);
             bool usernameFound = false;
             bool loginSucessful = false;
             Account logedInAccount = new Account();
 
             HideLoginError();
-            ToggleLoginControls(false);
 
             foreach (Account a in accounts.GetContainer())
             {
@@ -118,6 +165,7 @@ namespace APPD_layout
             {
                 DisplayLoginError();
                 ToggleLoginControls(true);
+                textBox2.Select();
             }
             else
             {
@@ -131,36 +179,6 @@ namespace APPD_layout
             }
         }
 
-        private void ToggleLoginControls(bool b)
-        {
-            textBox1.Enabled = b;
-            textBox2.Enabled = b;
-            checkBox1.Enabled = b;
-            button1.BackgroundImage = b ? buttonBg : base.BackgroundImage;
-            button1.Enabled = b;
-            button3.BackgroundImage = b ? buttonBg : base.BackgroundImage;
-            button3.Enabled = b;
-            button4.BackgroundImage = b ? buttonBg : base.BackgroundImage;
-            button4.Enabled = b;
-
-        }
-
-        private void HideLoginError()
-        {
-            if (flowLayoutPanel2.Controls.Find("errorPanel", true).Any())
-            {
-                ((Panel)flowLayoutPanel2.Controls.Find("errorPanel", true)[0]).Visible = false;
-            }
-        }
-
-        private void DisplayLoginError()
-        {
-            flowLayoutPanel2.Controls.Clear();
-            flowLayoutPanel2.Controls.Add(ControlsGenerator.GenerateLoginError());
-            textBox2.Clear();
-        }
-
-
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -173,35 +191,6 @@ namespace APPD_layout
             Application.Exit();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -233,6 +222,27 @@ namespace APPD_layout
         private void button1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ExecuteLogin();
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ExecuteLogin();
+            }
         }
     }
 }

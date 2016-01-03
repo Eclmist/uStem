@@ -258,7 +258,7 @@
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 11F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(10, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(422, 71);
+            this.label1.Size = new System.Drawing.Size(422, 72);
             this.label1.TabIndex = 42;
             this.label1.Text = "Your purchase was successful. it is recommended that you keep this information in" +
     " a safe place. It can be used as proof-of-purchase in the future.";
@@ -269,11 +269,11 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(451, 104);
+            this.pictureBox1.Size = new System.Drawing.Size(408, 104);
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             // 
-            // Reciept
+            // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -299,7 +299,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Reciept";
+            this.Name = "Receipt";
             this.Text = "Reciept";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -15,7 +15,7 @@ namespace APPD_layout
         List<CheckBox> allGenreCheckbox = new List<CheckBox>();
         List<Games> gamesToBeDisplayed = new List<Games>();
         BackgroundWorker BWPopulateGameList = new BackgroundWorker();
-        int gamesPerPage = 8;
+        int gamesPerPage = 10;
 
         public BrowsingScreenHandler(FlowLayoutPanel flp, FlowLayoutPanel gsp)
         {
@@ -119,6 +119,7 @@ namespace APPD_layout
   
         public void PopulateGenreList(GenreContainer genre)
         {
+
             foreach (Games game in genre.GetContainer())
             {
                 gamesListPanel.Controls.Add(ControlsGenerator.GenerateGamePanel(game));
