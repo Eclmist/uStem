@@ -431,10 +431,10 @@
             this.panel10.Controls.Add(this.panel12);
             this.panel10.Controls.Add(this.label18);
             this.panel10.Controls.Add(this.flowLayoutPanel4);
-            this.panel10.Location = new System.Drawing.Point(10, 429);
+            this.panel10.Location = new System.Drawing.Point(10, 73);
             this.panel10.Name = "panel10";
             this.panel10.Padding = new System.Windows.Forms.Padding(5);
-            this.panel10.Size = new System.Drawing.Size(884, 64);
+            this.panel10.Size = new System.Drawing.Size(884, 420);
             this.panel10.TabIndex = 27;
             this.panel10.Visible = false;
             this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
@@ -450,11 +450,12 @@
             // 
             // label50
             // 
+            this.label50.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label50.AutoSize = true;
             this.label50.BackColor = System.Drawing.Color.Black;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.label50.ForeColor = System.Drawing.Color.White;
-            this.label50.Location = new System.Drawing.Point(142, 101);
+            this.label50.Location = new System.Drawing.Point(19, 101);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(52, 17);
             this.label50.TabIndex = 1;
@@ -469,6 +470,7 @@
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 0;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
             // 
             // label18
             // 
@@ -1129,9 +1131,9 @@
             this.panel9.Controls.Add(this.label41);
             this.panel9.Controls.Add(this.label36);
             this.panel9.Controls.Add(this.panel18);
-            this.panel9.Location = new System.Drawing.Point(10, 455);
+            this.panel9.Location = new System.Drawing.Point(10, 73);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(884, 38);
+            this.panel9.Size = new System.Drawing.Size(884, 420);
             this.panel9.TabIndex = 28;
             this.panel9.Visible = false;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
@@ -1486,9 +1488,9 @@
             this.panel7.Controls.Add(this.button2);
             this.panel7.Controls.Add(this.label22);
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(10, 409);
+            this.panel7.Location = new System.Drawing.Point(10, 73);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(884, 84);
+            this.panel7.Size = new System.Drawing.Size(884, 420);
             this.panel7.TabIndex = 23;
             this.panel7.Visible = false;
             // 
@@ -1676,9 +1678,9 @@
             this.panel14.Controls.Add(this.panel15);
             this.panel14.Controls.Add(this.panel17);
             this.panel14.Controls.Add(this.label60);
-            this.panel14.Location = new System.Drawing.Point(10, 476);
+            this.panel14.Location = new System.Drawing.Point(10, 73);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(885, 17);
+            this.panel14.Size = new System.Drawing.Size(884, 420);
             this.panel14.TabIndex = 31;
             this.panel14.Visible = false;
             // 
@@ -1714,13 +1716,13 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(5, 146);
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label12.Location = new System.Drawing.Point(11, 146);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(859, 13);
+            this.label12.Size = new System.Drawing.Size(625, 13);
             this.label12.TabIndex = 0;
             this.label12.Text = "_________________________________________________________________________________" +
-    "_____________________________________________________________";
+    "______________________";
             // 
             // panel15
             // 
@@ -1735,7 +1737,7 @@
             this.panel15.Controls.Add(this.label57);
             this.panel15.Location = new System.Drawing.Point(10, 195);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(848, 200);
+            this.panel15.Size = new System.Drawing.Size(630, 200);
             this.panel15.TabIndex = 38;
             // 
             // panel16
@@ -1763,6 +1765,7 @@
             this.button8.Text = "Print";
             this.button8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
             // pictureBox16
             // 
@@ -1875,7 +1878,7 @@
             this.panel17.Controls.Add(this.label59);
             this.panel17.Location = new System.Drawing.Point(9, 31);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(849, 112);
+            this.panel17.Size = new System.Drawing.Size(631, 112);
             this.panel17.TabIndex = 0;
             // 
             // linkLabel2

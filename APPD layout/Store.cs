@@ -242,8 +242,15 @@ namespace APPD_layout
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Random random = new Random();
             NavButtonClick(Page.Cart);
             cart.PopulateGameCart();
+            Games randomGame;
+            randomGame =
+                winterSalesCatalogue.GetContainer()[new Random().Next(0, winterSalesCatalogue.GetContainer().Count)];
+            pictureBox15.Tag = randomGame;
+            pictureBox15.Image = Image.FromFile("./img/" + randomGame.Imgsrc);
+            label50.Text = "S" + $"{randomGame.Cost:C}";
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -328,6 +335,7 @@ namespace APPD_layout
                 label41.Text = S;
                 if(errorCheck == true)
                 {
+                    label41.Visible = false;
                     NavButtonClick(Page.Confirmation);
                 }
                 errorCheck = true;
@@ -454,6 +462,17 @@ namespace APPD_layout
             {
                 browsingScreenHandler.PopulateGameList(allGamesCatalogue);
             }
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            GameClick((Games) (((PictureBox) sender).Tag));
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            Receipt receipt = new Receipt();
+            receipt.Show();
         }
     }
 }
