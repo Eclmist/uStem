@@ -13,6 +13,7 @@ namespace APPD_layout
         string email;
 
         #region Accessors and Mutators
+
         public string Username
         {
             get { return username; }
@@ -38,6 +39,10 @@ namespace APPD_layout
             this.username = username;
             this.password = pw;
             this.email = email;
+        }
+
+        public Account()
+        {
         }
     }
 }

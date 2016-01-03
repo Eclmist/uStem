@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -19,20 +20,22 @@ namespace APPD_layout
 
     public partial class Store : Form
     {
-        Panel[] panelList;
-        Page currentPage = Page.Browsing;
-        bool errorCheck = true;
-        Cart cart;
-        List<Page> pageHistroy = new List<Page>();
-        Bitmap nullBitmap = new Bitmap(1, 1);
-        Image backArrow; //TODO: add greying code to partial class after project is done
-        
-        List<GenreContainer> listOfGenres;
+        private Panel[] panelList;
+        private Page currentPage = Page.Browsing;
+        private bool errorCheck = true;
+        private Cart cart;
+        private List<Page> pageHistroy = new List<Page>();
+        private Bitmap nullBitmap = new Bitmap(1, 1);
+        private Image backArrow; //TODO: add greying code to partial class after project is done
+
+        private List<GenreContainer> listOfGenres;
 
         public static Catalogue allGamesCatalogue;
-        Catalogue winterSalesCatalogue;
+        private Catalogue winterSalesCatalogue;
+        private BrowsingScreenHandler browsingScreenHandler;
+        private Account currentLoggedInUser;
+        private Login loginForm;
 
-        Account currentLoggedInUser;
         public Store()
         {
             InitializeComponent();
@@ -47,6 +50,7 @@ namespace APPD_layout
             /*********************************************************************************/
             //
 
+
             SetControlStyles();
 
             /*** Instantiate Genres List ***/
@@ -54,23 +58,33 @@ namespace APPD_layout
 
             /*** Populating Catalogue ***/
             allGamesCatalogue = new Catalogue();
-            allGamesCatalogue.LoadGames("./product.txt", listOfGenres);
+            allGamesCatalogue.LoadGames("./uStem/product.txt", listOfGenres);
 
             winterSalesCatalogue = new Catalogue();
             //winterSalesCatalogue.LoadGames("");
 
-
             LoadGameClickHandler();
-            BrowsingScreenHandler browsingScreenHandler = new BrowsingScreenHandler(this.flowLayoutPanel1, this.flowLayoutPanel2);
-            cart = new Cart(flowLayoutPanel7, label8);
+
+
+            browsingScreenHandler = new BrowsingScreenHandler(this.flowLayoutPanel1, this.flowLayoutPanel2);
             browsingScreenHandler.PopulateGameList(allGamesCatalogue);
             browsingScreenHandler.PopulateGenreSelector(listOfGenres);
+
+            cart = new Cart(flowLayoutPanel7, label8);
+
         }
 
-        public Store(Account a) : this ()
+        public Store(Account a, Login loginForm) : this ()
         {
-            /*** Update Logged Account ***/
             currentLoggedInUser = a;
+            this.loginForm = loginForm;
+            On_Store_Loaded();
+        }
+
+        public void On_Store_Loaded()
+        {
+            this.Show();
+            loginForm.Hide();
         }
 
         public void SetControlStyles()

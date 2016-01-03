@@ -217,10 +217,10 @@ namespace APPD_layout
             panel3.TabIndex = 0;
 
             Panel panel = new Panel();
-            panel.BackColor = Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(72)))), ((int)(((byte)(71)))));
+            panel.BackColor = Color.FromArgb(169, 72, 71);
             panel.Controls.Add(panel3);
             panel.Location = new Point(3, 3);
-            panel.Name = "panel2";
+            panel.Name = "errorPanel";
             panel.Size = new Size(423, 49);
             panel.TabIndex = 0;
 

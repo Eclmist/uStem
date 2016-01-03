@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,21 +13,45 @@ namespace APPD_layout
 {
     public partial class Login : Form
     {
-        AccountContainer accounts = new AccountContainer();
-        Image buttonBg;
+        private AccountContainer accounts = new AccountContainer();
+        private Image buttonBg;
+        private string userfile = "./uStem/user.txt";
+        private string lastUser = "";
+        private string lastPassword = "";
+        private bool rememberPw = false;
 
         public Login()
         {
             InitializeComponent();
 
             /*** Populating Accounts ***/
-            accounts.LoadAccounts("./accounts.txt");
+            accounts.LoadAccounts("./uStem/accounts.txt");
 
             /*** Styling ***/
             buttonBg = button1.BackgroundImage;
             button1.BackgroundImage = base.BackgroundImage;
             button1.Enabled = false;
 
+            /*** Previous user details ***/
+            if (File.Exists(userfile))
+            {
+                string[] content = File.ReadAllLines(userfile);
+
+                if (!content[0].Equals(""))
+                {
+                    lastUser = content[0];
+                }
+
+                if (!content[1].Equals(""))
+                {
+                    lastPassword = content[1];
+                    rememberPw = true;
+                }
+            }
+
+            textBox1.Text = lastUser;
+            textBox2.Text = lastPassword;
+            checkBox1.Checked = rememberPw;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -66,13 +91,10 @@ namespace APPD_layout
         {
             bool usernameFound = false;
             bool loginSucessful = false;
+            Account logedInAccount = new Account();
 
             HideLoginError();
-
-
-
-            //Emulating login time
-            System.Threading.Thread.Sleep(500);
+            ToggleLoginControls(false);
 
             foreach (Account a in accounts.GetContainer())
             {
@@ -86,14 +108,8 @@ namespace APPD_layout
                     if (textBox2.Text.Equals(a.Password))
                     {
                         loginSucessful = true;
-                        this.Hide();
-                        Store store = new Store(a);
-                        store.Show();
+                        logedInAccount = a;
                         break;
-                    }
-                    else
-                    {
-                        DisplayLoginError();
                     }
                 }
             }
@@ -101,17 +117,45 @@ namespace APPD_layout
             if (!loginSucessful)
             {
                 DisplayLoginError();
-
+                ToggleLoginControls(true);
             }
+            else
+            {
+                string[] content = new string[2];
+                content[0] = textBox1.Text;
+                content[1] = checkBox1.Checked ? textBox2.Text : null;
+
+                File.WriteAllLines(userfile, content);
+
+                Store store = new Store(logedInAccount, this);
+            }
+        }
+
+        private void ToggleLoginControls(bool b)
+        {
+            textBox1.Enabled = b;
+            textBox2.Enabled = b;
+            checkBox1.Enabled = b;
+            button1.BackgroundImage = b ? buttonBg : base.BackgroundImage;
+            button1.Enabled = b;
+            button3.BackgroundImage = b ? buttonBg : base.BackgroundImage;
+            button3.Enabled = b;
+            button4.BackgroundImage = b ? buttonBg : base.BackgroundImage;
+            button4.Enabled = b;
+
         }
 
         private void HideLoginError()
         {
-            flowLayoutPanel2.Controls.Clear();
+            if (flowLayoutPanel2.Controls.Find("errorPanel", true).Any())
+            {
+                ((Panel)flowLayoutPanel2.Controls.Find("errorPanel", true)[0]).Visible = false;
+            }
         }
 
         private void DisplayLoginError()
         {
+            flowLayoutPanel2.Controls.Clear();
             flowLayoutPanel2.Controls.Add(ControlsGenerator.GenerateLoginError());
             textBox2.Clear();
         }
@@ -183,14 +227,7 @@ namespace APPD_layout
 
         private void button1_EnabledChanged(object sender, EventArgs e)
         {
-            if (button1.Enabled)
-            {
-                button1.ForeColor = Color.Silver;
-            }
-            else
-            {
-                button1.ForeColor = Color.FromArgb(115, 115, 115);
-            }
+
         }
 
         private void button1_Paint(object sender, PaintEventArgs e)

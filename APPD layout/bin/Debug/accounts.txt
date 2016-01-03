@@ -1,5 +1,0 @@
-<account>
-<username>eclmist</username>
-<password>notmyrealpassword</password>
-<email>mist@kawaiidesu.org</email>
-</account>
