@@ -35,8 +35,10 @@ namespace APPD_layout
         private Account currentLoggedInUser;
         private Login loginForm;
 
+        private Receipt receipt;
         //Singleton reference for store
         public static Store storeReference;
+        public string paymentMethod;
 
         public Store()
         {
@@ -51,6 +53,7 @@ namespace APPD_layout
             //
             /*********************************************************************************/
             //
+
 
             storeReference = this;
 
@@ -81,6 +84,7 @@ namespace APPD_layout
         {
             currentLoggedInUser = a;
             this.loginForm = loginForm;
+            receipt = new Receipt(currentLoggedInUser, cart, this);
             On_Store_Loaded();
         }
 
@@ -218,6 +222,7 @@ namespace APPD_layout
             label24.Text = "Buy " + game.Name;
             label22.Text = "S" + String.Format("{0:C}", game.Cost);
             button2.Tag = game;
+            pictureBox9.BackgroundImage = Image.FromFile("./img/" + game.Imgsrc2);
             if (game.DiscountRate > 0)
             {
                 label23.Text = "SPECIAL PROMOTION! Offer ends on " + game.ReleaseDate.AddDays(36).ToString("MMMM dd");
@@ -336,6 +341,10 @@ namespace APPD_layout
                 if(errorCheck == true)
                 {
                     label41.Visible = false;
+                    label54.Text = currentLoggedInUser.Username;
+                    label55.Text = "S" + String.Format("{0:C}", cart.CalculateSubtotal());
+                    label56.Text = RandomGenerator.GenerateRandomDigits(16);
+                    paymentMethod = comboBox1.Text;
                     NavButtonClick(Page.Confirmation);
                 }
                 errorCheck = true;
@@ -432,7 +441,7 @@ namespace APPD_layout
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Receipt receipt = new Receipt();
+            receipt.GenerateReceipt();
             receipt.Show();
         }
 
@@ -443,7 +452,7 @@ namespace APPD_layout
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Receipt receipt = new Receipt();
+            receipt.GenerateReceipt();
             receipt.Show();
         }
 
@@ -471,7 +480,7 @@ namespace APPD_layout
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            Receipt receipt = new Receipt();
+            receipt.GenerateReceipt();
             receipt.Show();
         }
 

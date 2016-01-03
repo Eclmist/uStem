@@ -8,7 +8,7 @@ namespace APPD_layout
 {
     public class Games
     {
-        private string name, desc, imgsrc;
+        private string name, desc, imgsrc, imgsrc2;
         private double cost, discountrRate;
         private DateTime releaseDate;
         private List<Genre> genres;
@@ -37,6 +37,13 @@ namespace APPD_layout
         {
             get { return imgsrc; }
             set { imgsrc = value; }
+        }
+
+
+        public string Imgsrc2
+        {
+            get { return imgsrc2; }
+            set { imgsrc2 = value; }
         }
 
         public double Cost
@@ -69,6 +76,7 @@ namespace APPD_layout
             name = "";
             desc = "";
             imgsrc = "game1.png";
+            imgsrc2 = imgsrc.Remove(imgsrc.Length - 4) + "desc.png";
             cost = 0;
             discountrRate = 0;
             releaseDate = DateTime.MaxValue;
@@ -85,6 +93,8 @@ namespace APPD_layout
             this.imgsrc = imgsrc;
             this.discountrRate = drate;
             this.genres = genres;
+            imgsrc2 = imgsrc.Remove(imgsrc.Length - 4) + "desc.png";
+
         }
 
         public void SetInfo(string name, string desc, double cost, DateTime rdate, string imgsrc, double drate, List<Genre> genres)
@@ -98,11 +108,17 @@ namespace APPD_layout
             if (releaseDate != null)
                 this.releaseDate = rdate;
             if (!imgsrc.Equals(""))
+            {
                 this.imgsrc = imgsrc;
+                imgsrc2 = imgsrc.Remove(imgsrc.Length - 4) + "desc.png";
+
+            }
+
             if (!double.IsNaN(discountrRate))
                 this.discountrRate = drate;
             if (genres.Count > 0)
                 this.genres = genres;
+
         }
     }
 }

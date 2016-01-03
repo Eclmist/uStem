@@ -100,6 +100,60 @@ namespace APPD_layout
             return button;
         }
 
+        public static Panel GenerateRecepitPanel(Games gameref)
+        {
+
+            // 
+            // label19
+            // 
+            Label label19 = new Label();
+            label19.AutoSize = true;
+            label19.BackColor = System.Drawing.Color.Transparent;
+            label19.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label19.Location = new System.Drawing.Point(9, 10);
+            label19.Name = "label19";
+            label19.Size = new System.Drawing.Size(99, 16);
+            label19.TabIndex = 63;
+            label19.Text = gameref.Name;
+            // 
+            // label22
+            // 
+            Label label22 = new Label();
+
+            label22.AutoSize = true;
+            label22.BackColor = System.Drawing.Color.Transparent;
+            label22.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label22.Location = new System.Drawing.Point(108, 10);
+            label22.Name = "label22";
+            label22.Size = new System.Drawing.Size(28, 16);
+            label22.TabIndex = 64;
+            label22.Text = "(x" + gameref.Quantity.ToString() + ")";
+            // 
+            // label23
+            // 
+            Label label23 = new Label();
+
+            label23.AutoSize = true;
+            label23.BackColor = System.Drawing.Color.Transparent;
+            label23.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label23.Location = new System.Drawing.Point(380, 10);
+            label23.Name = "label23";
+            label23.Size = new System.Drawing.Size(40, 16);
+            label23.TabIndex = 65;
+            label23.Text = "S" + String.Format("{0:C}", gameref.Cost*gameref.Quantity);
+
+
+            Panel panel = new Panel();
+            panel.Controls.Add(label23);
+            panel.Controls.Add(label22);
+            panel.Controls.Add(label19);
+            panel.Location = new System.Drawing.Point(3, 3);
+            panel.Name = "panel2";
+            panel.Size = new System.Drawing.Size(442, 37);
+            panel.TabIndex = 0;
+
+            return panel;
+        }
 
         #region cartpanel
         public static Panel GenerateCartPanel(Games gameref)

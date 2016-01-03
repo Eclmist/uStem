@@ -60,6 +60,7 @@
     <Compile Include="GenericContainer.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="GenreContainer.cs" />
+    <Compile Include="RandomGenerator.cs" />
     <Compile Include="Receipt.cs">
       <SubType>Form</SubType>
     </Compile>
