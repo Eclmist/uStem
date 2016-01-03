@@ -474,5 +474,26 @@ namespace APPD_layout
             Receipt receipt = new Receipt();
             receipt.Show();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (((TextBox) sender).Text.Equals("ustem10discount"))
+            {
+                pictureBox17.Visible = true;
+                label66.Visible = true;
+                cart.Discount = 0.9;
+                cart.Discounted = true;
+                cart.UpdateSubtotal();
+            }
+            else
+            {
+                pictureBox17.Visible = false;
+                label66.Visible = false;
+                cart.Discount = 1;
+                cart.Discounted = false;
+
+                cart.UpdateSubtotal();
+            }
+        }
     }
 }

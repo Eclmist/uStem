@@ -13,6 +13,34 @@ namespace APPD_layout
     {
         FlowLayoutPanel cartListPanel;
         Label subtotalLabel;
+        private double discount = 1;
+        private bool discounted = false;
+
+        public double Discount
+        {
+            get
+            {
+                return discount;
+            }
+
+            set
+            {
+                discount = value;
+            }
+        }
+
+        public bool Discounted
+        {
+            get
+            {
+                return discounted;
+            }
+
+            set
+            {
+                discounted = value;
+            }
+        }
 
         public Cart(FlowLayoutPanel flowLayoutPanel, Label subtotalLabel)
         {
@@ -51,7 +79,7 @@ namespace APPD_layout
 
         public void UpdateSubtotal()
         {
-            subtotalLabel.Text = "S" + String.Format("{0:C}", CalculateSubtotal());
+            subtotalLabel.Text = "S" + string.Format("{0:C}", CalculateSubtotal());
         }
 
         public double CalculateSubtotal()
@@ -62,7 +90,7 @@ namespace APPD_layout
                 subtotal += game.Cost * game.Quantity;
             }
 
-            return subtotal;
+            return discounted ? subtotal * discount : subtotal;
         }
 
         public override void AddToContainer(Games item)

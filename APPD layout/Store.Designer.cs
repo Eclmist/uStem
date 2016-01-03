@@ -171,6 +171,12 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label65 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.label66 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel11.SuspendLayout();
@@ -215,6 +221,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.flowLayoutPanel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -304,6 +312,11 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.panel11.Controls.Add(this.pictureBox17);
+            this.panel11.Controls.Add(this.label66);
+            this.panel11.Controls.Add(this.flowLayoutPanel12);
+            this.panel11.Controls.Add(this.flowLayoutPanel11);
+            this.panel11.Controls.Add(this.label65);
             this.panel11.Controls.Add(this.flowLayoutPanel8);
             this.panel11.Controls.Add(this.button4);
             this.panel11.Controls.Add(this.label7);
@@ -1131,9 +1144,9 @@
             this.panel9.Controls.Add(this.label41);
             this.panel9.Controls.Add(this.label36);
             this.panel9.Controls.Add(this.panel18);
-            this.panel9.Location = new System.Drawing.Point(10, 73);
+            this.panel9.Location = new System.Drawing.Point(10, 452);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(884, 420);
+            this.panel9.Size = new System.Drawing.Size(884, 41);
             this.panel9.TabIndex = 28;
             this.panel9.Visible = false;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
@@ -1678,9 +1691,9 @@
             this.panel14.Controls.Add(this.panel15);
             this.panel14.Controls.Add(this.panel17);
             this.panel14.Controls.Add(this.label60);
-            this.panel14.Location = new System.Drawing.Point(10, 73);
+            this.panel14.Location = new System.Drawing.Point(10, 470);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(884, 420);
+            this.panel14.Size = new System.Drawing.Size(884, 23);
             this.panel14.TabIndex = 31;
             this.panel14.Visible = false;
             // 
@@ -1962,6 +1975,73 @@
             this.radioButton2.Text = "All Games";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.BackColor = System.Drawing.Color.Transparent;
+            this.label65.Font = new System.Drawing.Font("Calibri", 11F);
+            this.label65.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label65.Location = new System.Drawing.Point(18, 16);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(97, 18);
+            this.label65.TabIndex = 36;
+            this.label65.Text = "Discount Code";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(146, 13);
+            this.textBox1.TabIndex = 37;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // flowLayoutPanel11
+            // 
+            this.flowLayoutPanel11.BackColor = System.Drawing.Color.SkyBlue;
+            this.flowLayoutPanel11.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.flowLayoutPanel11.Location = new System.Drawing.Point(121, 12);
+            this.flowLayoutPanel11.Name = "flowLayoutPanel11";
+            this.flowLayoutPanel11.Size = new System.Drawing.Size(158, 24);
+            this.flowLayoutPanel11.TabIndex = 38;
+            // 
+            // flowLayoutPanel12
+            // 
+            this.flowLayoutPanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.flowLayoutPanel12.Controls.Add(this.textBox1);
+            this.flowLayoutPanel12.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.flowLayoutPanel12.Location = new System.Drawing.Point(123, 14);
+            this.flowLayoutPanel12.Name = "flowLayoutPanel12";
+            this.flowLayoutPanel12.Size = new System.Drawing.Size(154, 20);
+            this.flowLayoutPanel12.TabIndex = 39;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox17.BackgroundImage")));
+            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox17.Location = new System.Drawing.Point(279, 12);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox17.TabIndex = 40;
+            this.pictureBox17.TabStop = false;
+            this.pictureBox17.Visible = false;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.BackColor = System.Drawing.Color.Transparent;
+            this.label66.Font = new System.Drawing.Font("Calibri", 8F);
+            this.label66.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label66.Location = new System.Drawing.Point(305, 17);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(103, 13);
+            this.label66.TabIndex = 41;
+            this.label66.Text = "(10% Discount Code)";
+            this.label66.Visible = false;
+            // 
             // Store
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2053,6 +2133,9 @@
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.flowLayoutPanel12.ResumeLayout(false);
+            this.flowLayoutPanel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2200,5 +2283,11 @@
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel11;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Label label66;
     }
 }
